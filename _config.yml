@@ -9,7 +9,7 @@ baseurl: "/bob-2015-usa" # the subpath of your site, e.g. /blog/
 url: "http://daily-bruin.github.io/bob-2015-usa" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-permalink: /:chapter/:title/
+permalink: :title/
 
 # Build settings
 markdown: kramdown
