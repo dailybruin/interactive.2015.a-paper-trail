@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "The first post"
 date:   2015-10-13 18:34:08
-categories: jekyll update
+chapter: 1
+type: main
+permalink: /chapter1/:title/
+featured-image: "http://placekitten.com/1600/1000"
+
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

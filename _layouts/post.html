@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    
+    {% if page.featured-image %}
+        <div class="featured-image" style="background-image:url('{{ page.featured-image }}')">
+    {% endif %}
+    
+    </div>
+
+    <article>
+    
+        {{ content }}
+    
+    </article>
+      
+  </body>
+
+</html>

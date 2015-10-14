@@ -1,49 +1,61 @@
+div.featured-image {
+  width: 100%;
+  height: 100vh;
+}
+
+article {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding-left: 200px;
+  line-height: 2;
+}
+
 div.landing {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 23vh;
-  
-  h1 {
-    font-size: 5.5rem;
-    font-weight: 900;
-  }
-  
-  .bob {
-    font-size: 0.95rem;
-  }
-  
-  span.db,
-  span.share {
-    position: absolute;
-    top: 1rem;
-  }
-  
-  span.db {
-    left: 2.5rem;
-  }
-  
-  span.share {
-    right: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 23vh;
     
-    i { margin-left: 0.35rem; }
-  }
-  
-  p {
-    margin: 1.5rem;
-  }
-  
-  p.more a {
-    display: inline-block;
-    border: thin solid $brand-color;
-    width: auto;
-    padding: 0.5rem 1rem;
-    margin: 1.2rem;
-  }
-  
-  p.more:hover a {
-    background-color: $brand-color;
-    color: white;
-    text-decoration: none;
-  }
+    h1 {
+      font-size: 5.5rem;
+      font-weight: 900;
+    }
+    
+    .bob {
+      font-size: 0.95rem;
+    }
+    
+    span.db,
+    span.share {
+      position: absolute;
+      top: 1rem;
+    }
+    
+    span.db {
+      left: 2.5rem;
+    }
+    
+    span.share {
+      right: 2.5rem;
+      
+      i { margin-left: 0.35rem; }
+    }
+    
+    p {
+      margin: 1.5rem;
+    }
+    
+    p.more a {
+      display: inline-block;
+      border: thin solid $brand-color;
+      width: auto;
+      padding: 0.5rem 1rem;
+      margin: 1.2rem;
+    }
+    
+    p.more:hover a {
+      background-color: $brand-color;
+      color: white;
+      text-decoration: none;
+    }
 }
