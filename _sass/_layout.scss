@@ -40,12 +40,13 @@ header {
 div.featured-image {
   width: 100%;
   height: 100vh;
+  color: #fdfdfd;
   
   div.featured-text {
     content: "";
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0; 
-    background: rgba(256,256,256,1);
+    background: rgba(0,0,0,0.55);
     pointer-events: none;
     padding-top: 20vh;
     text-align: center;
@@ -56,6 +57,7 @@ div.featured-image {
       text-transform: uppercase;
       font-family: Arial, sans-serif;
       letter-spacing: -4px;
+      color: #fdfdfd;
     }
     
     .chapter {
@@ -65,6 +67,7 @@ div.featured-image {
     i {
       font-size: 5rem;
       margin-top: 3rem;
+      color: #fdfdfd;
     }
     
     p.byline {
@@ -90,6 +93,19 @@ article {
   margin: 3rem auto;
   padding-left: 200px;
   line-height: 2;
+  
+  figure {
+    float: left;
+    margin: 1rem;
+    margin-left: -200px;
+    width: 100%;
+    display: inline-block;
+    
+    figcaption {
+      color: grey;
+      font-size: 0.85rem;
+    }
+  }
 }
 
 div.landing {
