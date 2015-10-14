@@ -4,7 +4,6 @@ title:  "The first post"
 date:   2015-10-13 18:34:08
 chapter: 1
 type: main
-permalink: /chapter1/:title/
 featured-image: "http://placekitten.com/1600/1000"
 bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."
