@@ -1,13 +1,18 @@
 <header>
   <span class="db"><a href="http://dailybruin.com">DB</a></span>
   {% if page.title %}
-      <p class="title">
-        <a href="">
-          {% if page.chapter %}Chapter {{ page.chapter }}:{% endif %}
-          {{ page.title }}
-          <i class="fa fa-angle-down"></i>
+  <nav class="posts">
+    <ul>
+      {% for post in site.posts %}
+      <li class="{{ post.type }}">
+        <a href="{{ post.url }}">
+          Chapter {{ post.chapter }}: {{ post.title }} <i class="fa fa-angle-down"></i>
         </a>
-      </p>
+      </li>    
+      {% endfor %}  
+    </ul>
+  </nav>
+
   {% endif %}
   <span class="title"></span>
   <span class="share">

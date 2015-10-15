@@ -9,6 +9,12 @@ header {
   line-height: 2;
   padding: 0.2rem;
   
+  nav.posts {
+    text-align: center;
+    ul { list-style-type: none; }
+    a { color: #fdfdfd; }
+  }
+  
   p.title {
       text-align: center;
       a { 
@@ -39,6 +45,11 @@ header {
   }
 }
 
+.column h1,
+li.column {
+  font-style: italic;
+}
+
 section.featured-image {
   width: 100%;
   height: 100vh;
@@ -47,13 +58,14 @@ section.featured-image {
   top: 0;
   
   div.featured-text {
-    // content: "";
-    // position: absolute;
-    // top: 0; bottom: 0; left: 0; right: 0; 
-    // background: rgba(0,0,0,0.55);
-    // pointer-events: none;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
     padding-top: 20vh;
     text-align: center;
+    
+    &.column { background: rgba(255, 165, 0, 0.55); }
+    
+    &.main { background: rgba(0, 43, 66, 0.55); }
     
     h1 {
       font-size: 7rem;

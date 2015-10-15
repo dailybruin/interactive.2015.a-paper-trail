@@ -11,7 +11,7 @@
     
     {% if page.featured-image %}
     <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">
-        <div class="featured-text">
+        <div class="featured-text {{ page.type }}">
             <span class="chapter">Chapter {{ page.chapter }}</span>
             {% if page.title %}
                 <h1>{{ page.title }}</h1>
@@ -57,10 +57,6 @@
           }
         });
       });
-    </script>
-    
-    <script>
-
     </script>
     
   </body>

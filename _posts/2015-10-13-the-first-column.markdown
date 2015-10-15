@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "The first post"
+title:  "The first column"
 date:   2015-10-13 18:34:08
 chapter: 1
-type: main
-featured-image: http://placekitten.com/1800/1000
-permalink: /chapter1/the-first-post/
-bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
+type: column
+featured-image: http://placekitten.com/1600/1000
+permalink: /chapter1/the-first-column/
+bylines: ["Column by Ryan Nelson","Photos by Angie Wang"]
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."
 
 ---
