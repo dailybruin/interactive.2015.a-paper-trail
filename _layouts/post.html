@@ -7,6 +7,8 @@
     
     {% include header.html %}
     
+    <nav class='anchorific'></nav>
+    
     {% if page.featured-image %}
     <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">
         <div class="featured-text">
@@ -17,14 +19,12 @@
             {% for byline in page.bylines %}
                 <p class="byline">{{ byline }}</p>
             {% endfor %}
-            <a class="down" href=""><i class="fa fa-angle-down"></i></a>
+            <a class="down" href="#start"><i class="fa fa-angle-down"></i></a>
         </div>
     </section>
     {% endif %}
     
-    <article>
-        <nav class='anchorific'></nav>
-        
+    <article id="start">
         {% if page.sidenote %}
             <p class="sidenote">{{ page.sidenote }}</p>
         {% endif %}
@@ -37,8 +37,30 @@
     
     <script>
       $('article').anchorific({
-        anchorText: ''
+        anchorText: '',
+        spyOffset: 70
       });
+    </script>
+    
+    <script>
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+    
+    <script>
+
     </script>
     
   </body>
