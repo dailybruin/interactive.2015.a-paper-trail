@@ -170,11 +170,22 @@ article {
   }
 }
 
+div.landing-photo {
+  background-image: url("http://img.hqhdwalls.com/uploads/wallpaper/files/kit/kitten-wallpaper-53cee1ed3b06d.jpg");
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top:0;
+  background-size: cover;
+  background-position: top center;
+}
+
 div.landing {
+    background-color: rgba(256,256,256,0.75);
     text-align: center;
-    max-width: 800px;
     margin: auto;
-    margin-top: 23vh;
+    padding-top: 23vh;
+    height: 77vh;
     
     h1 {
       font-size: 5.5rem;
@@ -202,7 +213,9 @@ div.landing {
     }
     
     p {
-      margin: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 1.5rem;
     }
     
     p.more a {
