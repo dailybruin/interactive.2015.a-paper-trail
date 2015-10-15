@@ -7,7 +7,7 @@
     
     {% include header.html %}
     
-    <nav class='anchorific'></nav>
+    <nav class='anchorific {{ page.type }}'></nav>
     
     {% if page.featured-image %}
     <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">

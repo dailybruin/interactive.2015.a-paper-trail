@@ -3,11 +3,12 @@ header {
   top: 0;
   height: 45px;
   width: 100%;
-  background-color: rgba(0, 43, 66, 0.95);
   color: #fdfdfd;
   font-size: 1.3rem;
   line-height: 2;
   padding: 0.2rem;
+  &.column { background: transparentize($brand-color, 0.05); }
+  &.main { background: transparentize($brand-off-color, 0.05); }
   
   nav.posts {
     text-align: center;
@@ -56,6 +57,8 @@ section.featured-image {
   color: #fdfdfd;
   position: absolute;
   top: 0;
+  background-size: cover;
+  background-position: top center;
   
   div.featured-text {
     position: absolute;
@@ -63,9 +66,8 @@ section.featured-image {
     padding-top: 20vh;
     text-align: center;
     
-    &.column { background: rgba(255, 165, 0, 0.55); }
-    
-    &.main { background: rgba(0, 43, 66, 0.55); }
+    &.column { background: transparentize($brand-color, 0.55); }
+    &.main { background: transparentize($brand-off-color, 0.55); }
     
     h1 {
       font-size: 7rem;
@@ -101,6 +103,19 @@ nav.anchorific {
   text-align: right;
   font-family: $base-sans-font-family;
   
+  &.main li a, 
+  &.column li.active a { 
+    color: $brand-color; 
+    background-color: $brand-color; 
+    &:hover { background-color: $background-color; }
+  }
+  &.column li a, &.main li.active a { 
+    color: $brand-off-color; 
+    background-color: $brand-off-color; 
+    &:hover { background-color: $background-color; }
+  }
+  
+  
   ul { 
     list-style-type: none; 
     li a{
@@ -108,16 +123,8 @@ nav.anchorific {
       line-height: 1.2;
       font-size: 0.85rem;
       clear: both;
-      float: right;
-      background-color: $brand-color;
+      float: right;  
       margin: 0.2rem;
-    }
-    li.active a {
-      color: orange;
-      background-color: orange;
-    }
-    li a:hover {
-      background-color: $background-color;
     }
   }
   @include media-query($on-laptop) {
