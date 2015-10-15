@@ -137,7 +137,7 @@ article {
   max-width: 600px;
   margin: 3rem auto;
   margin-top: 100vh;
-  padding-top: 50px;
+  padding-top: 0px;
   padding-left: 200px;
   line-height: 2;
   
@@ -156,13 +156,17 @@ article {
   
   p.sidenote {
     width: 150px;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: -180px;
     float: left;
     text-align: right;
     font-size: 0.85rem;
     line-height: 1.5;
     font-family: Arial, sans-serif;
+  }
+  
+  h1.title {
+    visibility: hidden;
   }
 }
 
