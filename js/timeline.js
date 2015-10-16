@@ -3,7 +3,6 @@ $(document).ready(function() {
       id: '#timeline',
       width: 180,
       height: $('article').height()*0.85,
-      dateFormat: "%Y/%m/%d %H:%M:%S",
       radius: 10
     };
   
@@ -40,7 +39,7 @@ $(document).ready(function() {
                       .data(data).enter()
                       .append('text')
                       .attr('class', 'date')
-                      .text( function(d) { return d.date; })
+                      .text( function(d) { return moment(d.date).format('MMMM DD, YYYY'); })
                       .attr("x", cfg.radius+15)
                       .attr("y", function(d, i) {
                         return (i+0.5) / data.length * cfg.height + 30;
