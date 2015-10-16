@@ -21,7 +21,7 @@
     {% for post in site.posts reversed %}
     {% if post.id != page.id %}
     <li class="{{ post.type }}">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         Chapter {{ post.chapter }}: {{ post.title }}
       </a>
     </li>  

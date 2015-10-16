@@ -177,9 +177,17 @@ article{
   padding-top: 0px;
   line-height: 2;
   
-  &#start { 
+  &.post { 
     margin-top: 100vh; 
     padding-left: 200px;
+  }
+  
+  &.page {
+    margin-top: 75px;
+    
+    h1 {
+      text-align: center;
+    }
   }
   
   figure {

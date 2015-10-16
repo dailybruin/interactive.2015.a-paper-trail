@@ -4,6 +4,7 @@ permalink: /about/
 title: "About the project"
 ---
 
+# About the project
 
 Every year, the Bridget O’Brien Scholarship Foundation gives a group of Daily Bruin staffers the opportunity to go on a fully-funded reporting trip to produce a package for the student newspaper.
 

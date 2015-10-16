@@ -2,7 +2,7 @@
 title: Higher Education
 email: your-email@domain.com
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-baseurl: "/bob-2015-usa/" # the subpath of your site, e.g. /blog/
+baseurl: "/bob-2015-usa" # the subpath of your site, e.g. /blog/
 url: "http://daily-bruin.github.io/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
