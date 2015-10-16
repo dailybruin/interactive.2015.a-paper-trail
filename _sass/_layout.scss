@@ -10,6 +10,10 @@ header {
   &.column { background: transparentize($brand-color, 0.05); }
   &.main { background: transparentize($brand-off-color, 0.05); }
   
+  a:hover {
+      border-bottom: $background-color 0.2rem solid;
+  }
+  
   nav.posts {
     text-align: center;
     ul { list-style-type: none; }
@@ -113,7 +117,10 @@ nav.anchorific {
   &.column li a, &.main li.active a { 
     color: $brand-off-color; 
     background-color: $brand-off-color; 
-    &:hover { background-color: $background-color; }
+    &:hover { 
+      background-color: $background-color;
+      border-bottom: lighten($brand-off-color, 10%) 0.35rem solid;
+     }
   }
   
   
