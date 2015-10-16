@@ -16,6 +16,7 @@
 <nav class="posts {{ page.type }}" id="drop">
   <ul>
     <hr/>
+    <li><a href="/">{{ site.title }}</a></li>
     {% for post in site.posts reversed %}
     {% if post.id != page.id %}
     <li class="{{ post.type }}">
