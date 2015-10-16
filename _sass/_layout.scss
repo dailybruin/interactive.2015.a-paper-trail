@@ -223,6 +223,30 @@ article{
   h1.title {
     visibility: hidden;
   }
+  
+  blockquote {
+    float: left;
+    max-width: 600px;
+    margin: 2rem 4rem;
+    margin-left: -200px;
+    color: $grey-color-dark;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    font-style: italic;
+    
+    span.quoteby {
+      display: block;
+      font-size: 1.2rem;
+      text-align: right;
+      color: $grey-color;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+  }
 }
 
 div.landing-photo {

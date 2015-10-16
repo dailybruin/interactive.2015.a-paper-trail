@@ -19,6 +19,7 @@
             {% for byline in page.bylines %}
                 <p class="byline">{{ byline }}</p>
             {% endfor %}
+            <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
             <a class="down" href="#start"><i class="fa fa-angle-down"></i></a>
         </div>
     </section>
