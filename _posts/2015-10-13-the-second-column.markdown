@@ -5,7 +5,7 @@ date:   2015-10-13 18:37:08
 chapter: 2
 type: column
 featured-image: http://placekitten.com/1600/1000
-permalink: /chapter1/the-second-column/
+permalink: /chapter2/the-second-column/
 bylines: ["Column by Ryan Nelson","Photos by Angie Wang"]
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."
 

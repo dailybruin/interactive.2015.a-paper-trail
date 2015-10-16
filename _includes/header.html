@@ -17,7 +17,7 @@
 <nav class="posts {{ page.type }}" id="drop">
   <ul id="post-menu">
     <hr/>
-    <li><a href="/">{{ site.title }}</a></li>
+    <li><a href="{{ site.baseurl }}/">{{ site.title }}</a></li>
     {% for post in site.posts reversed %}
     {% if post.id != page.id %}
     <li class="{{ post.type }}">
