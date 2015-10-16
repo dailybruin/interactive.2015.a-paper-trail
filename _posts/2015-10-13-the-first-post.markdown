@@ -110,7 +110,7 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 <figure class="sidebar">
   <img src="http://placekitten.com/900/500" />
   <figcaption>
-    <h1>Sidebar one</h1>
+    <h1>Sidebar two</h1>
     This is a sidebar story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Click to read more.
   </figcaption>
 </figure>

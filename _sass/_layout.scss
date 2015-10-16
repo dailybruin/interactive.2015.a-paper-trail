@@ -204,11 +204,7 @@ div#timeline {
     
     tspan {
       transition: all 1s;
-      opacity: 0.1;
-      visibility: visible;
-    }
-    tspan:first-child {
-      opacity: 1;
+      opacity: 0.2;
       visibility: visible;
     }
     &.show tspan { 
