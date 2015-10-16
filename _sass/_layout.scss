@@ -184,8 +184,9 @@ div#timeline {
     fill: $background-color;
     stroke-width: 2;
     stroke: #777;
-    &:hover {
-      stroke-width: 3;
+    transition: 1s all;
+    &.hover {
+      stroke-width: 5;
       cursor: pointer;
     }
   }

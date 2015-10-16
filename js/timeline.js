@@ -24,17 +24,16 @@ $(document).ready(function() {
     var circles = svg.selectAll('circle')
                       .data(data).enter()
                       .append('circle')
+                      .attr('class', function(d,i) {
+                        return 'circle i' + i;
+                      })
                       .attr("r", cfg.radius)
                       .attr("cx", cfg.radius+5)
                       .attr("cy", function(d, i) {
                         return (i+0.5) / data.length * cfg.height ;
                       })
-                      .on("mouseover", function() {
-                        d3.select(this).attr("class", "hover");
-                      })
-                      .on("mouseout", function() {
-                        d3.select(this).attr("class", "circle");
-                      })
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout)
                       .on("click", click); 
 
     var dates = svg.selectAll('.date')
@@ -46,6 +45,8 @@ $(document).ready(function() {
                       .attr("y", function(d, i) {
                         return (i+0.5) / data.length * cfg.height + 30;
                       })
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout)
                       .on("click", click);     
                                       
     var titles = svg.selectAll('.title')
@@ -57,6 +58,8 @@ $(document).ready(function() {
                           .attr("y", function(d, i) {
                             return (i+0.5) / data.length * cfg.height + 50;
                           })
+                          .on("mouseover", mouseover)
+                          .on("mouseout", mouseout)
                           .on("click", click);
                           
     var descriptions = svg.selectAll('.description')
@@ -72,9 +75,21 @@ $(document).ready(function() {
                           })
                           .attr("dy", 0)
                           .call(wrap, 160)
+                          .on("mouseover", mouseover)
+                          .on("mouseout", mouseout)
                           .on("click", click);
     
   });
+  
+  var mouseout = function(d,i) {
+    var thisCircle = d3.selectAll('.circle.i'+i);
+    thisCircle.classed("hover", false);
+  }
+  
+  var mouseover = function(d,i) {
+    var thisCircle = d3.selectAll('.circle.i'+i);
+    thisCircle.classed("hover", true);
+  }
   
   var click = function(d,i) { 
     var thisCircle = d3.selectAll('.description.i'+i);
