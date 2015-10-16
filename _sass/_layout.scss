@@ -145,7 +145,7 @@ nav.anchorific {
     background-color: $brand-color; 
     &:hover { 
       background-color: $background-color; 
-      border-bottom: lighten($brand-color, 10%) thin solid;
+      border-bottom: lighten($brand-color, 10%) 3px solid;
     }
   }
   &.column li a, &.main li.active a { 
@@ -153,13 +153,14 @@ nav.anchorific {
     background-color: $brand-off-color; 
     &:hover { 
       background-color: $background-color;
-      border-bottom: lighten($brand-off-color, 10%) thin solid;
+      border-bottom: lighten($brand-off-color, 10%) 3px solid;
      }
   }
   
   ul { 
     list-style-type: none; 
     li a{
+      transition: 0.5s all ease;
       padding-left: 1rem;
       line-height: 1.2;
       font-size: 0.85rem;
@@ -184,7 +185,7 @@ div#timeline {
     fill: $background-color;
     stroke-width: 2;
     stroke: #777;
-    transition: 1s all;
+    transition: 0.5s all;
     &.hover {
       stroke-width: 5;
       cursor: pointer;
@@ -246,6 +247,31 @@ article{
     margin-left: -200px;
     max-width: 600px;
     display: inline-block;
+    
+    img {
+      max-height: 600px;
+    }
+    
+    &.sidebar {
+      float: right;
+      margin-left: 1rem;
+      max-width: 400px;
+      background-color: #EEE;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      
+      figcaption {
+        h1 { margin: 0; }
+        color: #222;
+        font-size: 0.85rem;
+      }
+      
+      &:hover {
+        margin-left: 0.5rem;
+        border-right: 0.5rem solid grey;
+      }
+    }
     
     &.right {
       margin-left: 1rem;
