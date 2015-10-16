@@ -1,11 +1,12 @@
 <header class="{{ page.type }}">
   <span class="db"><a href="http://dailybruin.com">DB</a></span>
-  {% if page.title %}
-  <p class="title"><a onclick="$('nav.posts').height($('nav.posts').height() == 0 ? $('nav.posts ul').height()+20 : 0);">
-    Chapter {{ page.chapter }}: {{ page.title }} <i class="fa fa-angle-down"></i>
-  </a></p>
-
-  {% endif %}
+  
+  <p class="title">
+    <a onclick="$('nav.posts').height($('nav.posts').height() == 0 ? $('nav.posts ul').height()+20 : 0);">
+    {% if page.chapter %}Chapter {{ page.chapter }}: {% endif %}{{ page.title }} <i class="fa fa-angle-down"></i>
+    </a>
+  </p>
+  
   <span class="share">
     <a href="http://www.facebook.com/sharer.php?u={{ site.url }}"><i class="fa fa-facebook"></i></a>
     <a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>
@@ -27,7 +28,7 @@
     {% endif %}  
     {% endfor %}  
     <hr/>
-    <li class="page"><a href="">About the project</a></li>
-    <li class="page"><a href="">Print version</a></li>
+    <li class="page"><a href="{{ "/about" | | prepend: site.baseurl }}">About the project</a></li>
+    <li class="page"><a href="{{ "/print" | | prepend: site.baseurl }}">Print version</a></li>
   </ul>
 </nav>
