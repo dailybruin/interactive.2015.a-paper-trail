@@ -2,7 +2,7 @@ $(document).ready(function() {
   var cfg = {
       id: '#timeline',
       width: 180,
-      height: $('article').height(),
+      height: $('article').height()*0.85,
       dateFormat: "%Y/%m/%d %H:%M:%S",
       radius: 10
     };
