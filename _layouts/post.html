@@ -10,8 +10,15 @@
     <nav class='anchorific {{ page.type }}'></nav>
     
     {% if page.timeline %}
-    <div id="timeline"></div>
+    <div id="timeline" data-stellar-ratio="0.8"></div>
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $('#timeline').height($('article').height()*2);
+    $.stellar({
+      horizontalScrolling: false,
+      hideDistantElements: false
+		});
+    </script>
     {% endif %}
     
     {% if page.featured-image %}

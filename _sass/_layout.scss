@@ -174,8 +174,10 @@ nav.anchorific {
 }
 
 div#timeline {
-  float: left;
-  margin: 10rem 2rem 2rem;
+  // float: left;
+  position: absolute;
+  top: 90vh;
+  margin: 2rem 2rem;
   font-size: 0.9rem;
 
   circle {
