@@ -1,22 +1,9 @@
 <header class="{{ page.type }}">
   <span class="db"><a href="http://dailybruin.com">DB</a></span>
   {% if page.title %}
-  <p class="title"><a onclick="$('#drop').toggle();">
+  <p class="title"><a onclick="$('nav.posts').height($('nav.posts').height() == 0 ? $('nav.posts ul').height()+20 : 0);">
     Chapter {{ page.chapter }}: {{ page.title }} <i class="fa fa-angle-down"></i>
   </a></p>
-  <nav class="posts" id="drop">
-    <ul>
-      {% for post in site.posts reversed %}
-      {% if post.id != page.id %}
-      <li class="{{ post.type }}">
-        <a href="{{ post.url }}">
-          Chapter {{ post.chapter }}: {{ post.title }}
-        </a>
-      </li>  
-      {% endif %}  
-      {% endfor %}  
-    </ul>
-  </nav>
 
   {% endif %}
   <span class="share">
@@ -25,3 +12,21 @@
     <a href="http://www.reddit.com/submit?url={{ site.url }}"><i class="fa fa-reddit"></i></a>
   </span>
 </header>
+
+<nav class="posts {{ page.type }}" id="drop">
+  <ul>
+    <hr/>
+    {% for post in site.posts reversed %}
+    {% if post.id != page.id %}
+    <li class="{{ post.type }}">
+      <a href="{{ post.url }}">
+        Chapter {{ post.chapter }}: {{ post.title }}
+      </a>
+    </li>  
+    {% endif %}  
+    {% endfor %}  
+    <hr/>
+    <li class="page"><a href="">About the project</a></li>
+    <li class="page"><a href="">Print version</a></li>
+  </ul>
+</nav>
