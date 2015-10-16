@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "The first column"
-date:   2015-10-13 18:35:08
-chapter: 1
-type: column
-featured-image: http://placekitten.com/1600/1000
-permalink: /chapter1/the-first-column/
-bylines: ["Column by Ryan Nelson","Photos by Angie Wang"]
+title:  "The second post"
+date:   2015-10-13 18:36:08
+chapter: 2
+type: main
+featured-image: http://placekitten.com/1800/1000
+permalink: /chapter1/the-second-post/
+bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."
 
 ---
@@ -47,6 +47,25 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 # the middle middle
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+<figure>
+  <img src="http://placekitten.com/800/500" />
+  <figcaption>This kitten travelled across the world to see you. He has saved many lives. (Photo by Kitten Photographer)</figcaption>
+</figure>
 
 # the end
 

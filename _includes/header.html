@@ -1,20 +1,24 @@
 <header class="{{ page.type }}">
   <span class="db"><a href="http://dailybruin.com">DB</a></span>
   {% if page.title %}
-  <nav class="posts">
+  <p class="title"><a onclick="$('#drop').toggle();">
+    Chapter {{ page.chapter }}: {{ page.title }} <i class="fa fa-angle-down"></i>
+  </a></p>
+  <nav class="posts" id="drop">
     <ul>
-      {% for post in site.posts %}
+      {% for post in site.posts reversed %}
+      {% if post.id != page.id %}
       <li class="{{ post.type }}">
         <a href="{{ post.url }}">
-          Chapter {{ post.chapter }}: {{ post.title }} <i class="fa fa-angle-down"></i>
+          Chapter {{ post.chapter }}: {{ post.title }}
         </a>
-      </li>    
+      </li>  
+      {% endif %}  
       {% endfor %}  
     </ul>
   </nav>
 
   {% endif %}
-  <span class="title"></span>
   <span class="share">
     <a href="http://www.facebook.com/sharer.php?u={{ site.url }}"><i class="fa fa-facebook"></i></a>
     <a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>

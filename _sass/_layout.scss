@@ -4,28 +4,37 @@ header {
   height: 45px;
   width: 100%;
   color: #fdfdfd;
-  font-size: 1.3rem;
-  line-height: 2;
+  font-size: 1.1rem;
+  line-height: 2.4;
   padding: 0.2rem;
-  &.column { background: transparentize($brand-color, 0.05); }
-  &.main { background: transparentize($brand-off-color, 0.05); }
+  &.column, &.column nav ul { background: transparentize($brand-color, 0.05); }
+  &.main, &.main nav ul { background: transparentize($brand-off-color, 0.05); }
   
   a:hover {
       border-bottom: $background-color 0.2rem solid;
+      cursor: pointer;
+  }
+  
+  p.title {
+    text-align: center;
+    margin: 0;
+    a { color: #fdfdfd; }
   }
   
   nav.posts {
     text-align: center;
-    ul { list-style-type: none; }
+    transition: all 1s; 
+    display: none; 
+    ul { 
+      display: inline-block;
+      border-radius: 2px;
+      margin: 5.2px 0;
+      padding: 0rem 1.5rem;
+      list-style-type: none; 
+      width: auto;
+      line-height: 2;
+    }
     a { color: #fdfdfd; }
-  }
-  
-  p.title {
-      text-align: center;
-      a { 
-        margin-right:1rem;
-        color: #fdfdfd; 
-      }
   }
   
   span.db {
@@ -87,10 +96,13 @@ section.featured-image {
       font-size: 2rem;
     }
     
+    a:hover { color: lightgrey; border: none; }
+    
     i {
       font-size: 5rem;
       margin-top: 3rem;
       color: #fdfdfd;
+      
     }
     
     p.byline {
