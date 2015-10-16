@@ -8,6 +8,7 @@ featured-image: http://placekitten.com/1800/1000
 permalink: /chapter1/the-first-post/
 bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."
+timeline: /data/timeline.json 
 
 ---
 

@@ -9,6 +9,11 @@
     
     <nav class='anchorific {{ page.type }}'></nav>
     
+    {% if page.timeline %}
+    <div id="timeline"></div>
+    <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
+    {% endif %}
+    
     {% if page.featured-image %}
     <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">
         <div class="featured-text {{ page.type }}">

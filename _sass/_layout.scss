@@ -143,17 +143,19 @@ nav.anchorific {
   &.column li.active a { 
     color: $brand-color; 
     background-color: $brand-color; 
-    &:hover { background-color: $background-color; }
+    &:hover { 
+      background-color: $background-color; 
+      border-bottom: lighten($brand-color, 10%) thin solid;
+    }
   }
   &.column li a, &.main li.active a { 
     color: $brand-off-color; 
     background-color: $brand-off-color; 
     &:hover { 
       background-color: $background-color;
-      border-bottom: lighten($brand-off-color, 10%) 0.35rem solid;
+      border-bottom: lighten($brand-off-color, 10%) thin solid;
      }
   }
-  
   
   ul { 
     list-style-type: none; 
@@ -166,6 +168,51 @@ nav.anchorific {
       margin: 0.2rem;
     }
   }
+  @include media-query($on-laptop) {
+      display: none;
+  }
+}
+
+div#timeline {
+  float: left;
+  margin: 10rem 2rem 2rem;
+  font-size: 0.9rem;
+
+  circle {
+    fill: $background-color;
+    stroke-width: 2;
+    stroke: #777;
+    &:hover {
+      stroke-width: 3;
+      cursor: pointer;
+    }
+  }
+  text:hover { cursor: pointer }
+  text.date {
+    font-family: $base-sans-font-family;
+    font-size: 0.75rem;
+  }
+  text.title {
+  }
+  text.description {
+    font-size: 0.75rem;
+    font-family: $base-sans-font-family;
+    
+    tspan {
+      transition: all 1s;
+      opacity: 0.1;
+      visibility: visible;
+    }
+    tspan:first-child {
+      opacity: 1;
+      visibility: visible;
+    }
+    &.show tspan { 
+      opacity: 1; 
+      visibility: visible;
+    }
+  }
+  
   @include media-query($on-laptop) {
       display: none;
   }
