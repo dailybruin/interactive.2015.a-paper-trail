@@ -62,7 +62,14 @@
     </script>
     
     <script>
-      // $(document).click(function() { $("#drop").hide(); });
+      $(document).click(function(e) { 
+        if ( e.target.id == 'post-menu' || $('#post-menu').has(e.target).length > 0
+              || $('#drop').height() == 0) {
+          return true;
+        } else {
+          $('#drop').height(0);
+        }
+      });
     </script>
     
   </body>

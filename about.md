@@ -11,7 +11,7 @@ Every year, the Bridget O’Brien Scholarship Foundation gives a group of Daily 
 The scholarship issued its first award in 2008, the year after Bridget O’Brien passed away in a car accident.
 
 <figure class="right">
-  <img src="/img/bridget-obrien.jpg"/>
+  <img src="{{ "/img/bridget-obrien.jpg" | prepend: site.baseurl }}"/>
   <figcaption>Photo courtesy of Kristy Milliken.</figcaption>
 </figure>
 
