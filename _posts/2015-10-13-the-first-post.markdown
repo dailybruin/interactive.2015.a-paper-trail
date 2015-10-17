@@ -44,7 +44,7 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
     <p> {{ post.description }} <a>Click to toggle.</a></p>
   </figcaption>
   <figcaption class="more">
-    {{ post.content }}
+    {{ post.content | markdownify }}
   </figcaption>
 </figure>
 {% endif %}
