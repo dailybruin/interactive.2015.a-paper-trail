@@ -139,6 +139,14 @@ nav.anchorific {
   text-align: right;
   font-family: $base-sans-font-family;
   
+  li > ul {
+    display: none;
+  }
+  
+  li.active > ul {
+    display: block;
+  }
+  
   &.main li a, 
   &.column li.active a { 
     color: $brand-color; 
