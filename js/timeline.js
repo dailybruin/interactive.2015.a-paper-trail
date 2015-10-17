@@ -1,10 +1,13 @@
 $(document).ready(function() {
+  
   var cfg = {
       id: '#timeline',
       width: 180,
-      height: $('article').height()*0.85,
+      height: $('article.post').innerHeight()*0.75,
       radius: 10
     };
+  
+  console.log(cfg.height);
   
   var svg = d3.select(cfg.id).append('svg')
                 .attr("width", cfg.width)
