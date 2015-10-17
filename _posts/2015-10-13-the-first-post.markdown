@@ -35,13 +35,20 @@ Jekyll also offers powerful support for code snippets:
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
+{% for post in site.posts %}
+{% if post.title == 'The first sidebar' %}
 <figure class="sidebar">
-  <img src="http://placekitten.com/900/500" />
-  <figcaption>
-    <h1>Sidebar one</h1>
-    This is a sidebar story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Click to read more.
+  <img src="{{ post.featured-image }}" />
+  <h2>{{ post.title }}</h2>
+  <figcaption class="less">
+    <p> {{ post.description }} <a>Click to toggle.</a></p>
+  </figcaption>
+  <figcaption class="more">
+    {{ post.content }}
   </figcaption>
 </figure>
+{% endif %}
+{% endfor %}
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -107,13 +114,20 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
+{% for post in site.posts %}
+{% if post.title == 'The second sidebar' %}
 <figure class="sidebar">
-  <img src="http://placekitten.com/900/500" />
-  <figcaption>
-    <h1>Sidebar two</h1>
-    This is a sidebar story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Click to read more.
+  <img src="{{ post.featured-image }}" />
+  <h2>{{ post.title }}</h2>
+  <figcaption class="less">
+    <p> {{ post.description }} <a>Click to toggle.</a></p>
+  </figcaption>
+  <figcaption class="more">
+    {{ post.content }}
   </figcaption>
 </figure>
+{% endif %}
+{% endfor %}
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

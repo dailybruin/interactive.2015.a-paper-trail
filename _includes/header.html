@@ -19,7 +19,7 @@
     <hr/>
     <li><a href="{{ site.baseurl }}/">{{ site.title }}</a></li>
     {% for post in site.posts reversed %}
-    {% if post.id != page.id %}
+    {% if post.id != page.id and (post.type == 'main' or post.type == 'column') %}
     <li class="{{ post.type }}">
       <a href="{{ post.url | prepend: site.baseurl }}">
         Chapter {{ post.chapter }}: {{ post.title }}

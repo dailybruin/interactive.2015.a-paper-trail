@@ -82,6 +82,11 @@
           $('#drop').height(0);
         }
       });
+      
+      $('figure.sidebar').click(function() {
+        var t = $(this);
+        $('figcaption.more', t).slideToggle();
+      });
     </script>
     
   </body>

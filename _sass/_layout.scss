@@ -256,11 +256,25 @@ article{
       padding: 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
+      max-height: 500px;
+      overflow-y: auto;
+      
+      img {
+        max-height: 240px;
+      }
+      h2 { margin: 0; }
       
       figcaption {
-        h1 { margin: 0; }
         color: #222;
         font-size: 0.85rem;
+        &.more { display: none; }
+        &.less { 
+          font-size: 0.8rem; 
+          color: grey; 
+          line-height: 1.5;
+          font-style: italic;
+          font-family: $base-sans-font-family;
+        }
       }
       
       &:hover {
