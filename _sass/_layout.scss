@@ -222,7 +222,7 @@ div#timeline {
   }
   
   @include media-query($on-laptop) {
-      display: none;
+      visibility: hidden !important;
   }
 }
 
@@ -289,6 +289,7 @@ article{
         margin-left: 0.5rem;
         border-right: 0.5rem solid grey;
       }
+      
     }
     
     &.right {
@@ -339,6 +340,21 @@ article{
 
     > :last-child {
         margin-bottom: 0;
+    }
+  }
+  
+  @include media-query($on-palm) {
+    &, &.post {
+      padding: 0px 50px;
+    }
+    figure,
+    blockquote,
+    p.sidenote,
+    figure.sidebar {
+      clear: both;
+      display: block;
+      width: 100%;
+      margin: 1rem auto;
     }
   }
 }
