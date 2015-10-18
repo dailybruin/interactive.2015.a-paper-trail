@@ -42,7 +42,7 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   <img src="{{ post.featured-image }}" />
   <h2>{{ post.title }}</h2>
   <figcaption class="less">
-    <p> {{ post.description }} <a>Click to toggle.</a></p>
+    <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>
   <figcaption class="more">
     {{ post.content | markdownify }}
@@ -121,7 +121,7 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   <img src="{{ post.featured-image }}" />
   <h2>{{ post.title }}</h2>
   <figcaption class="less">
-    <p> {{ post.description }} <a>Click to toggle.</a></p>
+    <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>
   <figcaption class="more">
     {{ post.content | markdownify }}
