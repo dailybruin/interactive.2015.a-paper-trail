@@ -7,8 +7,6 @@ $(document).ready(function() {
       radius: 10
     };
   
-  console.log(cfg.height);
-  
   var svg = d3.select(cfg.id).append('svg')
                 .attr("width", cfg.width)
                 .attr("height", cfg.height);
@@ -42,7 +40,7 @@ $(document).ready(function() {
                       .data(data).enter()
                       .append('text')
                       .attr('class', 'date')
-                      .text( function(d) { return moment(d.date).format('MMMM DD, YYYY'); })
+                      .text( function(d) { return moment(d.date, "YYYY MM DD").format('MMMM DD, YYYY'); })
                       .attr("x", cfg.radius+15)
                       .attr("y", function(d, i) {
                         return (i+0.4) / data.length * cfg.height + 30;
