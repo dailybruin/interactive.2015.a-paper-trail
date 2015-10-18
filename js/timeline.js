@@ -32,7 +32,7 @@ $(document).ready(function() {
                       .attr("r", cfg.radius)
                       .attr("cx", cfg.radius+5)
                       .attr("cy", function(d, i) {
-                        return (i+0.5) / data.length * cfg.height ;
+                        return (i+0.4) / data.length * cfg.height;
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -45,7 +45,7 @@ $(document).ready(function() {
                       .text( function(d) { return moment(d.date).format('MMMM DD, YYYY'); })
                       .attr("x", cfg.radius+15)
                       .attr("y", function(d, i) {
-                        return (i+0.5) / data.length * cfg.height + 30;
+                        return (i+0.4) / data.length * cfg.height + 30;
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -58,7 +58,7 @@ $(document).ready(function() {
                           .text( function(d) { return d.title; })
                           .attr("x", cfg.radius+15)
                           .attr("y", function(d, i) {
-                            return (i+0.5) / data.length * cfg.height + 50;
+                            return (i+0.4) / data.length * cfg.height + 50;
                           })
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
@@ -73,7 +73,7 @@ $(document).ready(function() {
                           .text( function(d) { return d.description; })
                           .attr("x", cfg.radius+15)
                           .attr("y", function(d, i) {
-                            return (i+0.5) / data.length * cfg.height + 70;
+                            return (i+0.4) / data.length * cfg.height + 70;
                           })
                           .attr("dy", 0)
                           .call(wrap, 160)
@@ -81,6 +81,13 @@ $(document).ready(function() {
                           .on("mouseout", mouseout)
                           .on("click", click);
     
+    var attribution = svg.append('text')
+                          .attr('class', 'attr')
+                          .text("Compiled with information from Hiroshi Motomura’s Immigration Outside the Law, the National Immigration Law Center, and the Cornell Legal Information Institute")
+                          .attr("x", cfg.radius+15)
+                          .attr("y", cfg.height-80)
+                          .attr("dy", 0)
+                          .call(wrap, 160);
   });
   
   var mouseout = function(d,i) {

@@ -202,7 +202,10 @@ div#timeline {
       cursor: pointer;
     }
   }
-  text:hover { cursor: pointer }
+  text:hover { 
+    cursor: pointer; 
+    &.attr { cursor: default; }
+   }
   text.date {
     font-family: $base-sans-font-family;
     font-size: 0.75rem;
@@ -216,12 +219,17 @@ div#timeline {
     tspan {
       transition: all 1s;
       opacity: 0.2;
-      visibility: visible;
     }
     &.show tspan { 
       opacity: 1; 
-      visibility: visible;
     }
+    &:hover tspan{
+      opacity: 1; 
+    }
+  }
+  text.attr {
+    font-size: 0.75rem;
+    font-family: $base-sans-font-family;
   }
   
   @include media-query($on-laptop) {
