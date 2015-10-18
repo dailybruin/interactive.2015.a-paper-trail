@@ -46,6 +46,37 @@
         {{ content }}
     
     </article>
+    
+    <nav class="next-prev">
+      {% for post in site.posts reversed %}
+          {% if post.url == page.url %}
+              {% assign post_index = forloop.index %}
+          {% endif %}
+      {% endfor %}
+      {% for post in site.posts reversed %}
+          {% if forloop.index < post_index and post.type != 'sidebar' %}
+              {% assign prev_post = post %}
+          {% endif %}
+          {% if forloop.index > post_index and post.type != 'sidebar' %}
+              {% assign next_post = post %}
+              {% break %}
+          {% endif %}
+      {% endfor %}
+      {% if prev_post %}
+      <a class="prev" href="{{ prev_post.url }}">
+        <p class="arrow">← previous</p>
+        <h2 class="{{ prev_post.type }}"> {{ prev_post.title }}</h2>
+        <p>{{ prev_post.description }}</p>
+      </a>
+      {% endif %}
+      {% if next_post %}
+      <a class="next" href="{{ next_post.url }}">
+        <p class="arrow">next →</p>
+        <h2 class="{{ next_post.type }}">{{ next_post.title }} </h2>
+        <p>{{ next_post.description }}</p>
+      </a>
+      {% endif %}
+    </nav>
       
     {% include footer.html %}
     

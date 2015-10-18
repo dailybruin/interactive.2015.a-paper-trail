@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The second sidebar"
-date:   2015-10-13 18:40:08
+date:   2015-10-13 18:37:09
 chapter: 1
 type: sidebar
 featured-image: http://placekitten.com/900/500

@@ -32,9 +32,12 @@ header {
     padding: 0 0.6rem;
   }
   
-  span.db a,
-  span.share a { 
-    color: #fdfdfd; 
+  span.db,
+  span.share {
+    a { color: #fdfdfd; }
+    @include media-query($on-mobile) {
+        display: none;
+    }
   }
   
   span.share {
@@ -422,6 +425,47 @@ div.landing {
     }
 }
 
+nav.next-prev {
+  display: block;
+  margin: 2rem;
+  overflow: auto;
+  
+  a { 
+    color: #666; 
+    width: 30%;
+    transition: 0.2s all;
+    &:hover {
+      border: none;
+      color: #333;
+      &.next { border-right: solid 5px $brand-color; }
+      &.prev { border-left: solid 5px $brand-color; }
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-family: $base-serif-font-family;
+    margin: 0.75rem 0;
+    &.column { font-style: italic; }
+  }
+  a.next {
+    float: right;
+    text-align: left;
+  }
+  a.prev {
+    float: left;
+    text-align: right;
+  }
+  p {
+    font-size: 0.8rem;
+    &.arrow {
+      text-transform: uppercase;
+      font-family: $base-sans-font-family;
+      margin: 0;
+    }
+  }
+}
+
 iframe.box-embed {
   width: 90%;
   min-height: 1000px;
@@ -433,6 +477,9 @@ iframe.box-embed {
 footer {
   max-width: 650px;
   margin: auto;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  border-top: thin solid lightgrey;
   font-size: 0.75rem;
   text-align: center;
 }
