@@ -7,6 +7,8 @@
     
     {% include header.html %}
     
+    <div id="overlay"></div>
+    
     <nav class='anchorific {{ page.type }}'></nav>
     
     {% if page.timeline %}
@@ -115,8 +117,12 @@
       });
       
       $('figure.sidebar').click(function() {
-        var t = $(this);
-        $('figcaption.more', t).slideToggle();
+        $(this).children('section.sidebar').toggleClass('show');
+        $('#overlay').toggleClass('show');
+      });
+      $('#overlay').click(function() {
+        $('section.sidebar').removeClass('show');
+        $('#overlay').removeClass('show');
       });
     </script>
     

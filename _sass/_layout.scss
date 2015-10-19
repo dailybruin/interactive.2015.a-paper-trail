@@ -48,6 +48,22 @@ header {
   }
 }
 
+div#overlay {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  transition: 1s all;
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+}
+
 nav.posts {
   position: fixed;
   width: 100%;
@@ -256,6 +272,7 @@ article{
     }
   }
   
+  
   figure {
     float: left;
     margin: 1rem;
@@ -271,7 +288,9 @@ article{
       float: right;
       margin-left: 1rem;
       max-width: 400px;
-      background-color: #EEE;
+      // background-color: #EEE;
+      border-top: medium lightgrey solid;
+      border-bottom: medium lightgrey solid;
       padding: 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -286,9 +305,9 @@ article{
       figcaption {
         color: #222;
         font-size: 0.85rem;
-        &.more { display: none; }
+        a { font-weight: bold; }
         &.less { 
-          font-size: 0.8rem; 
+          font-size: 0.9rem; 
           color: grey; 
           line-height: 1.5;
           font-style: italic;
@@ -296,9 +315,64 @@ article{
         }
       }
       
+      section.sidebar {
+        position: fixed;
+        top: 50px;
+        right: -750px;
+        max-width: 650px;
+        padding: 20px 50px;
+        padding-bottom: 1000px;
+        transition: 1s all ease;
+        overflow: auto;
+        height: 95vh;
+        background: $brand-color;
+        color: $background-color;
+        
+        img.featured-image { 
+          width: 100%; 
+          text-align: center; 
+          max-height: 400px;
+        }
+        
+        p.title { 
+          font-family: $base-sans-font-family;
+          font-weight: bold;
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem; 
+        }
+        p.byline {
+          font-size: 0.9rem;
+          line-height: 1;
+          text-align: right;
+        }
+        
+        p:last-child {
+          padding-bottom: 50px;
+        }
+        
+        &.show { 
+          right: 0px;
+        }
+        
+        figure {
+          float: left;
+          margin: 1rem;
+          margin-left: 0;
+          max-width: 300px;
+          display: inline-block;
+          img {
+            max-height: 600px;
+          }
+          figcaption {
+            color: $background-color;
+            font-size: 0.85rem;
+          }
+        }
+      }
+      
       &:hover {
         margin-left: 0.5rem;
-        border-right: 0.5rem solid grey;
+        border-top: 0.5rem solid grey;
       }
       
     }

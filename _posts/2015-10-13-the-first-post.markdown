@@ -44,10 +44,17 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   <figcaption class="less">
     <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>
-  <figcaption class="more">
+  
+  <section class="sidebar">
+    <img class="featured-image" src="{{ post.featured-image }}" />
+    <p class="title">{{ post.title }}</p>
     {{ post.content | markdownify }}
-  </figcaption>
+    {% for byline in page.bylines %}
+        <p class="byline">{{ byline }}</p>
+    {% endfor %}
+  </section>
 </figure>
+
 {% endif %}
 {% endfor %}
 
@@ -123,10 +130,17 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   <figcaption class="less">
     <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>
-  <figcaption class="more">
+  
+  <section class="sidebar">
+    <img class="featured-image" src="{{ post.featured-image }}" />
+    <p class="title">{{ post.title }}</p>
     {{ post.content | markdownify }}
-  </figcaption>
+    {% for byline in page.bylines %}
+        <p class="byline">{{ byline }}</p>
+    {% endfor %}
+  </section>
 </figure>
+
 {% endif %}
 {% endfor %}
 
