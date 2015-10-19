@@ -207,7 +207,7 @@ div#timeline {
   top: 100vh;
   margin: 2rem 2rem;
   font-size: 0.9rem;
-  z-index: -1;
+  &.hide { z-index: -1; }
 
   circle {
     fill: $background-color;
@@ -321,13 +321,18 @@ article{
         top: 50px;
         right: -750px;
         max-width: 650px;
-        padding: 20px 50px;
-        padding-bottom: 1000px;
+        padding: 10px 50px;
         transition: 1s all ease;
-        overflow: auto;
-        height: 95vh;
         background: $brand-color;
         color: $background-color;
+        
+        div.sidebar-content {
+          position: relative;
+          height: 95vh;
+          padding-bottom: 50px;
+          padding-right: 20px;
+          overflow: auto;
+        }
         
         img.featured-image { 
           width: 100%; 
@@ -345,10 +350,6 @@ article{
           font-size: 0.9rem;
           line-height: 1;
           text-align: right;
-        }
-        
-        p:last-child {
-          padding-bottom: 50px;
         }
         
         &.show { 

@@ -119,10 +119,12 @@
       $('figure.sidebar').click(function() {
         $(this).children('section.sidebar').toggleClass('show');
         $('#overlay').toggleClass('show');
+        $('#timeline').toggleClass('hide');
       });
       $('#overlay').click(function() {
         $('section.sidebar').removeClass('show');
         $('#overlay').removeClass('show');
+        $('#timeline').removeClass('hide');
       });
     </script>
     

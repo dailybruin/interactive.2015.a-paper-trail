@@ -46,12 +46,14 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   </figcaption>
   
   <section class="sidebar">
-    <img class="featured-image" src="{{ post.featured-image }}" />
-    <p class="title">{{ post.title }}</p>
-    {{ post.content | markdownify }}
-    {% for byline in page.bylines %}
-        <p class="byline">{{ byline }}</p>
-    {% endfor %}
+    <div class="sidebar-content">
+      <img class="featured-image" src="{{ post.featured-image }}" />
+      <p class="title">{{ post.title }}</p>
+      {{ post.content | markdownify }}
+      {% for byline in page.bylines %}
+          <p class="byline">{{ byline }}</p>
+      {% endfor %}
+    </div>
   </section>
 </figure>
 
@@ -132,12 +134,14 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
   </figcaption>
   
   <section class="sidebar">
-    <img class="featured-image" src="{{ post.featured-image }}" />
-    <p class="title">{{ post.title }}</p>
-    {{ post.content | markdownify }}
-    {% for byline in page.bylines %}
-        <p class="byline">{{ byline }}</p>
-    {% endfor %}
+    <div class="sidebar-content">
+      <img class="featured-image" src="{{ post.featured-image }}" />
+      <p class="title">{{ post.title }}</p>
+      {{ post.content | markdownify }}
+      {% for byline in page.bylines %}
+          <p class="byline">{{ byline }}</p>
+      {% endfor %}
+    </div>
   </section>
 </figure>
 
