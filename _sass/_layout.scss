@@ -329,8 +329,8 @@ article{
         div.sidebar-content {
           position: relative;
           height: 95vh;
-          padding-bottom: 50px;
-          padding-right: 20px;
+          padding: 50px 20px;
+          padding-left: 0px;
           overflow: auto;
         }
         
@@ -350,6 +350,10 @@ article{
           font-size: 0.9rem;
           line-height: 1;
           text-align: right;
+        }
+        
+        p:last-child {
+          padding-bottom: 50px;
         }
         
         &.show { 
@@ -412,17 +416,28 @@ article{
     margin: 2rem 4rem;
     margin-left: -200px;
     color: $grey-color-dark;
-    border-left: 4px solid $grey-color-light;
+    font-family: $base-serif-font-family;
+    font-weight: 700;
+    border: none;
     padding-left: $spacing-unit / 2;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-    font-style: italic;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    border-left: 4px solid $brand-color;
+    
+    p {
+      display: block;
+    }
     
     span.quoteby {
       display: block;
+      width: auto;
+      margin-top: 0.5rem;
       font-size: 1.2rem;
       text-align: right;
       color: $grey-color;
+      font-style: italic;
+      font-family: $base-sans-font-family;
     }
 
     > :last-child {
