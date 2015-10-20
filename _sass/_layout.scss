@@ -74,6 +74,16 @@ nav.posts {
   overflow: hidden;
   z-index: 1;
   
+  label {
+    color: $background-color;
+    font-family: $base-sans-font-family;
+    font-size: 0.85rem;
+    line-height: 1;
+    border-bottom: thin lightgrey solid;
+    padding-bottom: 0.3rem;
+    // text-transform: uppercase;
+  }
+  
   &.column ul { background: transparentize($brand-color, 0.05); }
   ul { background: transparentize($brand-off-color, 0.05); }
   
@@ -83,14 +93,18 @@ nav.posts {
     display: inline-block;
     border-radius: 0 0 2px 2px;
     margin: 5.2px 0;
-    padding: 0rem 5rem 0.5rem;
+    padding: 0rem 6rem 0.5rem;
     list-style-type: none; 
     width: auto;
-    line-height: 2;
+    line-height: 1.5;
+    font-size: 1rem;
     
-    li.page {
-      line-height: 1.8;
-      a { font-size: 0.95rem;  }
+    li {
+      margin: 0.5rem;
+      letter-spacing: 0.5px;
+      &.page {
+        font-size: 0.85rem; line-height: 1.2;
+      }
     }
   }
   a { color: #fdfdfd; &:hover { border-bottom: $background-color 0.2rem solid; } }
@@ -272,7 +286,6 @@ article{
       text-align: center;
     }
   }
-  
   
   figure {
     float: left;
