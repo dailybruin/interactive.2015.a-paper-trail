@@ -125,18 +125,26 @@ section.featured-image {
   background-size: cover;
   background-position: top center;
   z-index: 3;
+  overflow: hidden;
+  font-family: $base-sans-font-family;
   
   div.featured-text {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0; 
-    padding-top: 20vh;
     text-align: center;
+    font-weight: bold;
     
     &.column { background: transparentize($brand-color, 0.55); }
     &.main { background: transparentize($brand-off-color, 0.55); }
     
     h1 {
-      font-size: 7rem;
+      position: absolute;
+      top: 23vh;
+      line-height: 1.2;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      font-size: 8rem;
       font-weight: 900;
       text-transform: uppercase;
       font-family: Arial, sans-serif;
@@ -144,22 +152,60 @@ section.featured-image {
       color: #fdfdfd;
     }
     
-    .chapter {
-      font-size: 2rem;
+    span.chapter {
+      display: block;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 3rem;
+      left: 0;
+      font-size: 1.5rem;
     }
     
     a:hover { color: lightgrey; border: none; }
     
-    i {
+    a.down p {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
       font-size: 5rem;
-      margin-top: 3rem;
+      margin-top: 1rem;
       color: #fdfdfd;
+      line-height: 1;
+    }
+    
+    div.byline {
+      display: block;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 23vh;
+      left: 0;
+      font-weight: 500;
+      font-size: 1.3rem;
       
     }
     
-    p.byline {
-      font-weight: 500;
-      font-size: 1.5rem;
+    p.date {
+      display: block;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 6rem;
+      left: 0;
+    }
+    
+    @include media-query(845px) {
+        p { font-size: 1rem; }
+        h1 { top: 16vh; }
+    }
+    @include media-query(700px) {
+        p { font-size: 1rem; }
+        h1 { 
+          top: 14vh;
+          font-size: 5rem;
+        }
     }
   }
   
@@ -490,6 +536,11 @@ div.landing {
     margin: auto;
     padding-top: 23vh;
     height: 77vh;
+    
+    @include media-query(700px) {
+      padding-top: 10vh;
+      height: 90vh;
+    }
     
     h1 {
       font-size: 5.5rem;
