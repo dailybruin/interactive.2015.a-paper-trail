@@ -14,14 +14,33 @@ uscartogram = function(id, initialData) {
   var states = svg.selectAll('.state')
                     .data(data).enter()
                     .append('circle')
-                    .attr('class', 'state')
-                    .attr("r", radius)
+                    .attr('class', function(d,i) {
+                      return 'state i' + i;
+                    })
+                    .attr("r", radius-1)
                     .attr("cx", function(d) {
                       return (d.column-1) * radius * 2 + margin.x + radius;
                     })
                     .attr("cy", function(d) {
                       return (d.row-1) * radius * 2 + margin.y + radius;
-                    });
+                    })
+                    .on("mouseover", mouseover)
+                    .on("mouseout", mouseout);
+                    
+  var abbrLabels = svg.selectAll('abbr')
+                    .data(data).enter()
+                    .append('text')
+                    .attr('class', 'abbr')
+                    .attr("text-anchor", "middle")
+                    .text(function(d){ return d.abbreviation; })
+                    .attr("x", function(d) {
+                      return (d.column-1) * radius * 2 + margin.x + radius;
+                    })
+                    .attr("y", function(d) {
+                      return (d.row-1) * radius * 2 + margin.y + radius*1.3;
+                    })
+                    .on("mouseover", mouseover)
+                    .on("mouseout", mouseout);
 }
 
 function merge(data) {
@@ -39,6 +58,16 @@ function merge(data) {
   } else {
     return stateGrid;
   }  
+}
+
+var mouseout = function(d,i) {
+  var thisCircle = d3.selectAll('.state.i'+i);
+  thisCircle.classed("hover", false);
+}
+
+var mouseover = function(d,i) {
+  var thisCircle = d3.selectAll('.state.i'+i);
+  thisCircle.classed("hover", true);
 }
 
 var stateGrid = [

@@ -21,6 +21,8 @@ $(document).ready(function() {
   
   d3.json('../../data/timeline.json', function (data) {
     
+    data.sort(function(a,b) { return a.year - b.year; });
+    
     var circles = svg.selectAll('circle')
                       .data(data).enter()
                       .append('circle')
@@ -30,7 +32,7 @@ $(document).ready(function() {
                       .attr("r", cfg.radius)
                       .attr("cx", cfg.radius+5)
                       .attr("cy", function(d, i) {
-                        return (i+0.4) / data.length * cfg.height;
+                        return (i+0.3) / data.length * (cfg.height-60) + 50;
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -40,10 +42,10 @@ $(document).ready(function() {
                       .data(data).enter()
                       .append('text')
                       .attr('class', 'date')
-                      .text( function(d) { return moment(d.date, "YYYY MM DD").format('MMMM DD, YYYY'); })
+                      .text( function(d) { return moment(d.year, 'YYYY').format('YYYY'); })
                       .attr("x", cfg.radius+15)
                       .attr("y", function(d, i) {
-                        return (i+0.4) / data.length * cfg.height + 30;
+                        return (i+0.3) / data.length * (cfg.height-60) + 80;
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -52,12 +54,16 @@ $(document).ready(function() {
     var titles = svg.selectAll('.title')
                           .data(data).enter()
                           .append('text')
-                          .attr('class', 'title')
-                          .text( function(d) { return d.title; })
+                          .attr('class', function(d,i) {
+                            return 'title i' + i;
+                          })
+                          .text( function(d) { return d.name; })
                           .attr("x", cfg.radius+15)
                           .attr("y", function(d, i) {
-                            return (i+0.4) / data.length * cfg.height + 50;
+                            return (i+0.3) / data.length * (cfg.height-60) + 100;
                           })
+                          .attr("dy", 0)
+                          .call(wrap, 160)
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
                           .on("click", click);
@@ -71,13 +77,41 @@ $(document).ready(function() {
                           .text( function(d) { return d.description; })
                           .attr("x", cfg.radius+15)
                           .attr("y", function(d, i) {
-                            return (i+0.4) / data.length * cfg.height + 70;
+                            var offset = ($('.title.i'+i+' tspan').length-1) * 15;
+                            return (i+0.3) / data.length * (cfg.height-60) + 120 + offset;
                           })
                           .attr("dy", 0)
                           .call(wrap, 160)
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
                           .on("click", click);
+                          
+    var tags = svg.selectAll('.tag')
+                          .data(data).enter()
+                          .append('text')
+                          .attr('class', function(d,i) {
+                            return 'tag i' + i;
+                          })
+                          .text( function(d) { return d.tag; })
+                          .attr("x", cfg.radius+15)
+                          .attr("y", function(d, i) {
+                            var offset = ($('.title.i'+i+' tspan').length-1) * 15;
+                            offset += ($('.description.i'+i+' tspan').length-1) * 15;
+                            return (i+0.3) / data.length * (cfg.height-60) + 130 + offset;
+                          })
+                          .attr("dy", 0)
+                          .call(wrap, 160)
+                          .on("mouseover", mouseover)
+                          .on("mouseout", mouseout)
+                          .on("click", click);
+
+    var title = svg.append('text')
+                          .attr('class', 'title')
+                          .text("A Quick Look at Significant Legislation and Executive Action on Immigration and Undocumented Individuals")
+                          .attr("x", cfg.radius+15)
+                          .attr("y", 20)
+                          .attr("dy", 0)
+                          .call(wrap, 160);
     
     var attribution = svg.append('text')
                           .attr('class', 'attr')

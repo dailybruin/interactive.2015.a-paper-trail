@@ -1,47 +1,92 @@
 [
   {
-    "date": "1990 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal",
+    "year": 1982,
+    "name": "Plyler v. Doe",
+    "description": "Plyler v. Doe was a landmark Supreme Court case between several unnamed undocumented children and a Texas school district. In 1975, Texas passed Education Code section 21.031, which denied local school districts any state funding for undocumented children, and a group of children in the Tyler school district sued the superintendent, James Plyler. The Court ruled in favor of the children in the case, shaping the way the U.S. would come to treat the youngest undocumented people seeking a public education in the country."
   },
   {
-    "date": "1993 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal",
+    "year": 1986,
+    "name": "Immigration Reform and Control Act (IRCA)",
+    "description": "Four years after Plyler, Congress passed a comprehensive legalization bill which offered permanent residence to undocumented people who had been in the country since January 1, 1982 and met certain other requirements. It also included a legalization program with less stringent requirements for agricultural workers. About 2.7 million undocumented immigrants became permanent residents through IRCA."
   },
   {
-    "date": "1996 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal",
+    "year": 1996,
+    "name": "The Illegal Immigration Reform and Immigrant Responsibility Act (IIRIRA)",
+    "description": "Part of an uptick in enforcement policies, IIRIRA aimed to improve border control by imposing criminal penalties for things like racketeering and alien smuggling. The Act also includes employment eligibility verification guidelines and sanctions for employers who fail to follow them."
   },
   {
-    "date": "1999 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal programs for state implementation",
+    "year": 1986,
+    "name": "Criminal Alien Program",
+    "description": "CAP is the oldest federal program made for adoption and implementation in state and local communities. It creates guidelines for state and local authorities to cooperate with federal immigration officials to remove persons that Immigration and Customs Enforcement (ICE) deems deportable."
   },
   {
-    "date": "2002 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal programs for state implementation",
+    "year": 2002,
+    "name": "287(g)",
+    "description": "This federal program follows two basic models: the “jail model,” which greatly resembles CAP, calling for local authorities to assist federal officials in removing deportable individuals; and the “task force model,” which makes immigration status checks a part of local police work. Jessica Colotl, one of the undocumented young people we interviewed for this story, was held in detention in Georgia through the 287(g) program."
   },
   {
-    "date": "2005 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal programs for state implementation",
+    "year": 2007,
+    "name": "Secure Communities",
+    "description": "Secure Communities calls for the fingerprints of anyone arrested in booked by state or local law enforcement, to be checked against federal databases. If an immigration violation shows up, DHS can issue a “detainer,” or a request that the state or local jail hold the individual for a period not to exceed 48 hours over the time they would originally have been released."
   },
   {
-    "date": "2008 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Federal programs for state implementation",
+    "year": 2014,
+    "name": "Priority Enforcement Program",
+    "description": "PEP is the newest federal program made for state/local adoption. In general, it replaces Secure Communities’ use of detainers with “requests for notification,” or requests that ICE be notified of a pending release. However, under PEP, ICE may still issue detainers under “special circumstances.” Note: Not all state/local authorities have historically honored ICE detainers. San Francisco and Los Angeles generally do not, for example."
   },
   {
-    "date": "2011 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Executive Actions",
+    "year": 2012,
+    "name": "Deferred Action for Childhood Arrivals (DACA)",
+    "description": "This Executive Action provides a two-year grant of deferred action for undocumented individuals who were brought to the U.S. as children. DACA also allows undocumented people to work legally in the United States and grants them a social security number."
   },
   {
-    "date": "2014 10 10",
-    "title": "test title",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "tag": "Executive Actions",
+    "year": 2014,
+    "name": "Expanded DACA and DAPA",
+    "description": "This expansion, announced in November 2014, increases the length of the deferred action period for DACA recipients from two to three years. It also grants deferred action to certain undocumented parents of American citizens and permanent residents. Several states have sued the federal government over this action, and a Texas court has issued an order that currently blocks the expanded DACA and DAPA programs from being implemented."
+  },
+  {
+    "tag": "State - CA",
+    "year": 1994,
+    "name": "Prop 187",
+    "description": "Though most of its provisions never took effect, this law would have barred undocumented immigrants from accessing public benefits; it would have kept children out of public school, and required state and local government employees to verify the status of people they encountered in their jobs. Many of these provisions were ruled to be unconstitutional in a 1995 court case."
+  },
+  {
+    "tag": "State - CA",
+    "year": 2001,
+    "name": "AB 540",
+    "description": "This law offers in-state tuition rates to undocumented students who graduated from a California high school that they attended for three years or more. California is one of ___ states that offers resident rates to undocumented students."
+  },
+  {
+    "tag": "State - CA",
+    "year": 2012,
+    "name": "California Dream Act",
+    "description": "Split into two bills, AB 130 and AB 131, the CA DREAM Act gives undocumented students access to state financial aid."
+  },
+  {
+    "tag": "State - CA",
+    "year": 2015,
+    "name": "AB 60",
+    "description": "This bill gives undocumented people in the state of CA the ability to obtain a Driver’s License."
+  },
+  {
+    "tag": "State - AZ",
+    "year": 2010,
+    "name": "SB 1070",
+    "description": "This law sets out state criminal penalties for some violations of federal immigration law. It required state and local AZ police to check the immigration status of any person they detained or arrested that they “reasonably suspected” was in the U.S. illegally."
+  },
+  {
+    "tag": "State - GA",
+    "year": 2011,
+    "name": "HB 87",
+    "description": "This Georgia law was in many ways modeled after Arizona’s SB 1070. It imposed strict requirements for employment eligibility checks and imposed sanctions on employers that did not follow them."
   }
 ]

@@ -335,10 +335,24 @@ article{
   
   figure {
     float: left;
+    clear: left;
     margin: 1rem;
     margin-left: -200px;
     max-width: 600px;
     display: inline-block;
+    
+    text {
+      font-family: $base-sans-font-family;
+      
+      &.abbr {
+        font-weight: bold;
+      }
+    }
+    
+    circle {
+      fill: #F67E7D;
+      &.hover { fill: #FFB997; }
+    }
     
     img {
       max-height: 600px;
@@ -459,6 +473,7 @@ article{
     margin-top: 50px;
     margin-left: -180px;
     float: left;
+    clear: left;
     text-align: right;
     font-size: 0.85rem;
     line-height: 1.5;
