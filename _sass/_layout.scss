@@ -314,6 +314,47 @@ div#timeline {
   }
 }
 
+figure.viz {
+    p {
+      font-family: $base-sans-font-family;
+      
+      &.title {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      &.source {
+        font-size: 0.75rem;
+        text-align: right;
+        padding-right: 1rem;
+      }
+    }
+
+    text {
+      font-family: $base-sans-font-family;
+      
+      &.abbr {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      
+      &.more {
+        font-size: 0.9rem;
+        font-weight: 100;
+      }
+    }
+    
+    .legend {
+      text {
+        font-size: 0.75rem;
+      }
+    }
+
+    circle {
+      &.hover { stroke: grey; stroke-width: 2; }
+      &.non { fill: lightgrey; }
+    }
+}
+
 article{
   max-width: 600px;
   margin: 3rem auto;
@@ -340,19 +381,6 @@ article{
     margin-left: -200px;
     max-width: 600px;
     display: inline-block;
-    
-    text {
-      font-family: $base-sans-font-family;
-      
-      &.abbr {
-        font-weight: bold;
-      }
-    }
-    
-    circle {
-      fill: #F67E7D;
-      &.hover { fill: #FFB997; }
-    }
     
     img {
       max-height: 600px;

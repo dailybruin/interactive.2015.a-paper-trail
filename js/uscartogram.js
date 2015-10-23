@@ -1,56 +1,123 @@
-uscartogram = function(id, initialData) {
-  var margin = { x: 50, y: 20};
+//uses abbreviation as key for data
+uscartogram = function(id, dataPath, colorField) {
+  var margin = { x: 50, y: 55};
   var width = $('article.post').width();
   var height = (width-margin.x*2)*7/12 + margin.y*2;
     
   var radius = (width - margin.x*2)/24;
   
-  var data = merge(initialData);
-  console.log(data);
-  var svg = d3.select(id).append('svg')
-                .attr("width", width)
-                .attr("height", height);
-  console.log(svg);
-  var states = svg.selectAll('.state')
-                    .data(data).enter()
-                    .append('circle')
-                    .attr('class', function(d,i) {
-                      return 'state i' + i;
-                    })
-                    .attr("r", radius-1)
-                    .attr("cx", function(d) {
-                      return (d.column-1) * radius * 2 + margin.x + radius;
-                    })
-                    .attr("cy", function(d) {
-                      return (d.row-1) * radius * 2 + margin.y + radius;
-                    })
-                    .on("mouseover", mouseover)
-                    .on("mouseout", mouseout);
-                    
-  var abbrLabels = svg.selectAll('abbr')
-                    .data(data).enter()
-                    .append('text')
-                    .attr('class', 'abbr')
-                    .attr("text-anchor", "middle")
-                    .text(function(d){ return d.abbreviation; })
-                    .attr("x", function(d) {
-                      return (d.column-1) * radius * 2 + margin.x + radius;
-                    })
-                    .attr("y", function(d) {
-                      return (d.row-1) * radius * 2 + margin.y + radius*1.3;
-                    })
-                    .on("mouseover", mouseover)
-                    .on("mouseout", mouseout);
+  var colors = ["#FEC0AA", "#D0F1BF", "#95F9E3"];
+  
+  var color = d3.scale.ordinal()
+    .range(["#FEC0AA", "#D0F1BF", "#95F9E3"]);
+    
+  var constants = ["name", "abbreviation", "row", "column", colorField];
+  
+  d3.json(dataPath, function(initialData) {
+    var data = merge(initialData);
+    
+    var svg = d3.select(id).append('svg')
+                  .attr("width", width)
+                  .attr("height", height);
+
+    var states = svg.selectAll('.state')
+                      .data(data).enter()
+                      .append('circle')
+                      .attr('class', function(d,i) {
+                        var className = "";
+                        if (d[colorField]=="" || d[colorField] === undefined) {
+                          className = "non";
+                        }
+                          
+                        return 'state i' + i + " " + className;
+                      })
+                      .attr("r", radius-1)
+                      .attr("cx", function(d) {
+                        return (d.column-1) * radius * 2 + margin.x + radius;
+                      })
+                      .attr("cy", function(d) {
+                        return (d.row-1) * radius * 2 + margin.y + radius;
+                      })
+                      .style("fill", function(d) { 
+                        if (d[colorField]=="")
+                          return "lightgrey";
+                        return color(d[colorField]); 
+                      })
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout);
+                      
+    var abbrLabels = svg.selectAll('abbr')
+                      .data(data).enter()
+                      .append('text')
+                      .attr('class', 'abbr')
+                      .attr("text-anchor", "middle")
+                      .text(function(d){ return d.abbreviation; })
+                      .attr("x", function(d) {
+                        return (d.column-1) * radius * 2 + margin.x + radius;
+                      })
+                      .attr("y", function(d) {
+                        return (d.row-1) * radius * 2 + margin.y + radius*1.3;
+                      })
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout);
+
+    var legend = svg.selectAll(".legend")
+        .data(color.domain())
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });        
+                      
+    legend.append("rect")
+        .attr("x", width - 18)
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", color);
+
+    legend.append("text")
+        .attr("x", width - 24)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function(d) { return d; });
+    
+    var more = svg.append("text")
+              .attr("class", "more")
+              .text("Hover for more details on each state.")
+              .attr("x", margin.x)
+              .attr("y", height);
+  });
+  
+  var mouseout = function(d,i) {
+    var thisCircle = d3.selectAll('.state.i'+i);
+    thisCircle.classed("hover", false);
+    var more = d3.selectAll('.more')
+                  .text('Hover for more details on each state.');
+  }
+
+  var mouseover = function(d,i) {
+    var thisCircle = d3.selectAll('.state.i'+i);
+    thisCircle.classed("hover", true);
+    var more = d3.selectAll('.more')
+                  .text(function() {
+                    var text = "";
+                    for (var prop in d) {
+                      if (constants.indexOf(prop) == -1) {
+                        text +=  prop + ': ' + d[prop] + ' ';
+                      }
+                    }
+                    return text;
+                  });
+  }
 }
 
 function merge(data) {
   if (data) {
     data.forEach(function(d) {
       stateGrid.forEach(function(s) {
-        if (d["abbreviation"] == state["abbreviation"]) {
-          d["name"] = state["name"];
-          d["row"] = state["row"];
-          d["column"] = state["column"];
+        if (d["abbreviation"] == s["abbreviation"]) {
+          d["name"] = s["name"];
+          d["row"] = s["row"];
+          d["column"] = s["column"];
         }
       });
     });
@@ -60,14 +127,29 @@ function merge(data) {
   }  
 }
 
-var mouseout = function(d,i) {
-  var thisCircle = d3.selectAll('.state.i'+i);
-  thisCircle.classed("hover", false);
-}
-
-var mouseover = function(d,i) {
-  var thisCircle = d3.selectAll('.state.i'+i);
-  thisCircle.classed("hover", true);
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
 }
 
 var stateGrid = [
@@ -370,5 +452,11 @@ var stateGrid = [
     "abbreviation": "FL",
     "row": 7,
     "column": 10
+  },
+  {
+    "name": "District of Columbia",
+    "abbreviation": "DC",
+    "row": 6,
+    "column": 12
   }
 ]

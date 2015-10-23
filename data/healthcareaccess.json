@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Alaska",
+    "abbreviation": "AK",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Maine",
+    "abbreviation": "ME",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Washington",
+    "abbreviation": "WA",
+    "access": "Full benefits to low-income DACA recipients"
+  },
+  {
+    "name": "Idaho",
+    "abbreviation": "ID",
+    "access": 0
+  },
+  {
+    "name": "Montana",
+    "abbreviation": "MT",
+    "access": 0
+  },
+  {
+    "name": "North Dakota",
+    "abbreviation": "ND",
+    "access": 0
+  },
+  {
+    "name": "Wisconsin",
+    "abbreviation": "WI",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Minnesota",
+    "abbreviation": "MN",
+    "access": "Full benefits to low-income DACA recipients"
+  },
+  {
+    "name": "Michigan",
+    "abbreviation": "MI",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Vermont",
+    "abbreviation": "VT",
+    "access": 0
+  },
+  {
+    "name": "New Hampshire",
+    "abbreviation": "NH",
+    "access": 0
+  },
+  {
+    "name": "Massachusetts",
+    "abbreviation": "MA",
+    "access": "Full benefits to low-income DACA recipients"
+  },
+  {
+    "name": "Oregon",
+    "abbreviation": "OR",
+    "access": 0
+  },
+  {
+    "name": "Nevada",
+    "abbreviation": "NV",
+    "access": 0
+  },
+  {
+    "name": "Wyoming",
+    "abbreviation": "WY",
+    "access": 0
+  },
+  {
+    "name": "South Dakota",
+    "abbreviation": "SD",
+    "access": 0
+  },
+  {
+    "name": "Iowa",
+    "abbreviation": "IA",
+    "access": 0
+  },
+  {
+    "name": "Indiana",
+    "abbreviation": "IN",
+    "access": 0
+  },
+  {
+    "name": "Ohio",
+    "abbreviation": "OH",
+    "access": 0
+  },
+  {
+    "name": "Pennsylvania",
+    "abbreviation": "PA",
+    "access": 0
+  },
+  {
+    "name": "New York",
+    "abbreviation": "NY",
+    "access": "Full benefits to low-income DACA recipients"
+  },
+  {
+    "name": "Connecticut",
+    "abbreviation": "CT",
+    "access": 0
+  },
+  {
+    "name": "Rhode Island",
+    "abbreviation": "RI",
+    "access": 0
+  },
+  {
+    "name": "California",
+    "abbreviation": "CA",
+    "access": "Full benefits to low-income DACA recipients"
+  },
+  {
+    "name": "Utah",
+    "abbreviation": "UT",
+    "access": 0
+  },
+  {
+    "name": "Colorado",
+    "abbreviation": "CO",
+    "access": 0
+  },
+  {
+    "name": "Nebraska",
+    "abbreviation": "NE",
+    "access": 0
+  },
+  {
+    "name": "Missouri",
+    "abbreviation": "MO",
+    "access": 0
+  },
+  {
+    "name": "Illinois",
+    "abbreviation": "IL",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Kentucky",
+    "abbreviation": "KY",
+    "access": 0
+  },
+  {
+    "name": "Maryland",
+    "abbreviation": "MD",
+    "access": 0
+  },
+  {
+    "name": "Delaware",
+    "abbreviation": "DE",
+    "access": 0
+  },
+  {
+    "name": "New Jersey",
+    "abbreviation": "NJ",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Arizona",
+    "abbreviation": "AZ",
+    "access": 0
+  },
+  {
+    "name": "New Mexico",
+    "abbreviation": "NM",
+    "access": 0
+  },
+  {
+    "name": "Kansas",
+    "abbreviation": "KS",
+    "access": 0
+  },
+  {
+    "name": "Arkansas",
+    "abbreviation": "AR",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Tennessee",
+    "abbreviation": "TN",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "West Virginia",
+    "abbreviation": "WV",
+    "access": 0
+  },
+  {
+    "name": "Virginia",
+    "abbreviation": "VA",
+    "access": 0
+  },
+  {
+    "name": "North Carolina",
+    "abbreviation": "NC",
+    "access": 0
+  },
+  {
+    "name": "Oklahoma",
+    "abbreviation": "OK",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Louisiana",
+    "abbreviation": "LA",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Mississippi",
+    "abbreviation": "MS",
+    "access": 0
+  },
+  {
+    "name": "Alabama",
+    "abbreviation": "AL",
+    "access": 0
+  },
+  {
+    "name": "Georgia",
+    "abbreviation": "GA",
+    "access": 0
+  },
+  {
+    "name": "South Carolina",
+    "abbreviation": "SC",
+    "access": 0
+  },
+  {
+    "name": "Hawaii",
+    "abbreviation": "HI",
+    "access": 0
+  },
+  {
+    "name": "Texas",
+    "abbreviation": "TX",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "Florida",
+    "abbreviation": "FL",
+    "access": "Limited service, primarily pre-natal care or service with age restrictions"
+  },
+  {
+    "name": "District of Columbia",
+    "abbreviation": "DC",
+    "access": "Full benefits to low-income DACA recipients"
+  }
+]
