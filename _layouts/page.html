@@ -7,6 +7,20 @@
     
     {% include header.html %}
     
+    {% if page.timeline %}
+    <div id="timeline" class="page" data-stellar-ratio="0.8"></div>
+    <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $(document).ready(function() {
+      timeline('{{page.timeline}}', 5500);
+    });
+    $.stellar({
+      horizontalScrolling: false,
+      hideDistantElements: false
+    });
+    </script>
+    {% endif %}
+    
     <article class="page">
       
       {{ content }}

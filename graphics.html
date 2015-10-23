@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /graphics/
+title: "All Graphics"
+timeline: ../data/timeline.json
+---
+
+<h1>All Graphics</h1>
+<p class="desc">A collection of every graphic shown in this package</p>
+
+<figure class="viz">
+  <p class="title">Healthcare access for undocumented individuals by state</p>
+  <div id="viz"></div>
+  <p class="source">Data from the Migration Policy Institute.</p>
+</figure>
+<script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
+<script>uscartogram('#viz', "../data/healthcareaccess.json", "access");</script>

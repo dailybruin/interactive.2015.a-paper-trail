@@ -1,9 +1,9 @@
-$(document).ready(function() {
+timeline = function (dataPath, height) {
   
   var cfg = {
       id: '#timeline',
       width: 180,
-      height: $('article.post').innerHeight()*0.75,
+      height: height,
       radius: 10
     };
   
@@ -19,7 +19,7 @@ $(document).ready(function() {
       .style("stroke", "#777")
       .style("stroke-width", "2");
   
-  d3.json('../../data/timeline.json', function (data) {
+  d3.json(dataPath, function (data) {
     
     data.sort(function(a,b) { return a.year - b.year; });
     
@@ -161,4 +161,4 @@ $(document).ready(function() {
       }
     });
   }
-})
+}
