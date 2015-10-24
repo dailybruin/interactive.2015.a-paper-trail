@@ -9,9 +9,25 @@ timeline: ../data/timeline.json
 <p class="desc">A collection of every graphic shown in this package</p>
 
 <figure class="viz">
-  <p class="title">Healthcare access for undocumented individuals by state</p>
+  <p class="title">Undocumented individuals in the US by the numbers</p>
+  <div id="numbers"></div>
+  <p class="source">Data from the Department of Homeland Security</p>
+</figure>
+<script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
+<script>uscartogram('#numbers', "../data/healthcareaccess.json", "access");</script>
+
+<figure class="viz">
+  <p class="title">Higher education access for undocumented individuals by state</p>
   <div id="viz"></div>
-  <p class="source">Data from the Migration Policy Institute.</p>
+  <p class="source">Data from ...</p>
 </figure>
 <script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
 <script>uscartogram('#viz', "../data/healthcareaccess.json", "access");</script>
+
+<figure class="viz">
+  <p class="title">Healthcare access for undocumented individuals by state</p>
+  <div id="viz2"></div>
+  <p class="source">Data from the Migration Policy Institute</p>
+</figure>
+<script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
+<script>uscartogram('#viz2', "../data/healthcareaccess.json", "access");</script>

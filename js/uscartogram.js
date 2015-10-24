@@ -6,19 +6,17 @@ uscartogram = function(id, dataPath, colorField) {
     
   var radius = (width - margin.x*2)/24;
   
-  var colors = ["#FEC0AA", "#D0F1BF", "#95F9E3"];
-  
   var color = d3.scale.ordinal()
     .range(["#FEC0AA", "#D0F1BF", "#95F9E3"]);
     
   var constants = ["name", "abbreviation", "row", "column", colorField];
   
+  var svg = d3.select(id).append('svg')
+                .attr("width", width)
+                .attr("height", height);
+  
   d3.json(dataPath, function(initialData) {
     var data = merge(initialData);
-    
-    var svg = d3.select(id).append('svg')
-                  .attr("width", width)
-                  .attr("height", height);
 
     var states = svg.selectAll('.state')
                       .data(data).enter()
@@ -88,16 +86,16 @@ uscartogram = function(id, dataPath, colorField) {
   });
   
   var mouseout = function(d,i) {
-    var thisCircle = d3.selectAll('.state.i'+i);
+    var thisCircle = svg.selectAll('.state.i'+i);
     thisCircle.classed("hover", false);
-    var more = d3.selectAll('.more')
+    var more = svg.selectAll('.more')
                   .text('Hover for more details on each state.');
   }
 
   var mouseover = function(d,i) {
-    var thisCircle = d3.selectAll('.state.i'+i);
+    var thisCircle = svg.selectAll('.state.i'+i);
     thisCircle.classed("hover", true);
-    var more = d3.selectAll('.more')
+    var more = svg.selectAll('.more')
                   .text(function() {
                     var text = "";
                     for (var prop in d) {

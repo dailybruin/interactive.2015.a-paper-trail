@@ -123,17 +123,17 @@ timeline = function (dataPath, height) {
   });
   
   var mouseout = function(d,i) {
-    var thisCircle = d3.selectAll('.circle.i'+i);
+    var thisCircle = svg.selectAll('.circle.i'+i);
     thisCircle.classed("hover", false);
   }
   
   var mouseover = function(d,i) {
-    var thisCircle = d3.selectAll('.circle.i'+i);
+    var thisCircle = svg.selectAll('.circle.i'+i);
     thisCircle.classed("hover", true);
   }
   
   var click = function(d,i) { 
-    var thisCircle = d3.selectAll('.description.i'+i);
+    var thisCircle = svg.selectAll('.description.i'+i);
     thisCircle.classed("show", !thisCircle.classed("show"));
   };
   
