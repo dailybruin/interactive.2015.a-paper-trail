@@ -12,7 +12,18 @@
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
-      timeline('{{page.timeline}}', 5500);
+      timeline('#timeline', '{{page.timeline}}', 5500);
+    });
+    
+    </script>
+    {% endif %}
+    
+    {% if page.flowchart %}
+    <div id="flowchart" class="page" data-stellar-ratio="0.8"></div>
+    <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $(document).ready(function() {
+      timeline('#flowchart', '{{page.timeline}}', 5500);
     });
     $.stellar({
       horizontalScrolling: false,

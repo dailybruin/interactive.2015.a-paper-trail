@@ -16,7 +16,7 @@
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
-      timeline('{{page.timeline}}', $('article').height()*0.75);
+      timeline('#timeline', '{{page.timeline}}', $('article').height()*0.75);
     });
     $.stellar({
       horizontalScrolling: false,
