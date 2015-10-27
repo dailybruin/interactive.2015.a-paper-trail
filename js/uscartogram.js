@@ -1,7 +1,7 @@
 //uses abbreviation as key for data
 uscartogram = function(id, dataPath, colorField) {
   var margin = { x: 50, y: 55};
-  var width = $('article').width();
+  var width = $(id).width();
   var height = (width-margin.x*2)*7/12 + margin.y*2;
     
   var radius = (width - margin.x*2)/24;

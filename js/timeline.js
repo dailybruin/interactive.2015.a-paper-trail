@@ -1,7 +1,7 @@
-timeline = function (dataPath, height) {
+timeline = function (id, dataPath, height) {
   
   var cfg = {
-      id: '#timeline',
+      id: id,
       width: 180,
       height: height,
       radius: 10
