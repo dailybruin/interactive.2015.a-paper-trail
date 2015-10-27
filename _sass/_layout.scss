@@ -69,7 +69,7 @@ nav.posts {
   width: 100%;
   top: 46px;
   text-align: center;
-  transition: height 1s; 
+  transition: height 0.5s; 
   height: 0;
   overflow: hidden;
   z-index: 1;
@@ -232,7 +232,9 @@ nav.anchorific {
     background-color: $brand-color; 
     &:hover { 
       background-color: $background-color; 
-      border-bottom: lighten($brand-color, 10%) 3px solid;
+      border-bottom: none;
+      padding-right: 0.5rem;
+      border-right: lighten($brand-color, 10%) 3px solid;
     }
   }
   &.column li a, &.main li.active a { 
@@ -240,14 +242,15 @@ nav.anchorific {
     background-color: $brand-off-color; 
     &:hover { 
       background-color: $background-color;
-      border-bottom: lighten($brand-off-color, 10%) 3px solid;
+      border-bottom: none;
+      border-right: lighten($brand-off-color, 10%) 3px solid;
      }
   }
   
   ul { 
     list-style-type: none; 
     li a{
-      transition: 0.5s all ease;
+      transition: 0.1s all ease;
       padding-left: 1rem;
       line-height: 1.2;
       font-size: 0.85rem;
@@ -265,6 +268,63 @@ div#timeline {
   // float: left;
   position: absolute;
   top: 100vh;
+  left: 0;
+  margin: 2rem 2rem;
+  font-size: 0.9rem;
+  
+  &.page { top: 75px; }
+  
+  &.hide { z-index: -1; }
+
+  circle {
+    fill: $background-color;
+    stroke-width: 2;
+    stroke: #777;
+    transition: 0.5s all;
+    &.hover {
+      stroke-width: 5;
+      cursor: pointer;
+    }
+  }
+  text:hover { 
+    cursor: pointer; 
+    &.attr { cursor: default; }
+   }
+  text.date {
+    font-family: $base-sans-font-family;
+    font-size: 0.75rem;
+  }
+  text.title {
+  }
+  text.description {
+    font-size: 0.75rem;
+    font-family: $base-sans-font-family;
+    
+    tspan {
+      transition: all 1s;
+      opacity: 0.2;
+    }
+    &.show tspan { 
+      opacity: 1; 
+    }
+    &:hover tspan{
+      opacity: 1; 
+    }
+  }
+  text.attr {
+    font-size: 0.75rem;
+    font-family: $base-sans-font-family;
+  }
+  
+  @include media-query($on-laptop) {
+      visibility: hidden !important;
+  }
+}
+
+div#flowchart {
+  position: absolute;
+  top: 100vh;
+  right: 0;
   margin: 2rem 2rem;
   font-size: 0.9rem;
   
@@ -344,6 +404,10 @@ figure.viz {
         font-size: 0.9rem;
         font-weight: 100;
       }
+      
+      &.next {
+        &:hover { cursor: pointer; }
+      }
     }
     
     .legend {
@@ -355,6 +419,10 @@ figure.viz {
     circle {
       &.hover { stroke: grey; stroke-width: 2; }
       &.non { fill: lightgrey; }
+    }
+    
+    rect {
+      &:hover { cursor: pointer; }
     }
 }
 
@@ -393,18 +461,22 @@ article{
     clear: left;
     margin: 1rem;
     margin-left: -200px;
-    max-width: 600px;
+    max-width: 550px;
     display: inline-block;
     
     img {
       max-height: 600px;
     }
     
+    &.wide {
+      max-width: none;
+      max-height: none;
+    }
+    
     &.sidebar {
       float: right;
       margin-left: 1rem;
       max-width: 400px;
-      // background-color: #EEE;
       border-top: medium lightgrey solid;
       border-bottom: medium lightgrey solid;
       padding: 1rem;
@@ -438,8 +510,7 @@ article{
         max-width: 650px;
         padding: 10px 50px;
         transition: 1s all ease;
-        background: $brand-color;
-        color: $background-color;
+        background: #eee;
         
         div.sidebar-content {
           position: relative;
@@ -468,7 +539,7 @@ article{
         }
         
         p:last-child {
-          padding-bottom: 50px;
+          padding-bottom: 100px;
         }
         
         &.show { 
@@ -485,14 +556,12 @@ article{
             max-height: 600px;
           }
           figcaption {
-            color: $background-color;
             font-size: 0.85rem;
           }
         }
       }
       
       &:hover {
-        margin-left: 0.5rem;
         border-top: 0.5rem solid grey;
       }
       
@@ -528,7 +597,7 @@ article{
   
   blockquote {
     float: left;
-    max-width: 600px;
+    max-width: 550px;
     margin: 2rem 4rem;
     margin-left: -200px;
     color: $grey-color-dark;
