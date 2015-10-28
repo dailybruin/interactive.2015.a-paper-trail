@@ -124,15 +124,8 @@
         }
       });
       
-      $('#post-menu-trigger').hover( function() {
+      $('#post-menu-trigger').mouseenter( function() {
         $('nav.posts').height($('nav.posts ul').height()+20);
-      }, function(e) {
-        if ( e.target.id == 'post-menu' || $('#post-menu').has(e.target).length > 0
-              || $('#drop').height() == 0) {
-          return true;
-        } else {
-          $('#drop').height(0);
-        }
       });
       
       $('#post-menu').mouseleave( function() {
