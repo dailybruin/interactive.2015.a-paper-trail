@@ -233,8 +233,9 @@ nav.anchorific {
     &:hover { 
       background-color: $background-color; 
       border-bottom: none;
-      padding-right: 0.5rem;
+      padding-right: 0.25rem;
       border-right: lighten($brand-color, 10%) 3px solid;
+      font-weight: bold;
     }
   }
   &.column li a, &.main li.active a { 
