@@ -9,7 +9,14 @@
     
     <div id="overlay"></div>
     
-    <nav class='anchorific {{ page.type }}'></nav>
+    <div class="sub-nav">
+      <nav class='anchorific {{ page.type }}'></nav>
+      <span class="share">
+        <a href="http://www.facebook.com/sharer.php?u={{ site.url }}"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>
+        <a href="http://www.reddit.com/submit?url={{ site.url }}"><i class="fa fa-reddit"></i></a>
+      </span>
+    </div>
     
     {% if page.timeline %}
     <div id="timeline" data-stellar-ratio="0.8"></div>
@@ -32,16 +39,16 @@
             {% if page.title %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
-            <div class="byline">
-              {% for byline in page.bylines %}
-                  <p>{{ byline }}</p>
-              {% endfor %}
-              ■
-            </div>
-            <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
-            <a class="down" href="#start">
+            {% if page.description %}
+                <p class="description">{{ page.description }}</p>
+            {% endif %}
+            {% for byline in page.bylines %}
+                <span class="byline">{{ byline }} ■ </span>
+            {% endfor %}
+            <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
+            <!-- <a class="down" href="#start">
               <p><i class="fa fa-angle-down"></i></p>
-            </a>
+            </a> -->
         </div>
     </section>
     {% endif %}

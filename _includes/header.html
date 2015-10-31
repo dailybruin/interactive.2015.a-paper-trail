@@ -1,17 +1,9 @@
 <header class="{{ page.type }}">
-  <span class="db"><a href="http://dailybruin.com">DB</a></span>
-  
   <p class="title">
     <a id="post-menu-trigger" onclick="$('nav.posts').height($('nav.posts').height() == 0 ? $('nav.posts ul').height()+20 : 0);">
     {% if page.chapter %}Chapter {{ page.chapter }}: {% endif %}{{ page.title }} <i class="fa fa-angle-down"></i>
     </a>
   </p>
-  
-  <span class="share">
-    <a href="http://www.facebook.com/sharer.php?u={{ site.url }}"><i class="fa fa-facebook"></i></a>
-    <a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>
-    <a href="http://www.reddit.com/submit?url={{ site.url }}"><i class="fa fa-reddit"></i></a>
-  </span>
 </header>
 
 <nav class="posts {{ page.type }}" id="drop">

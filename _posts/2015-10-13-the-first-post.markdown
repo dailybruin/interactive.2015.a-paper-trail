@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The first post"
+title:  "The Current Policy"
 date:   2015-10-13 18:34:08
 chapter: 1
 type: main
