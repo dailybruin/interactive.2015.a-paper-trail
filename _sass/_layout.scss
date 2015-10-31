@@ -133,7 +133,7 @@ section.featured-image {
     left: 0;
     max-width: 750px;
     text-align: left;
-    padding: 1rem 5rem 3rem 2rem;
+    padding: 1rem 5rem 4rem 3rem;
     // &.column { background: transparentize($brand-color, 0.55); }
     // &.main { background: transparentize($brand-off-color, 0.55); }
     
@@ -283,7 +283,6 @@ div.sub-nav {
 }
 
 div#timeline {
-  // float: left;
   position: absolute;
   top: 100vh;
   left: 0;
@@ -297,15 +296,15 @@ div#timeline {
   circle {
     fill: $background-color;
     stroke-width: 2;
-    stroke: #777;
+    stroke: #555;
     transition: 0.5s all;
     &.hover {
-      stroke-width: 5;
-      cursor: pointer;
+      stroke-width: 3;
+      cursor: default;
     }
   }
   text:hover { 
-    cursor: pointer; 
+    cursor: default; 
     &.attr { cursor: default; }
    }
   text.date {
@@ -320,18 +319,24 @@ div#timeline {
     
     tspan {
       transition: all 1s;
-      opacity: 0.2;
-    }
-    &.show tspan { 
-      opacity: 1; 
+      opacity: 0;
+      visibility: hidden;
+      &:nth-child(1) { opacity: 0.8; visibility: visible; }
+      &:nth-child(2) { opacity: 0.5; visibility: visible; }
+      &:nth-child(3) { opacity: 0.3; visibility: visible; }
     }
     &:hover tspan{
       opacity: 1; 
+      visibility: visible;
     }
   }
   text.attr {
     font-size: 0.75rem;
     font-family: $base-sans-font-family;
+  }
+  text.tag {
+    font-family: $base-sans-font-family;
+    font-size: 0.75rem;
   }
   
   @include media-query($on-laptop) {

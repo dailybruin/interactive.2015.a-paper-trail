@@ -4,7 +4,7 @@ timeline = function (id, dataPath, height) {
       id: id,
       width: 180,
       height: height,
-      radius: 10
+      radius: 8
     };
   
   var svg = d3.select(cfg.id).append('svg')
@@ -13,11 +13,12 @@ timeline = function (id, dataPath, height) {
   
   svg.append("line")
       .attr("y1", 0)
-      .attr("x1", cfg.radius+5)
+      .attr("x1", cfg.radius+3)
       .attr("y2", cfg.height)
-      .attr("x2", cfg.radius+5)
-      .style("stroke", "#777")
-      .style("stroke-width", "2");
+      .attr("x2", cfg.radius+3)
+      .style("stroke", "#111")
+      .style("stroke-width", "1.5")
+      .style("stroke-dasharray", ("2, 3"));
   
   d3.json(dataPath, function (data) {
     
@@ -30,9 +31,9 @@ timeline = function (id, dataPath, height) {
                         return 'circle i' + i;
                       })
                       .attr("r", cfg.radius)
-                      .attr("cx", cfg.radius+5)
+                      .attr("cx", cfg.radius+3)
                       .attr("cy", function(d, i) {
-                        return (i+0.3) / data.length * (cfg.height-60) + 50;
+                        return (i+0.3) / data.length * (cfg.height-60);
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -43,9 +44,9 @@ timeline = function (id, dataPath, height) {
                       .append('text')
                       .attr('class', 'date')
                       .text( function(d) { return moment(d.year, 'YYYY').format('YYYY'); })
-                      .attr("x", cfg.radius+15)
+                      .attr("x", cfg.radius+17)
                       .attr("y", function(d, i) {
-                        return (i+0.3) / data.length * (cfg.height-60) + 80;
+                        return (i+0.3) / data.length * (cfg.height-60) + 0;
                       })
                       .on("mouseover", mouseover)
                       .on("mouseout", mouseout)
@@ -58,12 +59,12 @@ timeline = function (id, dataPath, height) {
                             return 'title i' + i;
                           })
                           .text( function(d) { return d.name; })
-                          .attr("x", cfg.radius+15)
+                          .attr("x", cfg.radius+17)
                           .attr("y", function(d, i) {
-                            return (i+0.3) / data.length * (cfg.height-60) + 100;
+                            return (i+0.3) / data.length * (cfg.height-60) + 20;
                           })
                           .attr("dy", 0)
-                          .call(wrap, 160)
+                          .call(wrap, 150)
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
                           .on("click", click);
@@ -75,13 +76,13 @@ timeline = function (id, dataPath, height) {
                             return 'description i' + i;
                           })
                           .text( function(d) { return d.description; })
-                          .attr("x", cfg.radius+15)
+                          .attr("x", cfg.radius+17)
                           .attr("y", function(d, i) {
                             var offset = ($('.title.i'+i+' tspan').length-1) * 15;
-                            return (i+0.3) / data.length * (cfg.height-60) + 120 + offset;
+                            return (i+0.3) / data.length * (cfg.height-60) + 40 + offset;
                           })
                           .attr("dy", 0)
-                          .call(wrap, 160)
+                          .call(wrap, 150)
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
                           .on("click", click);
@@ -93,25 +94,15 @@ timeline = function (id, dataPath, height) {
                             return 'tag i' + i;
                           })
                           .text( function(d) { return d.tag; })
-                          .attr("x", cfg.radius+15)
+                          .attr("x", cfg.radius+17)
                           .attr("y", function(d, i) {
-                            var offset = ($('.title.i'+i+' tspan').length-1) * 15;
-                            offset += ($('.description.i'+i+' tspan').length-1) * 15;
-                            return (i+0.3) / data.length * (cfg.height-60) + 130 + offset;
+                            return (i+0.3) / data.length * (cfg.height-60) - 20;
                           })
                           .attr("dy", 0)
-                          .call(wrap, 160)
+                          .call(wrap, 150)
                           .on("mouseover", mouseover)
                           .on("mouseout", mouseout)
                           .on("click", click);
-
-    var title = svg.append('text')
-                          .attr('class', 'title')
-                          .text("A Quick Look at Significant Legislation and Executive Action on Immigration and Undocumented Individuals")
-                          .attr("x", cfg.radius+15)
-                          .attr("y", 20)
-                          .attr("dy", 0)
-                          .call(wrap, 160);
     
     var attribution = svg.append('text')
                           .attr('class', 'attr')
@@ -119,7 +110,7 @@ timeline = function (id, dataPath, height) {
                           .attr("x", cfg.radius+15)
                           .attr("y", cfg.height-80)
                           .attr("dy", 0)
-                          .call(wrap, 160);
+                          .call(wrap, 150);
   });
   
   var mouseout = function(d,i) {
