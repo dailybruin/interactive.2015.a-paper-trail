@@ -11,6 +11,9 @@ timeline = function (id, dataPath, height) {
                 .attr("width", cfg.width)
                 .attr("height", cfg.height);
   
+  var color = d3.scale.ordinal()
+              .range(["#FEC0AA", "#D0F1BF", "#77626D", "#609C92"]);
+  
   svg.append("line")
       .attr("y1", 0)
       .attr("x1", cfg.radius+3)
@@ -36,8 +39,7 @@ timeline = function (id, dataPath, height) {
                         return (i+0.3) / data.length * (cfg.height-60);
                       })
                       .on("mouseover", mouseover)
-                      .on("mouseout", mouseout)
-                      .on("click", click); 
+                      .on("mouseout", mouseout);
 
     var dates = svg.selectAll('.date')
                       .data(data).enter()
@@ -49,8 +51,7 @@ timeline = function (id, dataPath, height) {
                         return (i+0.3) / data.length * (cfg.height-60) + 0;
                       })
                       .on("mouseover", mouseover)
-                      .on("mouseout", mouseout)
-                      .on("click", click);     
+                      .on("mouseout", mouseout);    
                                       
     var titles = svg.selectAll('.title')
                           .data(data).enter()
@@ -66,8 +67,7 @@ timeline = function (id, dataPath, height) {
                           .attr("dy", 0)
                           .call(wrap, 150)
                           .on("mouseover", mouseover)
-                          .on("mouseout", mouseout)
-                          .on("click", click);
+                          .on("mouseout", mouseout);
                           
     var descriptions = svg.selectAll('.description')
                           .data(data).enter()
@@ -84,8 +84,7 @@ timeline = function (id, dataPath, height) {
                           .attr("dy", 0)
                           .call(wrap, 150)
                           .on("mouseover", mouseover)
-                          .on("mouseout", mouseout)
-                          .on("click", click);
+                          .on("mouseout", mouseout);
                           
     var tags = svg.selectAll('.tag')
                           .data(data).enter()
@@ -96,13 +95,28 @@ timeline = function (id, dataPath, height) {
                           .text( function(d) { return d.tag; })
                           .attr("x", cfg.radius+17)
                           .attr("y", function(d, i) {
-                            return (i+0.3) / data.length * (cfg.height-60) - 20;
+                            return (i+0.3) / data.length * (cfg.height-60) - 18;
                           })
                           .attr("dy", 0)
                           .call(wrap, 150)
                           .on("mouseover", mouseover)
-                          .on("mouseout", mouseout)
-                          .on("click", click);
+                          .on("mouseout", mouseout);
+                          
+    var tagcolor = svg.selectAll('.tag-color')
+                          .data(data).enter()
+                          .append('rect')
+                          .attr('class', function(d,i) {
+                            return 'tag-color i' + i;
+                          })
+                          .attr('x', cfg.radius+13)
+                          .attr('y', function(d, i) {
+                            return (i+0.3) / data.length * (cfg.height-60) - 30;
+                          })
+                          .attr('width', 2)
+                          .attr('height', 15)
+                          .style('fill', function(d) {
+                            return color(d["tag"])
+                          });
     
     var attribution = svg.append('text')
                           .attr('class', 'attr')
@@ -122,11 +136,6 @@ timeline = function (id, dataPath, height) {
     var thisCircle = svg.selectAll('.circle.i'+i);
     thisCircle.classed("hover", true);
   }
-  
-  var click = function(d,i) { 
-    var thisCircle = svg.selectAll('.description.i'+i);
-    thisCircle.classed("show", !thisCircle.classed("show"));
-  };
   
   function wrap(text, width) {
     text.each(function() {

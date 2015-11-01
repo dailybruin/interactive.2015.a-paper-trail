@@ -12,9 +12,9 @@
     <div class="sub-nav">
       <nav class='anchorific {{ page.type }}'></nav>
       <span class="share">
-        <a href="http://www.facebook.com/sharer.php?u={{ site.url }}"><i class="fa fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u={{ page.url }}"><i class="fa fa-facebook"></i></a>
         <a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>
-        <a href="http://www.reddit.com/submit?url={{ site.url }}"><i class="fa fa-reddit"></i></a>
+        <a href="http://www.reddit.com/submit?url={{ page.url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-reddit"></i></a>
       </span>
     </div>
     
@@ -29,13 +29,18 @@
       horizontalScrolling: false,
       hideDistantElements: false
 		});
+    $(window).resize(function() {
+        $.stellar('refresh');
+    });
     </script>
     {% endif %}
     
     {% if page.featured-image %}
     <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">
         <div class="featured-text {{ page.type }}">
-            <span class="chapter">Chapter {{ page.chapter }}</span>
+            <span class="chapter">
+              Chapter {{ page.chapter }} of <a href="{{ site.baseurl | prepend: site.url }}">Higher Education</a>
+            </span>
             {% if page.title %}
                 <h1>{{ page.title }}</h1>
             {% endif %}

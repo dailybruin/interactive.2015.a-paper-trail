@@ -9,4 +9,14 @@
       
   </body>
 
+  <script>
+    $('.down').on('click', function(event) {
+      event.preventDefault();
+      var target = $('#post-menu');
+      $('html, body').animate({
+          scrollTop: $(target).offset().top
+      }, 1000);
+    });
+  </script>
+
 </html>

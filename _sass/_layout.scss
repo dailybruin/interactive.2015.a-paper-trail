@@ -134,17 +134,11 @@ section.featured-image {
     max-width: 750px;
     text-align: left;
     padding: 1rem 5rem 4rem 3rem;
-    // &.column { background: transparentize($brand-color, 0.55); }
-    // &.main { background: transparentize($brand-off-color, 0.55); }
     
     p, span { font-family: $base-serif-font-family; }
     
     h1 {
-      // position: absolute;
-      // top: 34vh;
       line-height: 1.2;
-      // left: 0;
-      // text-align: center;
       width: 100%;
       font-size: 4.5rem;
       font-weight: 900;
@@ -154,24 +148,15 @@ section.featured-image {
     
     span.chapter {
       display: block;
-      // position: absolute;
-      // text-align: center;
       width: 100%;
-      // top: 3rem;
-      // left: 0;
       font-size: 1.3rem;
-      // font-family: $base-serif-font-family;
     }
     
     p.description {
       font-size: 1.3rem;
-      // font-family: $base-serif-font-family;
     }
     
-    a:hover { color: lightgrey; border: none; }
-    
     a.down p {
-      // position: absolute;
       text-align: center;
       width: 100%;
       margin: 0;
@@ -276,9 +261,9 @@ div.sub-nav {
         margin: 0.2rem;
       }
     }
-    @include media-query($on-laptop) {
-        display: none;
-    }
+  }
+  @include media-query($on-laptop) {
+      display: none;
   }
 }
 
@@ -611,7 +596,7 @@ article{
     text-align: right;
     font-size: 0.85rem;
     line-height: 1.5;
-    font-family: Arial, sans-serif;
+    font-family: $base-sans-font-family;
   }
   
   h1.title {
@@ -671,72 +656,148 @@ article{
 
 div.landing-photo {
   background-image: url("http://img.hqhdwalls.com/uploads/wallpaper/files/kit/kitten-wallpaper-53cee1ed3b06d.jpg");
+  background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  position: absolute;
+  overflow: auto;
+  position: fixed;
   top:0;
   background-size: cover;
   background-position: top center;
 }
 
 div.landing {
-    background-color: rgba(256,256,256,0.75);
-    text-align: center;
-    margin: auto;
-    padding-top: 23vh;
-    height: 77vh;
+    background-color: rgba(256,256,256,0.75);  
+    position: absolute;
+    width: 100%;
+    top: 0;
     
-    @include media-query(700px) {
-      padding-top: 10vh;
-      height: 90vh;
-    }
-    
-    h1 {
-      font-size: 5.5rem;
-      font-weight: 900;
-    }
-    
-    .bob {
-      font-size: 0.95rem;
-    }
-    
-    span.db,
-    span.share {
-      position: absolute;
-      top: 1rem;
-    }
-    
-    span.db {
-      left: 2.5rem;
-      svg {
-        width: 120px;
+    div.top {
+      min-height: 100vh;
+      padding-top: 20vh;
+      text-align: center;
+      h1 {
+        font-size: 5.5rem;
+        font-weight: 900;
+      }
+      
+      .bob {
+        font-size: 0.95rem;
+      }
+      
+      span.db,
+      span.share {
+        position: absolute;
+        top: 1rem;
+      }
+      
+      span.db {
+        left: 2.5rem;
+        svg {
+          width: 120px;
+        }
+      }
+      
+      span.share {
+        right: 2.5rem;
+        
+        i { margin-left: 0.35rem; }
+      }
+      
+      p {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 1.5rem;
+        &.down {
+          margin-top: 3.5rem;
+        }
+      }
+      
+      p.down a {
+        border: medium solid $brand-color;
+        padding: 0 1.5rem;
+        font-size: 3rem;
+        line-height: 1;
       }
     }
-    
-    span.share {
-      right: 2.5rem;
-      
-      i { margin-left: 0.35rem; }
-    }
-    
-    p {
-      max-width: 800px;
+    div#toc {
+      max-width: 850px;
       margin: auto;
-      margin-top: 1.5rem;
-    }
-    
-    p.more a {
-      display: inline-block;
-      border: thin solid $brand-color;
-      width: auto;
-      padding: 0.5rem 1rem;
-      margin: 1.2rem;
-    }
-    
-    p.more:hover a {
-      background-color: $brand-color;
-      color: white;
-      text-decoration: none;
+      padding: 1rem;
+      color: $brand-color;
+      
+      ul {
+        list-style-type: none;
+        
+        a { color: $brand-color; }
+        a:hover { color: black; }
+        
+        hr { 
+          border-top: $brand-color thin solid; 
+          width: 200px; 
+          margin: auto; 
+        }
+        
+        li {
+          margin-bottom: 1rem;
+          padding: 1rem 0;
+          transition: 0.2s all;
+        }
+        
+        li:hover {
+          box-shadow: 10px 0px $brand-color;
+          
+          div.featured-image div.featured-overlay {
+            background-color: transparentize($brand-color, 1);
+          }
+        }
+        
+        p.chapter {
+          text-align: center;
+          margin-top: 3rem;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          font-family: $base-sans-font-family;
+        }
+        
+        
+        div.featured-image, div.featured-text {
+          display: inline-block;
+        }
+        
+        div.featured-image {
+          width: 40%;
+          height: 200px;
+          background-size: cover;
+          vertical-align: bottom;
+          background-position: top center;
+          
+          div.featured-overlay {
+            width: 100%;
+            background-color: transparentize($brand-color, 0.5);
+            height: 200px;
+            transition: 0.2s all;
+          }
+        }
+        
+        div.featured-text {
+          width: 55%;
+          padding-left: 10px;
+          vertical-align: baseline;
+          h1 { font-family: $base-serif-font-family; }
+          // p { font-family: $base-sans-font-family; }
+        }
+        
+        li.page {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            text-align: center;
+            h1 { 
+              font-family: $base-sans-font-family; 
+              
+            }
+        }
+      }
     }
 }
 
