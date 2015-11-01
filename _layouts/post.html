@@ -51,15 +51,23 @@
                 <span class="byline">{{ byline }} ■ </span>
             {% endfor %}
             <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
-            <!-- <a class="down" href="#start">
-              <p><i class="fa fa-angle-down"></i></p>
-            </a> -->
         </div>
     </section>
     {% endif %}
     
-    <article  class="post">
+    <article class="post">
+        {% if page.featured-caption %}
+          <p class="featured-caption"><b>Above:</b> {{ page.featured-caption }}</p>
+        {% endif %}
+        
         <h1 id="start" class="title">{{ page.title }}</h1>
+        
+        {% if page.editorsnote %}
+            <div class="editorsnote">
+              <p class="title">Editor's Note</p>
+              <div class="editorstext"> {{ site.editorsnote }} </div>
+            </div>
+        {% endif %}
         
         {% if page.sidenote %}
             <p class="sidenote">{{ page.sidenote }}</p>

@@ -11,7 +11,7 @@
     {% for chapter in (1...3) %}
       <label>Chapter {{ chapter }}</label>
       {% for post in site.posts reversed %}
-        {% if post.chapter == chapter and post.id != page.id and (post.type == 'main' or post.type == 'column') %}
+        {% if post.chapter == chapter and (post.type == 'main' or post.type == 'column') %}
         <li class="{{ post.type }}">
           <a href="{{ post.url | prepend: site.baseurl }}">
             {{ post.title }} 
