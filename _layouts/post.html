@@ -156,7 +156,7 @@
         $(this).children('section.sidebar').toggleClass('show');
         $('#overlay').toggleClass('show');
         $('#timeline').toggleClass('hide');
-        document.body.style.overflow='hidden';
+        document.body.style.overflow = $('body').css('overflow') == 'hidden' ? 'auto' : 'hidden';
       });
       $('#overlay').click(function() {
         $('section.sidebar').removeClass('show');
