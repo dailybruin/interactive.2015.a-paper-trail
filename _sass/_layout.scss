@@ -135,7 +135,10 @@ section.featured-image {
     text-align: left;
     padding: 1rem 5rem 4rem 3rem;
     
-    p, span { font-family: $base-serif-font-family; }
+    p, span { 
+      font-family: $base-serif-font-family; 
+      font-size: 1.3rem;
+    }
     
     h1 {
       line-height: 1.2;
@@ -148,12 +151,7 @@ section.featured-image {
     
     span.chapter {
       display: block;
-      width: 100%;
-      font-size: 1.3rem;
-    }
-    
-    p.description {
-      font-size: 1.3rem;
+      width: 100%;      
     }
     
     a.down p {
@@ -165,18 +163,6 @@ section.featured-image {
       line-height: 0;
     }
     
-    div.byline {
-      display: block;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-      bottom: 23vh;
-      left: 0;
-      font-weight: 500;
-      font-size: 1.3rem;
-      
-    }
-    
     p.date {
       display: block;
       position: absolute;
@@ -185,13 +171,10 @@ section.featured-image {
       bottom: 6rem;
       left: 0;
     }
-    
-    @include media-query(845px) {
-        p { font-size: 1rem; } 
-    }
+
     @include media-query(700px) {
-        p { font-size: 1rem; }
-        h1 { font-size: 5rem; }
+        p, span { font-size: 1.1rem; }
+        h1 { font-size: 3.5rem; }
         &.column { background: transparentize($brand-color, 0.55); }
         &.main { background: transparentize($brand-off-color, 0.55); }   
     }
@@ -268,11 +251,12 @@ div.sub-nav {
 }
 
 div#timeline {
-  position: absolute;
-  top: 100vh;
+  position: fixed;
   left: 0;
   margin: 2rem 2rem;
+  margin-top: 100vh;
   font-size: 0.9rem;
+  overflow: auto;
   
   &.page { top: 75px; }
   
@@ -432,6 +416,10 @@ figure.viz {
     rect {
       &:hover { cursor: pointer; }
     }
+    
+    @include media-query($on-mobile) {
+        display: none;
+    }
 }
 
 article{
@@ -457,8 +445,16 @@ article{
     
     div.editorstext {
       -webkit-columns: 300px 2;
-      -moz-columns: 300px 2;
-          columns: 300px 2;
+         -moz-columns: 300px 2;
+              columns: 300px 2;
+      width: 100%;
+    }
+    
+    @include media-query($on-palm) {
+      -webkit-columns: none;
+         -moz-columns: none;
+              columns: none;
+      margin-left: 0px;
     }
   }
   
@@ -469,6 +465,11 @@ article{
     font-size: 0.85rem;
     text-align: right;
     font-family: $base-sans-font-family;
+    max-width: 800px;
+    
+    @include media-query($on-palm) {
+      margin-left: 0px;
+    }
   }
   
   h1#start {
@@ -687,7 +688,10 @@ article{
       clear: both;
       display: block;
       width: 100%;
+      max-width: none;
       margin: 1rem auto;
+      
+      img { text-align: center; margin: auto; }
     }
   }
 }

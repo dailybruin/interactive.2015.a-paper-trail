@@ -19,18 +19,16 @@
     </div>
     
     {% if page.timeline %}
-    <div id="timeline" data-stellar-ratio="0.8"></div>
+    <div id="timeline"></div>
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
       timeline('#timeline', '{{page.timeline}}', $('article').height()*0.75);
     });
-    $.stellar({
-      horizontalScrolling: false,
-      hideDistantElements: false
-		});
-    $(window).resize(function() {
-        $.stellar('refresh');
+    $(window).scroll(function () { 
+       $('#timeline').css({
+          'top' : -($(this).scrollTop()/4*3)+"px"
+       }); 
     });
     </script>
     {% endif %}

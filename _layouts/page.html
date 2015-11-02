@@ -8,26 +8,31 @@
     {% include header.html %}
     
     {% if page.timeline %}
-    <div id="timeline" class="page" data-stellar-ratio="0.8"></div>
+    <div id="timeline"></div>
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
-      timeline('#timeline', '{{page.timeline}}', 5500);
+      timeline('#timeline', '{{page.timeline}}', $('article').height()*0.75);
     });
-    
+    $(window).scroll(function () { 
+       $('#timeline').css({
+          'top' : -($(this).scrollTop()/4*3)+"px"
+       }); 
+    });
     </script>
     {% endif %}
     
-    {% if page.flowchart %}
-    <div id="flowchart" class="page" data-stellar-ratio="0.8"></div>
+    {% if page.timeline %}
+    <div id="flowchart" class="page"></div>
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
       timeline('#flowchart', '{{page.timeline}}', 5500);
     });
-    $.stellar({
-      horizontalScrolling: false,
-      hideDistantElements: false
+    $(window).scroll(function () { 
+       $('#flowchart').css({
+          'top' : -($(this).scrollTop()/4*3)+"px"
+       }); 
     });
     </script>
     {% endif %}
