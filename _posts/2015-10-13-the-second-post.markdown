@@ -2,6 +2,7 @@
 layout: post
 title:  "The second post"
 date:   2015-10-13 18:36:08
+publish: true
 chapter: 2
 type: main
 featured-image: http://placekitten.com/1800/1000

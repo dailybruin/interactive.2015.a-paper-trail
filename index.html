@@ -30,7 +30,8 @@ layout: landing
           <p class="chapter">Chapter {{ chapter }}</p>
           {% for post in site.posts reversed %}
             {% if post.chapter == chapter and post.id != page.id and (post.type == 'main' or post.type == 'column') %}
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            
+            <a {% if post.publish == true %} href="{{ post.url | prepend: site.baseurl }}" class="publish" {% endif %}>
               <li class="{{ post.type }}">
                 <div class="featured-image" style="background-image: url('{{post.featured-image}}')">
                   <div class="featured-overlay"></div>
@@ -39,20 +40,26 @@ layout: landing
                   <h1>{{ post.title }}</h1>
                   <p>{{ post.description }}</p>
                 </div>
+                {% if post.publish == false %}
+                <div class="future">
+                  <h1 class="future">Publishing on {{ post.date | date: '%B %d' }}</h1>
+                </div>
+                {% endif %}
               </li>  
             </a>
+            
             {% endif %}  
           {% endfor %}  
         {% endfor %}
         <hr/>
-        <a href="{{ "/about" | | prepend: site.baseurl }}">
+        <a href="{{ "/about" | | prepend: site.baseurl }}" class="publish">
           <li class="page">
               <h1>About the project</h1>
               <p>Learn about the project, where reporting took place and how it happened.</p>
           </li>
         </a>
         <hr/>
-        <a href="{{ "/print" | | prepend: site.baseurl }}">
+        <a href="{{ "/print" | | prepend: site.baseurl }}" class="publish">
           <li class="page">
               <h1>Print version</h1>
           </li>

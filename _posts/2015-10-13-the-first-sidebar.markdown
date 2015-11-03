@@ -2,6 +2,7 @@
 layout: post
 title:  "The first sidebar"
 date:   2015-10-13 18:40:08
+publish: true
 chapter: 1
 type: sidebar
 featured-image: http://placekitten.com/900/500

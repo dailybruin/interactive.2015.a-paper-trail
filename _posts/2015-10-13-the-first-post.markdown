@@ -2,6 +2,7 @@
 layout: post
 title:  "The Current Policy"
 date:   2015-10-13 18:34:08
+publish: true
 chapter: 1
 type: main
 featured-image: http://placekitten.com/1800/1000

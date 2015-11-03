@@ -2,10 +2,11 @@
 layout: post
 title:  "The third post"
 date:   2015-10-13 18:38:08
+publish: false
 chapter: 3
 type: main
 featured-image: http://placekitten.com/1600/1000
-permalink: /chapter3/the-third-post/
+permalink: #/chapter3/the-third-post/
 bylines: ["Column by Ryan Nelson","Photos by Angie Wang"]
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 sidenote: "Updated on October 10 at 10 p.m. This story has been updated to properly fit your screen assuming you're not on your phone."

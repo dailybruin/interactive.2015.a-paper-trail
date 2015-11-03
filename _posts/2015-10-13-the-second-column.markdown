@@ -2,6 +2,7 @@
 layout: post
 title:  "The second column"
 date:   2015-10-13 18:37:08
+publish: true
 chapter: 2
 type: column
 featured-image: http://placekitten.com/1600/1000

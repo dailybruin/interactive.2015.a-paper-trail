@@ -2,6 +2,7 @@
 layout: post
 title:  "The first column"
 date:   2015-10-13 18:35:08
+publish: true
 chapter: 1
 type: column
 featured-image: http://placekitten.com/1600/1000
