@@ -74,6 +74,12 @@ nav.posts {
   overflow: hidden;
   z-index: 1;
   
+  hr { 
+    border: none;
+    border-top: white thin solid;
+    margin: 0.25rem 0;
+  }
+  
   label {
     color: $background-color;
     font-family: $base-sans-font-family;
@@ -86,8 +92,6 @@ nav.posts {
   
   &.column ul { background: transparentize($brand-color, 0.05); }
   ul { background: transparentize($brand-off-color, 0.05); }
-  
-  hr { margin: 0.25rem 0; }
   
   ul { 
     display: inline-block;
@@ -108,6 +112,17 @@ nav.posts {
     }
   }
   a { color: #fdfdfd; &:hover { border-bottom: $background-color 0.2rem solid; } }
+  
+  @include media-query($on-palm) {
+    ul {
+      padding: 0px;
+      width: 100%;
+    }
+    hr {
+      width: 80%;
+      margin: auto;
+    }
+  }
 }
 
 .column h1,
@@ -131,13 +146,20 @@ section.featured-image {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 750px;
+    width: 100%;
     text-align: left;
-    padding: 1rem 5rem 4rem 3rem;
+    padding: 1rem 5rem 3rem 3rem;
+    background: transparent linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.2) 33%) repeat scroll 0% 0%;
+    text-shadow: 0em 0em 0.15em rgba(0, 0, 0, 0.25);
+    
+    a {
+      color: #e88a5a;
+    }
     
     p, span { 
       font-family: $base-serif-font-family; 
       font-size: 1.3rem;
+      max-width: 750px;
     }
     
     h1 {
@@ -175,8 +197,12 @@ section.featured-image {
     @include media-query(700px) {
         p, span { font-size: 1.1rem; }
         h1 { font-size: 3.5rem; }
-        &.column { background: transparentize($brand-color, 0.55); }
-        &.main { background: transparentize($brand-off-color, 0.55); }   
+    }
+    
+    @include media-query($on-mobile) {
+      bottom: 0;
+      padding: 1rem;
+      padding-bottom: 2rem;
     }
   }
   
@@ -288,14 +314,14 @@ div#timeline {
     
     tspan {
       transition: all 1s;
-      opacity: 0;
       visibility: hidden;
-      &:nth-child(1) { opacity: 0.8; visibility: visible; }
-      &:nth-child(2) { opacity: 0.5; visibility: visible; }
-      &:nth-child(3) { opacity: 0.3; visibility: visible; }
+      fill: white;
+      &:nth-child(1) { fill: #222; visibility: visible; }
+      &:nth-child(2) { fill: #555; visibility: visible; }
+      &:nth-child(3) { fill: #AAA; visibility: visible; }
     }
     &:hover tspan{
-      opacity: 1; 
+      fill: #222;
       visibility: visible;
     }
   }
@@ -309,6 +335,7 @@ div#timeline {
   }
   
   @include media-query($on-laptop) {
+    display: none;
       visibility: hidden !important;
   }
 }
@@ -679,19 +706,28 @@ article{
   
   @include media-query($on-palm) {
     &, &.post {
-      padding: 0px 50px;
+      padding: 0px 15px;
     }
     figure,
     blockquote,
     p.sidenote,
     figure.sidebar {
+      float: none;
       clear: both;
       display: block;
       width: 100%;
       max-width: none;
       margin: 1rem auto;
+      padding: 1rem 0;
       
       img { text-align: center; margin: auto; }
+    }
+    blockquote {
+      width: 90%;
+      padding-left: 1rem;
+    }
+    p.sidenote {
+      margin-bottom: 2rem;
     }
   }
 }
@@ -761,6 +797,21 @@ div.landing {
         font-size: 3rem;
         line-height: 1;
       }
+      
+      @include media-query($on-mobile) {
+        padding-top: 8vh;
+        
+        span.db,
+        span.share {
+          display: none;
+        }
+        h1 {
+          font-size: 4rem;
+        }
+        p.down {
+          display: none;
+        }
+      }
     }
     div#toc {
       max-width: 850px;
@@ -770,6 +821,7 @@ div.landing {
       
       ul {
         list-style-type: none;
+        margin: auto;
         
         a { color: $brand-color; }
         a:hover { color: black; }
@@ -840,6 +892,17 @@ div.landing {
               
             }
         }
+        
+        @include media-query($on-mobile) {
+          p {
+            font-size: 1rem;
+          }
+          div.featured-image,
+          div.featured-text {
+            width: 100%;
+            padding: 0;
+          }
+        }
       }
     }
 }
@@ -883,6 +946,12 @@ nav.next-prev {
       margin: 0;
     }
   }
+  
+  @include media-query($on-mobile) {
+    a {
+      width: 100%;
+    }
+  }
 }
 
 iframe.box-embed {
@@ -896,8 +965,7 @@ iframe.box-embed {
 footer {
   max-width: 650px;
   margin: auto;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
   border-top: thin solid lightgrey;
   font-size: 0.75rem;
   text-align: center;
