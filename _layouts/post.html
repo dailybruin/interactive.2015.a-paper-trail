@@ -23,7 +23,7 @@
     <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
     <script>
     $(document).ready(function() {
-      timeline('#timeline', '{{page.timeline}}', $('article').height()*0.85);
+      timeline('#timeline', '{{page.timeline}}', $('article').height()*0.75);
     });
     $(window).scroll(function () { 
        $('#timeline').css({
