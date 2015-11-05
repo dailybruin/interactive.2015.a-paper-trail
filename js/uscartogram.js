@@ -82,7 +82,7 @@ uscartogram = function(id, dataPath, colorField) {
               .attr("class", "more")
               .text("Hover for more details on each state.")
               .attr("x", margin.x)
-              .attr("y", height);
+              .attr("y", height-5);
   });
   
   var mouseout = function(d,i) {

@@ -99,6 +99,12 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
   <figcaption>This kitten travelled across the world to see you. He has saved many lives. (Photo by Kitten Photographer)</figcaption>
 </figure>
 
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
 # the end
 
 Jekyll also offers powerful support for code snippets:
@@ -109,11 +115,11 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 <figure class="viz">
   <p class="title">Healthcare access for undocumented individuals by state</p>
-  <div id="viz"></div>
+  <div id="healthcare"></div>
   <p class="source">Data from the Migration Policy Institute.</p>
 </figure>
 <script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
-<script>uscartogram('#viz', "../../data/healthcareaccess.json", "access");</script>
+<script>uscartogram('#healthcare', "../../data/healthcareaccess.json", "access");</script>
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
@@ -192,6 +198,23 @@ print_hi('Tom')
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+<figure class="viz">
+  <div id="cavga">
+    <p class="title">Policy on undocumented students: CA vs. GA</p>
+  </div>
+  <p class="source">Data from the Migration Policy Institute.</p>
+</figure>
+<script src="{{ "/js/ca_v_ga.js" | prepend: site.baseurl }}"></script>
+<script>
+  ca_v_ga("cavga");
+</script>
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 

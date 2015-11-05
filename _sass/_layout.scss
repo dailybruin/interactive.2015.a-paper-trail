@@ -406,8 +406,11 @@ figure.viz {
       font-family: $base-sans-font-family;
       
       &.title {
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        // border-bottom: lightgrey solid thin;
+        // padding-bottom: 1rem;
       }
       &.source {
         font-size: 0.75rem;
@@ -450,6 +453,45 @@ figure.viz {
     @include media-query($on-mobile) {
         display: none;
     }
+}
+
+div#cavga {
+  font-family: $base-sans-font-family;
+  margin: 0.5rem;
+  cursor: auto;
+  
+  table { 
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  td {  
+    font-size: 1rem;
+    padding-right: 0.75rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+    vertical-align: middle;
+    
+    &.details {
+      width: 40%;
+      padding: 0.5rem;
+    }
+    
+    &.check {
+      width: 10%;
+    }
+    i {
+      font-size: 2rem;
+      &.fa-file-text-o { font-size: 0.85rem; margin-left: 0.5rem;}
+      &.fa-check-circle { color: darken(rgb(208, 241, 191), 15%); }
+      &.fa-times-circle { color: darken(rgb(254, 192, 170), 15%); }
+      &.fa-minus-circle { color: darken(#f2c57c, 15%); }
+    }
+  }
 }
 
 article{
