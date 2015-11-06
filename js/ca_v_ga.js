@@ -24,7 +24,7 @@ ca_v_ga = function(id) {
               var info = document.createElement('i');
               info.className = "fa fa-file-text-o";
               var infoA = document.createElement('a');
-              infoA.href = "http://google.com";
+              infoA.href = d[prop]["link"];
               infoA.appendChild(info);
               details.appendChild(infoA);
               tr.appendChild(details);

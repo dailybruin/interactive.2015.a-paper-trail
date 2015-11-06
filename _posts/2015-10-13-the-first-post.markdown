@@ -207,7 +207,7 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
   <div id="cavga">
     <p class="title">Policy on undocumented students: CA vs. GA</p>
   </div>
-  <p class="source">Data from the Migration Policy Institute.</p>
+  <p class="source">Data from the California Student Aid Commission and University System of Georgia.</p>
 </figure>
 <script src="{{ "/js/ca_v_ga.js" | prepend: site.baseurl }}"></script>
 <script>

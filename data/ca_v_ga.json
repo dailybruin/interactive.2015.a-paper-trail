@@ -3,18 +3,18 @@
     "state": "California",
     "tuition": {
         "details": "In-state tuition rates for qualifying undocumented students",
-        "check": 2,
-        "link": "In-state tuition rates for qualifying undocumented students"
+        "check": 1,
+        "link": "http://www.csac.ca.gov/pubs/forms/grnt_frm/AB540Law.pdf"
     },
     "financial_aid": {
         "details": "State financial aid for qualifying undocumented students",
-        "check": 2,
-        "link": "In-state tuition rates for qualifying undocumented students"
+        "check": 1,
+        "link": "http://www.csac.ca.gov/pubs/forms/grnt_frm/AB131.pdf"
     },
     "admission_req": {
         "details": "No university requires citizenship status information to be eligible for admission",
         "check": 1,
-        "link": "No university requires citizenship status information to be eligible for admission"
+        "link": "http://www.ncsl.org/research/education/undocumented-student-tuition-federal-action.aspx"
     }
   },
   {
@@ -22,17 +22,17 @@
     "tuition": {
         "details": "No in-state tuition",
         "check": 3,
-        "link": "In-state tuition rates for qualifying undocumented students"
+        "link": "http://www.usg.edu/news/release/regents_adopt_new_policies_on_undocumented_students"
     },
     "financial_aid": {
         "details": "No state financial aid",
         "check": 3,
-        "link": "In-state tuition rates for qualifying undocumented students"
+        "link": "http://www.usg.edu/news/release/regents_adopt_new_policies_on_undocumented_students"
     },
     "admission_req": {
         "details": "Top 5 public universities must verify American citizenship or legal residency before admitting students",
         "check": 3,
-        "link": "No university requires citizenship status information to be eligible for admission"
+        "link": "http://www.usg.edu/policymanual/section4/C327/#p4.1.6_admission_of_persons_not_lawfully_present_in_the_united_states"
     }
   }
 ]
