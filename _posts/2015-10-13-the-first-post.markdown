@@ -116,7 +116,8 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 <figure class="viz">
   <p class="title">Healthcare access for undocumented individuals by state</p>
   <div id="healthcare"></div>
-  <p class="source">Data from the Migration Policy Institute.</p>
+  <p class="note">* Percentages collected from sample populations of undocumented individuals in each state. Samples for some states were not large enough to make accurate calculations.</p>
+  <p class="source">Data from the <a href="http://www.nilc.org/health.html">National Immigration Law Center</a> and <a href="http://www.migrationpolicy.org/programs/us-immigration-policy-program-data-hub/unauthorized-immigrant-population-profiles">Migration Policy Institute</a>.</p>
 </figure>
 <script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
 <script>uscartogram('#healthcare', "../../data/healthcareaccess.json", "access");</script>
@@ -207,7 +208,7 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
   <div id="cavga">
     <p class="title">Policy on undocumented students: CA vs. GA</p>
   </div>
-  <p class="source">Data from the California Student Aid Commission and University System of Georgia.</p>
+  <p class="source">Data from the <a href="http://www.csac.ca.gov/dream_act.asp">California Student Aid Commission</a> and <a href="http://www.usg.edu/policymanual/">University System of Georgia</a>.</p>
 </figure>
 <script src="{{ "/js/ca_v_ga.js" | prepend: site.baseurl }}"></script>
 <script>

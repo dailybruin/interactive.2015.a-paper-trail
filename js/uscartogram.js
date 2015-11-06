@@ -41,8 +41,7 @@ uscartogram = function(id, dataPath, colorField) {
                           return "lightgrey";
                         return color(d[colorField]); 
                       })
-                      .on("mouseover", mouseover)
-                      .on("mouseout", mouseout);
+                      .on("mouseover", mouseover);
                       
     var abbrLabels = svg.selectAll('abbr')
                       .data(data).enter()
@@ -56,8 +55,7 @@ uscartogram = function(id, dataPath, colorField) {
                       .attr("y", function(d) {
                         return (d.row-1) * radius * 2 + margin.y + radius*1.3;
                       })
-                      .on("mouseover", mouseover)
-                      .on("mouseout", mouseout);
+                      .on("mouseover", mouseover);
 
     var legend = svg.selectAll(".legend")
         .data(color.domain())
@@ -86,18 +84,20 @@ uscartogram = function(id, dataPath, colorField) {
   });
   
   var mouseout = function(d,i) {
-    var thisCircle = svg.selectAll('.state.i'+i);
-    thisCircle.classed("hover", false);
+    var circles = svg.selectAll('.state');
+    circles.classed("hover", false);
     var more = svg.selectAll('.more')
                   .text('Hover for more details on each state.');
   }
 
   var mouseover = function(d,i) {
+    var circles = svg.selectAll('.state');
+    circles.classed("hover", false);
     var thisCircle = svg.selectAll('.state.i'+i);
     thisCircle.classed("hover", true);
     var more = svg.selectAll('.more')
                   .text(function() {
-                    var text = "";
+                    var text = d["name"] + " - ";
                     for (var prop in d) {
                       if (constants.indexOf(prop) == -1) {
                         text +=  prop + ': ' + d[prop] + ' ';
