@@ -13,27 +13,24 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 <figure class="viz bytn">
   <div class="info">
     <h1>Undocumented individuals in the United States by the numbers</h1>
-    <p>There are approximately 11.4 million undocumented individuals in the United States. Here 
-    is a breakdown of the population by gender, age, healthcare access and more.</p>
+    <p>According to the Department of Homeland Security, there are approximately 11.4 million undocumented individuals in the United States. Here 
+    is a breakdown of the population by gender*, age, state of residence and more.</p>
     <hr/>
   </div>
 
   <div id="numbers"></div>
-  <p class="source">Data from the <a href="">Department of Homeland Security</a> and 
+  <p class="source">*The Department of Homeland Security only collects data from individuals who identify as either male or female.</p>
+  <p class="source">Estimates from the <a href="">Department of Homeland Security</a> and 
   <a href="">Migration Policy Institute</a></p>
 
   <script src="{{ "/js/bythenumbers.js" | prepend: site.baseurl }}"></script>
   <script>
-    bythenumbers('#numbers', 
-                  11400,
-                  { 'total': 11400000, 
-                    'desc': 'test', 
-                    'fields': [{ 'name': 'test', 
-                                'counts': { 'one': 1140000,
-                                            'two': 2280000,
-                                            'three': 7980000
-                                          }, 
-                                'desc': 'testdesc'}]
-                    });
+    $.getJSON("{{ "/data/bythenumbers.json" | prepend: site.baseurl }}", function(data) {
+      bythenumbers(
+        '#numbers', 
+        11430,
+        data
+      );
+    });
   </script>
 </figure>

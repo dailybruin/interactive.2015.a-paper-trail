@@ -1,0 +1,63 @@
+{ "total": 11430000, 
+  "desc": "test", 
+  "fields": [{ "name": "sex", 
+              "counts": { "Male (6,100,000)": 6100000,
+                          "Female (5,330,000)": 5330000
+                        }, 
+              "desc": "Just over half – 53 percent – of the undocumented population identifies as male. The remaining 47 percent or 5.4 million identify as female."},
+              { "name": "age", 
+                "counts": { "18 and younger (1,120,000)": 1120000,
+                            "18 to 24 years (1,410,000)": 1410000,
+                            "25 to 34 years (3,660,000)": 3660000,
+                            "35 to 44 years (3,320,000)": 3320000,
+                            "45 to 54 years (1,400,000)": 1400000,
+                            "55 years and older (520,000)": 520000
+                          },
+                "desc": "About 10 percent or 1.12 million people are children under the age of 18. A majority of the population – 61 percent – are between 25 and 44 years old. Only 5 percent of the population are seniors over the age of 55."
+              },
+                { "name": "state", 
+                  "counts": { "California (2,820,000)": 2820000,
+                              "Texas (1,830,000)": 1830000,
+                              "Florida (730,000)": 730000,
+                              "New York (580,000)": 580000,
+                              "Illinois (540,000)": 540000,
+                              "New Jersey (430,000)": 430000,
+                              "Georgia (400,000)": 400000,
+                              "North Carolina (360,000)": 360000,
+                              "Arizona (350,000)": 350000,
+                              "Washington (270,000)": 270000,
+                              " Other (3,120,000)": 3120000
+                            }, 
+                  "desc": "More undocumented people, about a quarter of the population, settle in California than any other state. About 83 percent live in ten states while the remaining are spread across the remaining 40."
+                },
+                { "name": "time", 
+                  "counts": { "  Less than 5 (2,400,300)": 2400300,
+                              " 5 to 9 (3,429,000)": 3429000,
+                              "10 to 14 (2,743,200)": 2743200,
+                              "15 to 19 (1,257,300)": 1257300,
+                              "20 or more (1,600,200)": 1600200
+                            }, 
+                  "desc": "About 29 percent of undocumented people have lived in the US for 5 to 9 years. Another 24 percent or 2.7 million have lived here for 10 to 14 years."
+                },
+                { "name": "edu", 
+                  "counts": { " 3 to 17 year olds enrolled (1,045,644)": 1045644,
+                              " 3 to 17 year olds not enrolled (90,926)": 90926,
+                              "18 to 24 year olds enrolled (433,712)": 433712,
+                              "18 to 24 year olds not enrolled (1,172,627)": 1172627,
+                              "24 and older with at least high school (4,239,906)": 4239906,
+                              "24 and older without high school (4,412,963)": 4412963,
+                              "N/A (34,222)": 34222
+                            }, 
+                  "desc": "A vast majority – 92 percent – of undocumented children are enrolled in school but only 27 percent of adults ages 18 to 24 are enrolled. Around 49 percent of adults over 25 have at least a high school diploma or GED."
+                },
+                { "name": "family", 
+                  "counts": { "  Below 50% poverty level (1,668,780)": 1668780,
+                              " 50 to 99% poverty level (1,668,780)": 1668780,
+                              "100 to 149% poverty level (2,125,980)": 2125980,
+                              "150 to 199% poverty level (1,783,080)": 1783080,
+                              "At or above 200% poverty level (4,183,380)": 4183380
+                            }, 
+                  "desc": "About 32 percent of undocumented people earn a family income below the poverty line. About 69 percent live above the line with the largest group, 36 percent, living at above 200 percent of the poverty level."
+                }]
+                
+  }

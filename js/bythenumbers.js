@@ -9,9 +9,6 @@ bythenumbers = function(id, count, stats) {
   
   var step = 0;
   
-  var color = d3.scale.ordinal()
-    .range(["#FEC0AA", "#D0F1BF", "#95F9E3"]);
-  
   var svg = d3.select(id).append('svg')
       .attr("width", width)
       .attr("height", height);
@@ -30,6 +27,8 @@ bythenumbers = function(id, count, stats) {
     properties.push(temp);
   });
   
+  console.log(properties);
+  
   for (var i = 0; i < count; i++) {
     var temp = {};
     stats["fields"].forEach(function(f) {
@@ -44,9 +43,7 @@ bythenumbers = function(id, count, stats) {
     data.push(temp);
   }
   
-  
   d3.shuffle(data);
-  console.log(data);
   
   var numbers = svg.selectAll('.number')
       .data(data).enter()
@@ -105,7 +102,7 @@ bythenumbers = function(id, count, stats) {
       .on('click', click);                                 
 
   function click() {
-    switch (step%3) {
+    switch (step%(properties.length+2)) {
       case 0:
         nextRect.transition()
             .duration(1000)
@@ -133,9 +130,9 @@ bythenumbers = function(id, count, stats) {
                             .attr("y", height/2)
                             .attr("dy", ".35em")
                             .style('opacity', 0)
-                            .text('There are approximately 11.4 million undocumented people in the ' + 
-                                  'United States. That is 120 columns times 95 rows times 1000 people ' +
-                                  'per dot.')
+                            .text('There are approximately 11.43 million undocumented people in the ' + 
+                                  'United States. That is 120 columns and 95.25 rows of dots representing ' +
+                                  '1000 people each.')
                             .call(wrap, 250);
         description.transition()
             .duration(1500)
@@ -168,7 +165,7 @@ bythenumbers = function(id, count, stats) {
         svg.selectAll(".description").remove();
         break;
       default:
-        breakdown(step%3-1);
+        breakdown(step%(properties.length+2)-1);
         break;
     }
     step++;
@@ -176,7 +173,10 @@ bythenumbers = function(id, count, stats) {
   };
 
   function breakdown(index) {
+    var color = d3.scale.category10();
     var counts = properties[index];
+    console.log(stats["fields"]);
+    console.log(data[0][stats["fields"][index]["name"]]);
     numbers.transition()
             .duration(1000)
             .attr('cx', function(d,i) {
@@ -203,28 +203,25 @@ bythenumbers = function(id, count, stats) {
                 propCount++;
                 totalCount += totals[prop];
               }
-              if(d[stats["fields"][index]["name"]]) {
-                tCountB++;
-                return Math.ceil((tCountB+1)/120)*4 + 50;
-              } else {
-                fCountB++;
-                return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
-              }
             })
-            .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
+            .style('fill', function(d) { return color(d[stats["fields"][index]["name"]]); });
     
-    var description = svg.selectAll('.description')
-                        .transition()
-                        .duration(1000)
-                        .style('opacity', 0);
+    svg.selectAll('.description').remove();
+    var description = svg.append('text')
+                        .attr('class', 'description')
+                        .attr("x", width - 260)
+                        .attr("y", height/5*3)
+                        .attr("dy", ".35em")
+                        .style('opacity', 0)
+                        .text(stats["fields"][index]["desc"])
+                        .call(wrap, 250);
     description.transition()
-                .delay(1000)
-                .duration(1000)
-                .style('opacity', 1)
-                .text(stats["fields"][0]["desc"]);              
-                                
+        .duration(1500)
+        .style('opacity', 1);           
+    
+    svg.selectAll('.colorLegend').remove();                            
     var colorLegend = svg.selectAll(".colorLegend")
-        .data(color.domain())
+        .data(color.domain().sort())
       .enter().append("g")
         .attr("class", "colorLegend")
         .attr("transform", function(d, i) { return "translate(0," + (i * 20 + 75) + ")"; });        
