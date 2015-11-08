@@ -126,44 +126,24 @@ bythenumbers = function(id, count, stats) {
         legend.transition()
             .duration(1500)
             .style('opacity', '1');
+            
+        var description = svg.append('text')
+                            .attr('class', 'description')
+                            .attr("x", width - 260)
+                            .attr("y", height/2)
+                            .attr("dy", ".35em")
+                            .style('opacity', 0)
+                            .text('There are approximately 11.4 million undocumented people in the ' + 
+                                  'United States. That is 120 columns times 95 rows times 1000 people ' +
+                                  'per dot.')
+                            .call(wrap, 250);
+        description.transition()
+            .duration(1500)
+            .style('opacity', 1);
+            
         break;
       case 1:
-        var counts = properties[0];
-        numbers.transition()
-                .duration(1500)
-                .attr('cx', function(d,i) {
-                  for (var prop in counts) {
-                    if(d[stats["fields"][0]["name"]]==prop) {
-                      counts[prop]++;
-                      return (counts[prop]%120 + 1)*4;
-                    }
-                  }
-                });
-        var totals = jQuery.extend({}, counts);
-        numbers.transition()
-                .delay(1500)
-                .duration(1500)
-                .attr('cy', function(d,i) {
-                  var propCount = 0;
-                  var totalCount = 0;
-                  for (var prop in counts) {
-                    if(d[stats["fields"][0]["name"]]==prop) {
-                      counts[prop]--;
-                      var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
-                      return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
-                    }
-                    propCount++;
-                    totalCount += totals[prop];
-                  }
-                  if(d[stats["fields"][0]["name"]]) {
-                    tCountB++;
-                    return Math.ceil((tCountB+1)/120)*4 + 50;
-                  } else {
-                    fCountB++;
-                    return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
-                  }
-                })
-                .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
+        breakdown();
         break;
       case 2:
         numbers.transition()
@@ -186,10 +166,82 @@ bythenumbers = function(id, count, stats) {
         next.transition()
             .duration(1000)
             .attr('transform', 'translate('+(width/2+6)+','+(height/2-30)+')scale(.3)');
+        
+        svg.selectAll(".colorLegend").remove();
+        svg.selectAll(".description").remove();
     }
     step++;
 
   };
+
+function breakdown() {
+  var counts = properties[0];
+  numbers.transition()
+          .duration(1000)
+          .attr('cx', function(d,i) {
+            for (var prop in counts) {
+              if(d[stats["fields"][0]["name"]]==prop) {
+                counts[prop]++;
+                return (counts[prop]%120 + 1)*4;
+              }
+            }
+          });
+  var totals = jQuery.extend({}, counts);
+  numbers.transition()
+          .delay(1000)
+          .duration(1000)
+          .attr('cy', function(d,i) {
+            var propCount = 0;
+            var totalCount = 0;
+            for (var prop in counts) {
+              if(d[stats["fields"][0]["name"]]==prop) {
+                counts[prop]--;
+                var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
+                return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
+              }
+              propCount++;
+              totalCount += totals[prop];
+            }
+            if(d[stats["fields"][0]["name"]]) {
+              tCountB++;
+              return Math.ceil((tCountB+1)/120)*4 + 50;
+            } else {
+              fCountB++;
+              return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
+            }
+          })
+          .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
+  
+  var description = svg.selectAll('.description')
+                      .transition()
+                      .duration(1000)
+                      .style('opacity', 0);
+  description.transition()
+              .delay(1000)
+              .duration(1000)
+              .style('opacity', 1)
+              .text(stats["fields"][0]["desc"]);              
+                              
+  var colorLegend = svg.selectAll(".colorLegend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "colorLegend")
+      .attr("transform", function(d, i) { return "translate(0," + (i * 20 + 75) + ")"; });        
+                    
+  colorLegend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  colorLegend.append("text")
+      .attr("class", "colorLegendText")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+}
 
 }
 
