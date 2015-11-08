@@ -14,7 +14,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
   <div class="info">
     <h1>Undocumented individuals in the United States by the numbers</h1>
     <p>There are approximately 11.4 million undocumented individuals in the United States. Here 
-    is a breakdown of the population by the numbers.</p>
+    is a breakdown of the population by gender, age, healthcare access and more.</p>
     <hr/>
   </div>
 
@@ -28,8 +28,12 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
                   11400,
                   { 'total': 11400000, 
                     'desc': 'test', 
-                    'fields': [{ "name": "test", 
-                                "count": 1140, 
-                                "desc": "testdesc"}]});
+                    'fields': [{ 'name': 'test', 
+                                'counts': { 'one': 1140000,
+                                            'two': 2280000,
+                                            'three': 7980000
+                                          }, 
+                                'desc': 'testdesc'}]
+                    });
   </script>
 </figure>

@@ -5,9 +5,12 @@ bythenumbers = function(id, count, stats) {
   var width = $('article').width();
   var height = width*.65;
     
-  var radius = 1;
+  var radius = 1.5;
   
   var step = 0;
+  
+  var color = d3.scale.ordinal()
+    .range(["#FEC0AA", "#D0F1BF", "#95F9E3"]);
   
   var svg = d3.select(id).append('svg')
       .attr("width", width)
@@ -17,24 +20,39 @@ bythenumbers = function(id, count, stats) {
   
   var data = [];
   
-  for (var i = 0; i < count; i++) {
-    data.push({});
-  }
+  var properties = [];
   
-  data.forEach(function(d) {
-    stats["fields"].forEach(function(f) {
-        d[f["name"]] = f["count"] > 0;
-        f["count"]=f["count"]-per;
-    });
+  stats["fields"].forEach(function(f) {
+    var temp = {};
+    for (var prop in f["counts"]) {
+      temp[prop] = -1;
+    }
+    properties.push(temp);
   });
   
+  for (var i = 0; i < count; i++) {
+    var temp = {};
+    stats["fields"].forEach(function(f) {
+      for (var prop in f["counts"]) {
+        if (f["counts"][prop] > 0) {
+          temp[f["name"]] = prop;
+          f["counts"][prop]-=per;
+          break;
+        }
+      }
+    });
+    data.push(temp);
+  }
+  
+  
   d3.shuffle(data);
+  console.log(data);
   
   var numbers = svg.selectAll('.number')
       .data(data).enter()
       .append('circle')
       .attr('class', 'number')
-      .attr('r', radius)
+      .attr('r', radius-0.5)
       .attr('cx', function(d,i) {
         return (i%120 + 1)*7;
       })
@@ -87,7 +105,7 @@ bythenumbers = function(id, count, stats) {
       .on('click', click);                                 
 
   function click() {
-    switch (step%2) {
+    switch (step%3) {
       case 0:
         nextRect.transition()
             .duration(1000)
@@ -98,6 +116,7 @@ bythenumbers = function(id, count, stats) {
             .attr('transform', 'translate('+(width-30)+','+(height-30)+')scale(.3)');
         numbers.transition()
             .duration(1500)
+            .attr('r', radius)
             .attr('cx', function(d,i) {
               return (i%120 + 1)*4;
             })
@@ -109,25 +128,33 @@ bythenumbers = function(id, count, stats) {
             .style('opacity', '1');
         break;
       case 1:
-        var tCount = -1;
-        var fCount = -1;
-        var tCountB = -1;
-        var fCountB = -1;
+        var counts = properties[0];
         numbers.transition()
                 .duration(1500)
                 .attr('cx', function(d,i) {
-                  if(d[stats["fields"][0]["name"]]) {
-                    tCount++;
-                    return (tCount%120 + 1)*4;
-                  } else {
-                    fCount++;
-                    return (fCount%120 + 1)*4;
+                  for (var prop in counts) {
+                    if(d[stats["fields"][0]["name"]]==prop) {
+                      counts[prop]++;
+                      return (counts[prop]%120 + 1)*4;
+                    }
                   }
                 });
+        var totals = jQuery.extend({}, counts);
         numbers.transition()
                 .delay(1500)
                 .duration(1500)
                 .attr('cy', function(d,i) {
+                  var propCount = 0;
+                  var totalCount = 0;
+                  for (var prop in counts) {
+                    if(d[stats["fields"][0]["name"]]==prop) {
+                      counts[prop]--;
+                      var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
+                      return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
+                    }
+                    propCount++;
+                    totalCount += totals[prop];
+                  }
                   if(d[stats["fields"][0]["name"]]) {
                     tCountB++;
                     return Math.ceil((tCountB+1)/120)*4 + 50;
@@ -135,8 +162,30 @@ bythenumbers = function(id, count, stats) {
                     fCountB++;
                     return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
                   }
-                });
+                })
+                .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
         break;
+      case 2:
+        numbers.transition()
+          .duration(1500)
+          .attr('cx', function(d,i) {
+            return (i%120 + 1)*7;
+          })
+          .attr('cy', function(d,i) {
+            return Math.ceil((i+1)/120)*4 + 50;
+          })
+          .attr('r', radius-0.5)
+          .style('fill', '#5B5B5B');
+        legend.transition()
+            .duration(1500)
+            .style('opacity', '0');
+        nextRect.transition()
+            .duration(1000)
+            .attr('x', width/2-20)
+            .attr('y', height/2-45)
+        next.transition()
+            .duration(1000)
+            .attr('transform', 'translate('+(width/2+6)+','+(height/2-30)+')scale(.3)');
     }
     step++;
 
