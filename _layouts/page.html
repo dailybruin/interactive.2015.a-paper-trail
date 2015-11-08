@@ -22,22 +22,7 @@
     </script>
     {% endif %}
     
-    {% if page.timeline %}
-    <div id="flowchart" class="page"></div>
-    <script src="{{ "/js/timeline.js" | prepend: site.baseurl }}"></script>
-    <script>
-    $(document).ready(function() {
-      timeline('#flowchart', '{{page.timeline}}', 5500);
-    });
-    $(window).scroll(function () { 
-       $('#flowchart').css({
-          'top' : -($(this).scrollTop()/4*3)+"px"
-       }); 
-    });
-    </script>
-    {% endif %}
-    
-    <article class="page">
+    <article class="page {{page.type}}">
       
       {{ content }}
       

@@ -1,0 +1,35 @@
+---
+layout: page
+title:  "By the numbers"
+date:   2015-10-13 18:40:08
+publish: true
+chapter: 1
+type: graphic
+permalink: /chapter1/by-the-numbers/
+bylines: ["Column by Ryan Nelson","Photos by Angie Wang"]
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+---
+
+<figure class="viz bytn">
+  <div class="info">
+    <h1>Undocumented individuals in the United States by the numbers</h1>
+    <p>There are approximately 11.4 million undocumented individuals in the United States. Here 
+    is a breakdown of the population by the numbers.</p>
+    <hr/>
+  </div>
+
+  <div id="numbers"></div>
+  <p class="source">Data from the <a href="">Department of Homeland Security</a> and 
+  <a href="">Migration Policy Institute</a></p>
+
+  <script src="{{ "/js/bythenumbers.js" | prepend: site.baseurl }}"></script>
+  <script>
+    bythenumbers('#numbers', 
+                  11400,
+                  { 'total': 11400000, 
+                    'desc': 'test', 
+                    'fields': [{ "name": "test", 
+                                "count": 1140, 
+                                "desc": "testdesc"}]});
+  </script>
+</figure>

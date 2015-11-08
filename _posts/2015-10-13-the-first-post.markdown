@@ -115,7 +115,7 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 <figure class="viz">
   <p class="title">Healthcare access for undocumented individuals by state</p>
-  <div id="healthcare"></div>
+  <div id="healthcare" class="map"></div>
   <p class="note">* Percentages collected from sample populations of undocumented individuals in each state. Samples for some states were not large enough to make accurate calculations.</p>
   <p class="source">Data from the <a href="http://www.nilc.org/health.html">National Immigration Law Center</a> and <a href="http://www.migrationpolicy.org/programs/us-immigration-policy-program-data-hub/unauthorized-immigrant-population-profiles">Migration Policy Institute</a>.</p>
 </figure>
@@ -216,6 +216,24 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 </script>
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+<figure class="viz bytn">
+  <div id="overview">
+    <p>400 There are million zombies in the world.</p>
+  </div>
+</figure>
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
