@@ -142,10 +142,7 @@ bythenumbers = function(id, count, stats) {
             .style('opacity', 1);
             
         break;
-      case 1:
-        breakdown();
-        break;
-      case 2:
+      case properties.length+1:
         numbers.transition()
           .duration(1500)
           .attr('cx', function(d,i) {
@@ -169,79 +166,83 @@ bythenumbers = function(id, count, stats) {
         
         svg.selectAll(".colorLegend").remove();
         svg.selectAll(".description").remove();
+        break;
+      default:
+        breakdown(step%3-1);
+        break;
     }
     step++;
 
   };
 
-function breakdown() {
-  var counts = properties[0];
-  numbers.transition()
-          .duration(1000)
-          .attr('cx', function(d,i) {
-            for (var prop in counts) {
-              if(d[stats["fields"][0]["name"]]==prop) {
-                counts[prop]++;
-                return (counts[prop]%120 + 1)*4;
+  function breakdown(index) {
+    var counts = properties[index];
+    numbers.transition()
+            .duration(1000)
+            .attr('cx', function(d,i) {
+              for (var prop in counts) {
+                if(d[stats["fields"][index]["name"]]==prop) {
+                  counts[prop]++;
+                  return (counts[prop]%120 + 1)*4;
+                }
               }
-            }
-          });
-  var totals = jQuery.extend({}, counts);
-  numbers.transition()
-          .delay(1000)
-          .duration(1000)
-          .attr('cy', function(d,i) {
-            var propCount = 0;
-            var totalCount = 0;
-            for (var prop in counts) {
-              if(d[stats["fields"][0]["name"]]==prop) {
-                counts[prop]--;
-                var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
-                return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
+            });
+    var totals = jQuery.extend({}, counts);
+    numbers.transition()
+            .delay(1000)
+            .duration(1000)
+            .attr('cy', function(d,i) {
+              var propCount = 0;
+              var totalCount = 0;
+              for (var prop in counts) {
+                if(d[stats["fields"][index]["name"]]==prop) {
+                  counts[prop]--;
+                  var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
+                  return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
+                }
+                propCount++;
+                totalCount += totals[prop];
               }
-              propCount++;
-              totalCount += totals[prop];
-            }
-            if(d[stats["fields"][0]["name"]]) {
-              tCountB++;
-              return Math.ceil((tCountB+1)/120)*4 + 50;
-            } else {
-              fCountB++;
-              return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
-            }
-          })
-          .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
-  
-  var description = svg.selectAll('.description')
-                      .transition()
-                      .duration(1000)
-                      .style('opacity', 0);
-  description.transition()
-              .delay(1000)
-              .duration(1000)
-              .style('opacity', 1)
-              .text(stats["fields"][0]["desc"]);              
-                              
-  var colorLegend = svg.selectAll(".colorLegend")
-      .data(color.domain())
-    .enter().append("g")
-      .attr("class", "colorLegend")
-      .attr("transform", function(d, i) { return "translate(0," + (i * 20 + 75) + ")"; });        
-                    
-  colorLegend.append("rect")
-      .attr("x", width - 18)
-      .attr("width", 18)
-      .attr("height", 18)
-      .style("fill", color);
+              if(d[stats["fields"][index]["name"]]) {
+                tCountB++;
+                return Math.ceil((tCountB+1)/120)*4 + 50;
+              } else {
+                fCountB++;
+                return Math.ceil((fCountB+1)/120)*4 + 60 + Math.ceil((tCount+1)/120)*(4);
+              }
+            })
+            .style('fill', function(d) { return color(d[stats["fields"][0]["name"]]); });
+    
+    var description = svg.selectAll('.description')
+                        .transition()
+                        .duration(1000)
+                        .style('opacity', 0);
+    description.transition()
+                .delay(1000)
+                .duration(1000)
+                .style('opacity', 1)
+                .text(stats["fields"][0]["desc"]);              
+                                
+    var colorLegend = svg.selectAll(".colorLegend")
+        .data(color.domain())
+      .enter().append("g")
+        .attr("class", "colorLegend")
+        .attr("transform", function(d, i) { return "translate(0," + (i * 20 + 75) + ")"; });        
+                      
+    colorLegend.append("rect")
+        .attr("x", width - 18)
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", color);
 
-  colorLegend.append("text")
-      .attr("class", "colorLegendText")
-      .attr("x", width - 24)
-      .attr("y", 9)
-      .attr("dy", ".35em")
-      .style("text-anchor", "end")
-      .text(function(d) { return d; });
-}
+    colorLegend.append("text")
+        .attr("class", "colorLegendText")
+        .attr("x", width - 24)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function(d) { return d; });
+  }
 
 }
 
