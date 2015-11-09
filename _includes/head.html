@@ -7,9 +7,9 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   {% if page.featured-image %}
-  <meta content="{{ page.featured-image }}" property="og:image">
+  <meta content="{{ page.featured-image | prepend: site.baseurl | prepend: site.url }}" property="og:image">
   {% else %}
-  <meta content="/img/photos/ns.BOB.Paolo.picB.AW.jpg" property="og:image">
+  <meta content="{{ '/img/photos/ns.BOB.Paolo.picB.AW.jpg' | prepend: site.baseurl | prepend: site.url }}" property="og:image">
   {% endif %}
 
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
