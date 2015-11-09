@@ -146,6 +146,47 @@ section.featured-image {
   z-index: 3;
   overflow: hidden;
   
+  &.special {
+    div.featured-text {
+      text-align: right;
+        margin-left: auto;
+        right: 0;
+        padding-left: 0;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        span, p {
+          margin-left: auto;
+        }
+    }
+    @media screen and (min-width: 1160px) {
+      height: 210vh;
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 62% auto;
+      background-color: transparent;
+      
+      div.featured-text {
+        bottom: 110vh;
+        color: #333;
+        background: none;
+        box-shadow: none;
+        
+        h1 { color: #333; box-shadow: none;}
+        a {
+          color: #e88a5a;
+          box-shadow: none;
+          border: none;
+          &:hover {
+            border-bottom: medium solid #e88a5a;
+          }
+        }
+        span, p {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  
   div.featured-text {
     position: absolute;
     bottom: 0;
@@ -155,18 +196,6 @@ section.featured-image {
     padding: 2rem 5rem 3rem 3rem;
     background: transparent linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.3) 33%) repeat scroll 0% 0%;
     text-shadow: 0em 0em 0.15em rgba(0, 0, 0, 0.25);
-    
-    &.column {
-      text-align: right;
-      margin-left: auto;
-      right: 0;
-      padding-left: 0;
-      padding-right: 3rem;
-      padding-top: 3rem;
-      span, p {
-        margin-left: auto;
-      }
-    }
     
     a {
       color: white;
@@ -964,7 +993,7 @@ div.landing {
           opacity: 1;
           
           div.featured-image div.featured-overlay {
-            background-color: transparentize($brand-color, 0.25);
+            background-color: transparentize($brand-color, 0.6);
           }
           
           &:hover {

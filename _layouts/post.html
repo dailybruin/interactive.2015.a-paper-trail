@@ -34,8 +34,8 @@
     {% endif %}
     
     {% if page.featured-image %}
-    <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image | prepend: site.baseurl }}')">
-        <div class="featured-text {{ page.type }}">
+    <section id="featured-image" class="featured-image {{ page.featured-class }}" style="background-image:url('{{ page.featured-image | prepend: site.baseurl }}')">
+        <div class="featured-text">
             <span class="chapter">
               Chapter {{ page.chapter }} of <a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a>
             </span>
@@ -55,7 +55,8 @@
     
     <article class="post">
         {% if page.featured-caption %}
-          <p class="featured-caption"><b>Above:</b> {{ page.featured-caption }}</p>
+          <p class="featured-caption">{% if page.featured-class != "special" %}<b>Above:</b>{% endif %}
+            {{ page.featured-caption }}</p>
         {% endif %}
         
         <h1 id="start" class="title">{{ page.title }}</h1>
@@ -163,6 +164,33 @@
         document.body.style.overflow='auto';
       });
     </script>
+    
+    {% if page.featured-class == "special" %}
+    <script>
+      $('header').hide();
+      $('div.sub-nav').hide();
+      $(window).scroll(function () {
+          var $this = $(this);
+          if ($this.scrollTop() > $('.featured-image').height()) {
+            $('header').show();
+            $('div.sub-nav').show();
+          } else {
+            $('header').hide();
+            $('div.sub-nav').hide();
+          }
+      });
+      $(window).resize(function () {
+          var $this = $(this);
+          if ($this.scrollTop() > $('.featured-image').height()) {
+            $('header').show();
+            $('div.sub-nav').show();
+          } else {
+            $('header').hide();
+            $('div.sub-nav').hide();
+          }
+      });
+    </script>
+    {% endif %}
     
   </body>
 
