@@ -37,10 +37,11 @@ California tells one very specific story about undocumented student access to hi
 Students in Georgia are subjected to some of the nation’s most draconian regulations, which include a university policy banning them from attending the state’s top schools. During the last five years, undocumented students in this state have begun advocating for themselves, finding new ways to fight against policies that make it almost impossible for them to get a higher education. 
 
 {% for post in site.posts %}
-{% if post.title == 'The second sidebar' %}
+{% if post.title == "UCLA law professor talks policy reform for undocumented immigrants" %}
 <figure class="sidebar">
+  <h1 style="visibility:hidden;height:1px;margin:0">Hiroshi Motomura</h1>
   <img src="{{ post.featured-image | prepend: site.baseurl }}" />
-  <h1>{{ post.title }}</h1>
+  <p class="title">{{ post.title }}</p>
   <figcaption class="less">
     <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>
@@ -118,10 +119,11 @@ She was confused, not understanding whether he meant her home in Georgia or in M
 ”Georgia,” he said. 
 
 {% for post in site.posts %}
-{% if post.title == 'The first sidebar' %}
+{% if post.title == "Former student to use law school to help other undocumented individuals" %}
 <figure class="sidebar">
+  <h1 style="visibility:hidden;height:1px;margin:0">Jessica Colotl</h1>
   <img src="{{ post.featured-image | prepend: site.baseurl }}" />
-  <h1>{{ post.title }}</h1>
+  <p class="title">{{ post.title }}</p>
   <figcaption class="less">
     <p> {{ post.description }} <a>Click to expand.</a></p>
   </figcaption>

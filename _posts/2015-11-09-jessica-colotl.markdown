@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The first sidebar"
+title:  "Former student to use law school to help other undocumented individuals"
 date:   2015-11-09 00:00:00
 publish: true
 chapter: 1
@@ -38,6 +38,8 @@ Colotl then returned to the detention center, where she waited for her mother to
 Colotl added she felt the U.S. betrayed her. After taking several constitutional law classes and learning the U.S. had one of the best judicial systems in the world, she couldn’t wrap her mind around how this could happen to her.
  
 “Being deported for a minor traffic offense is so cruel,” Colotl said. “Driving without a license wasn’t the worst thing in the world, and I felt I had already done my time.”
+ 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wuDEDJjrI7g" frameborder="0" allowfullscreen></iframe>
  
 Colotl’s case became public a few days after her Lambda Theta Alpha sorority sisters protested during the May 1 march to the Georgia Capitol.
  

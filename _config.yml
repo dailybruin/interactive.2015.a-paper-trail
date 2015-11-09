@@ -1,6 +1,6 @@
 # Site settings
 title: A Paper Trail
-description: Uncovering the reality of undocumented student access to higher education, state by state
+description: Uncovering the reality of undocumented student access to higher education, across state borders
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://undocumented.dailybruin.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb

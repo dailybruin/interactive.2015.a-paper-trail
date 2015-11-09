@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The second sidebar"
+title:  "UCLA law professor talks policy reform for undocumented immigrants"
 date:   2015-11-09 00:00:00
 publish: true
 chapter: 1
