@@ -9,7 +9,7 @@ featured-image: /img/illos/BOB1_illo_11-9.jpg
 featured-caption: Illustration by Courtney Tran
 permalink: /chapter1/the-first-column/
 bylines: ["Column by Ryan Nelson"]
-description: U.S. legislation ascribes a small group of undocumented students the "good immigrant" narrative, yet relegates their families to shame, stigma, and perpetual fear of deportation.
+description: U.S. legislation ascribes a small group of undocumented students the "good immigrant" narrative, yet relegates their families to shame, stigma and perpetual fear of deportation.
 
 ---
 
