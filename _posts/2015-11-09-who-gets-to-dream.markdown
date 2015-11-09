@@ -7,7 +7,7 @@ chapter: 1
 type: column
 featured-image: /img/illos/BOB1_illo_11-9.jpg
 featured-caption: Illustration by Courtney Tran
-permalink: /chapter1/the-first-column/
+permalink: /chapter1/who-gets-to-dream/
 bylines: ["Column by Ryan Nelson"]
 description: U.S. legislation ascribes a small group of undocumented students the "good immigrant" narrative, yet relegates their families to shame, stigma and perpetual fear of deportation.
 
