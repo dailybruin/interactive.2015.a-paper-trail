@@ -34,7 +34,7 @@
     {% endif %}
     
     {% if page.featured-image %}
-    <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image }}')">
+    <section id="featured-image" class="featured-image" style="background-image:url('{{ page.featured-image | prepend: site.baseurl }}')">
         <div class="featured-text {{ page.type }}">
             <span class="chapter">
               Chapter {{ page.chapter }} of <a href="{{ site.baseurl | prepend: site.url }}">Higher Education</a>
@@ -82,10 +82,10 @@
           {% endif %}
       {% endfor %}
       {% for post in site.posts reversed %}
-          {% if forloop.index < post_index and post.type != 'sidebar' %}
+          {% if forloop.index < post_index and post.type != 'sidebar' and post.type != 'graphic' and post.publish %}
               {% assign prev_post = post %}
           {% endif %}
-          {% if forloop.index > post_index and post.type != 'sidebar' %}
+          {% if forloop.index > post_index and post.type != 'sidebar' and post.type != 'graphic' and post.publish %}
               {% assign next_post = post %}
               {% break %}
           {% endif %}

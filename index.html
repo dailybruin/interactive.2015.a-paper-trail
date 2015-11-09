@@ -1,11 +1,10 @@
 ---
 layout: landing
 ---
-  <div class="landing-photo">
+  <div class="landing-photo" style="background-image: url('{{ "/img/photos/ns.BOB.LA.picA.AW.jpg" | prepend: site.baseurl}}');">
   </div>
   <div class="landing">
     <div class="top">
-      <span class="db"><a href="http://dailybruin.com">{% include nameplate.svg %}</a></span>
 
       <span class="share">
         <a href="http://www.facebook.com/sharer.php?u={{ site.baseurl | prepend: site.url }}"><i class="fa fa-facebook"></i></a>
@@ -13,7 +12,7 @@ layout: landing
         <a href="http://www.reddit.com/submit?url={{ site.baseurl | prepend: site.url }}"><i class="fa fa-reddit"></i></a>
       </span>
 
-      <p class="bob">A <a href="http://rememberingbridget.com">Bridget O'Brien Foundation</a> Report</p>
+      <p class="bob">A <a href="http://rememberingbridget.com">Bridget O'Brien Foundation</a> and <a href="http://dailybruin.com">Daily Bruin</a> Report</p>
 
       <h1>{{ site.title }}</h1>
 
@@ -33,7 +32,7 @@ layout: landing
             
             <a {% if post.publish == true %} href="{{ post.url | prepend: site.baseurl }}" class="publish" {% endif %}>
               <li class="{{ post.type }}">
-                <div class="featured-image" style="background-image: url('{{post.featured-image}}')">
+                <div class="featured-image" style="background-image: url('{{post.featured-image | prepend: site.baseurl}}')">
                   <div class="featured-overlay"></div>
                 </div>
                 <div class="featured-text">
@@ -52,7 +51,7 @@ layout: landing
           {% endfor %}  
         {% endfor %}
         <hr/>
-        <a href="{{ "/about" | | prepend: site.baseurl }}" class="publish">
+        <a href="{{ "/about" | prepend: site.baseurl }}" class="publish">
           <li class="page">
               <h1>About the project</h1>
               <p>Learn about the project, where reporting took place and how it happened.</p>

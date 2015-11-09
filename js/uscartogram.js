@@ -188,21 +188,21 @@ var stateGrid = [
     "column": 5
   },
   {
+    "name": "Wisconsin",
+    "abbreviation": "WI",
+    "row": 3,
+    "column": 7
+  },
+  {
     "name": "Minnesota",
     "abbreviation": "MN",
     "row": 2,
     "column": 6
   },
   {
-    "name": "Wisconsin",
-    "abbreviation": "WI",
-    "row": 2,
-    "column": 7
-  },
-  {
     "name": "Michigan",
     "abbreviation": "MI",
-    "row": 2,
+    "row": 3,
     "column": 8
   },
   {
@@ -215,13 +215,13 @@ var stateGrid = [
     "name": "New Hampshire",
     "abbreviation": "NH",
     "row": 2,
-    "column": 11
+    "column": 12
   },
   {
     "name": "Massachusetts",
     "abbreviation": "MA",
     "row": 2,
-    "column": 12
+    "column": 11
   },
   {
     "name": "Oregon",
@@ -256,13 +256,13 @@ var stateGrid = [
   {
     "name": "Indiana",
     "abbreviation": "IN",
-    "row": 3,
+    "row": 4,
     "column": 7
   },
   {
     "name": "Ohio",
     "abbreviation": "OH",
-    "row": 3,
+    "row": 4,
     "column": 8
   },
   {
@@ -316,19 +316,19 @@ var stateGrid = [
   {
     "name": "Missouri",
     "abbreviation": "MO",
-    "row": 4,
+    "row": 5,
     "column": 6
   },
   {
     "name": "Illinois",
     "abbreviation": "IL",
     "row": 4,
-    "column": 7
+    "column": 6
   },
   {
     "name": "Kentucky",
     "abbreviation": "KY",
-    "row": 4,
+    "row": 5,
     "column": 8
   },
   {
@@ -370,31 +370,31 @@ var stateGrid = [
   {
     "name": "Arkansas",
     "abbreviation": "AR",
-    "row": 5,
+    "row": 6,
     "column": 6
   },
   {
     "name": "Tennessee",
     "abbreviation": "TN",
-    "row": 5,
-    "column": 7
+    "row": 6,
+    "column": 8
   },
   {
     "name": "West Virginia",
     "abbreviation": "WV",
     "row": 5,
-    "column": 8
+    "column": 9
   },
   {
     "name": "Virginia",
     "abbreviation": "VA",
     "row": 5,
-    "column": 9
+    "column": 10
   },
   {
     "name": "North Carolina",
     "abbreviation": "NC",
-    "row": 5,
+    "row": 6,
     "column": 10
   },
   {
@@ -406,32 +406,32 @@ var stateGrid = [
   {
     "name": "Louisiana",
     "abbreviation": "LA",
-    "row": 6,
-    "column": 6
+    "row": 7,
+    "column": 7
   },
   {
     "name": "Mississippi",
     "abbreviation": "MS",
-    "row": 6,
+    "row": 5,
     "column": 7
   },
   {
     "name": "Alabama",
     "abbreviation": "AL",
     "row": 6,
-    "column": 8
+    "column": 7
   },
   {
     "name": "Georgia",
     "abbreviation": "GA",
-    "row": 6,
-    "column": 9
+    "row": 7,
+    "column": 8
   },
   {
     "name": "South Carolina",
     "abbreviation": "SC",
     "row": 6,
-    "column": 10
+    "column": 9
   },
   {
     "name": "Hawaii",
@@ -449,7 +449,7 @@ var stateGrid = [
     "name": "Florida",
     "abbreviation": "FL",
     "row": 7,
-    "column": 10
+    "column": 9
   },
   {
     "name": "District of Columbia",

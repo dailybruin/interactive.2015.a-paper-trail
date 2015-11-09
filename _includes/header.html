@@ -8,8 +8,8 @@
 
 <nav class="posts {{ page.type }}" id="drop">
   <ul id="post-menu">
-    {% for chapter in (1...3) %}
-      <label>Chapter {{ chapter }}</label>
+    {% for chapter in (1...1) %}
+      <label class="chapter">Chapter {{ chapter }}</label>
       {% for post in site.posts reversed %}
         {% if post.chapter == chapter and (post.type == 'main' or post.type == 'column') %}
         <li class="{{ post.type }}">
@@ -20,6 +20,9 @@
         {% endif %}  
       {% endfor %}  
     {% endfor %}
+    <label>Chapter 2 publishes Nov 10</label>
+  </br>
+    <label>Chapter 3 publishes Nov 11</label>
     <hr/>
     <li class="page"><a href="{{ "/about" | | prepend: site.baseurl }}">About the project</a></li>
     <li class="page"><a href="{{ "/print" | | prepend: site.baseurl }}">Print version</a></li>

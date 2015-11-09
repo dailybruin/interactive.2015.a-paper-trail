@@ -1,25 +1,27 @@
 # Site settings
-title: Higher Education
-email: your-email@domain.com
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+title: A Paper Trail
+description: Uncovering the reality of undocumented student access to higher education, state by state
 baseurl: "/bob-2015-usa" # the subpath of your site, e.g. /blog/
 url: "http://daily-bruin.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 permalink: :title/
 editorsnote: > # shortened description for meta description tag
-  <p>The Philippines was devastated by a super typhoon in November 2013 that affected 16 million people. 
-  UCLA student donations played a part in the relief missions of several aid agencies in the wake of the storm.</p>
-  
-  <p>The typhoon has two names, Haiyan and Yolanda. These stories use Yolanda, its Filipino name, for consistency and 
-  cultural accuracy.</p>
-  
-  <p>Reporter Katie Shepherd, photojournalist Neil Bedi and data journalist Byron Lutz spent 19 days in the Philippines 
-  talking to survivors of the typhoon, displaced residents and aid organizations about the massive rehabilitation 
-  efforts underway in the Eastern Visayas.</p>
-  
-  <p>The Bridget O’Brien Scholarship Foundation has funded seven years of UCLA student journalism with global reach 
-  and local impact, including this project. To learn more about the scholarship, visit rememberingbridget.com.</p>
+  <p>While federal legislation on undocumented immigrants continues to stall, 
+  state policy continues to be a powerful predictor of the course of their lives. 
+  Depending on where they've settled, undocumented students in the United States 
+  can either be admitted to college with resident tuition and state aid, or they 
+  can be banned from public institutions entirely.</p>
+   
+  <p>Reporter Natalie Delgadillo, opinion columnist Ryan Nelson and photojournalist 
+  Angie Wang spent eleven months piecing together the full picture of what it 
+  means to be an undocumented student in the United States, from California, where 
+  policies are comparatively lenient, to Georgia, where students are subject to 
+  some of the harshest higher education policies in the country.</p>
+
+  <p>The Bridget O’Brien Scholarship Foundation has funded eight years of UCLA 
+  student journalism with global reach and local impact, including this project. 
+  To learn more about the scholarship, visit <a href="http://rememberingbridget.com">rememberingbridget.com</a>.</p>
 
 # Build settings
 markdown: kramdown
