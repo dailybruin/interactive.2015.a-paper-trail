@@ -8,7 +8,7 @@
 
 <nav class="posts {{ page.type }}" id="drop">
   <ul id="post-menu">
-    <li class="title"><a href="{{ "/" | | prepend: site.baseurl }}">A Paper Trail</a></li>
+    <li class="title"><a href="{{ "/" | | prepend: site.baseurl }}">{{ site.title }}</a></li>
     {% for chapter in (1...1) %}
       <label class="chapter">Chapter {{ chapter }}</label>
       {% for post in site.posts reversed %}
