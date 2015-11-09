@@ -4,7 +4,7 @@
               "counts": { "Female (5,330,000)": 5330000,
                           "Male (6,100,000)": 6100000
                         }, 
-              "desc": "Just over half – 53 percent – of the undocumented population identifies as male. The remaining 47 percent or 5.4 million identify as female."},
+              "desc": "Just over half – 53 percent – of the undocumented population identifies as male. The remaining 47 percent or 5.3 million identify as female."},
               { "name": "age", 
                 "counts": { "18 and younger (1,120,000)": 1120000,
                             "18 to 24 years (1,410,000)": 1410000,
@@ -28,7 +28,7 @@
                               "Washington (270,000)": 270000,
                               " Other (3,120,000)": 3120000
                             }, 
-                  "desc": "More undocumented people, about a quarter of the population, settle in California than any other state. About 83 percent live in ten states while the remaining are spread across the remaining 40."
+                  "desc": "More undocumented people, about a quarter of the population, settle in California than any other state. About 73 percent live in the ten states with the highest population with undocumented people."
                 },
                 { "name": "time", 
                   "counts": { "  Less than 5 (2,400,300)": 2400300,
@@ -49,6 +49,15 @@
                               "N/A (34,222)": 34222
                             }, 
                   "desc": "A vast majority – 92 percent – of undocumented children are enrolled in school but only 27 percent of adults ages 18 to 24 are enrolled. Around 49 percent of adults over 25 have at least a high school diploma or GED."
+                },
+                { "name": "occupation", 
+                  "counts": { "  Below 50% poverty level (1,668,780)": 1668780,
+                              " 50 to 99% poverty level (1,668,780)": 1668780,
+                              "100 to 149% poverty level (2,125,980)": 2125980,
+                              "150 to 199% poverty level (1,783,080)": 1783080,
+                              "At or above 200% poverty level (4,183,380)": 4183380
+                            }, 
+                  "desc": "About 32 percent of undocumented people earn a family income below the poverty line. About 69 percent live above the line with the largest group, 36 percent, living at above 200 percent of the poverty level."
                 },
                 { "name": "family", 
                   "counts": { "  Below 50% poverty level (1,668,780)": 1668780,
