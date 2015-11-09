@@ -81,7 +81,7 @@ bythenumbers = function(id, count, stats) {
       .attr("y", 9)
       .attr("dy", ".35em")
       .text("Each one of these dots represents 1000 undocumented people, rounded to the next 1000")
-      .call(wrap, 250);
+      .call(wrap, 230);
   
   var nextRect = svg.append('rect')
       .attr('x', width/2-20)
@@ -131,8 +131,8 @@ bythenumbers = function(id, count, stats) {
                             .attr("dy", ".35em")
                             .style('opacity', 0)
                             .text('There are approximately 11.43 million undocumented people in the ' + 
-                                  'United States. That is 120 columns and 95.25 rows of dots representing ' +
-                                  '1000 people each.')
+                                  'United States. That is 120 columns and 95.25 rows of dots – 11430 total, ' + 
+                                  'with each dot representing ' +'1000 people each.')
                             .call(wrap, 250);
         description.transition()
             .duration(1500)
@@ -173,7 +173,7 @@ bythenumbers = function(id, count, stats) {
   };
 
   function breakdown(index) {
-    var color = d3.scale.category10();
+    var color = d3.scale.category20();
     var counts = properties[index];
     console.log(stats["fields"]);
     console.log(data[0][stats["fields"][index]["name"]]);

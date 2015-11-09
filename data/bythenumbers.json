@@ -1,8 +1,8 @@
 { "total": 11430000, 
   "desc": "test", 
   "fields": [{ "name": "sex", 
-              "counts": { "Male (6,100,000)": 6100000,
-                          "Female (5,330,000)": 5330000
+              "counts": { "Female (5,330,000)": 5330000,
+                          "Male (6,100,000)": 6100000
                         }, 
               "desc": "Just over half – 53 percent – of the undocumented population identifies as male. The remaining 47 percent or 5.4 million identify as female."},
               { "name": "age", 
