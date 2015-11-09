@@ -859,14 +859,14 @@ div.landing-photo {
 }
 
 div.landing {
-    background-color: transparentize(#fffff8, 0.2);
+    background-color: transparentize(#fffff8, 0.175);
     position: absolute;
     width: 100%;
     top: 0;
     
     div.top {
       min-height: 100vh;
-      padding-top: 15vh;
+      padding-top: 17vh;
       text-align: center;
       h1 {
         font-size: 5.5rem;
@@ -892,7 +892,7 @@ div.landing {
       }
       
       p {
-        max-width: 550px;
+        max-width: 600px;
         margin: auto;
         margin-top: 1.5rem;
         &.down {
