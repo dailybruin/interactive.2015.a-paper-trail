@@ -29,8 +29,6 @@ bythenumbers = function(id, count, stats) {
     properties.push(temp);
   });
   
-  console.log(properties);
-  
   for (var i = 0; i < count; i++) {
     var temp = {};
     stats["fields"].forEach(function(f) {
@@ -177,8 +175,6 @@ bythenumbers = function(id, count, stats) {
   function breakdown(index) {
     var color = d3.scale.category20();
     var counts = properties[index];
-    console.log(stats["fields"]);
-    console.log(data[0][stats["fields"][index]["name"]]);
     numbers.transition()
             .duration(1000)
             .attr('cx', function(d,i) {
