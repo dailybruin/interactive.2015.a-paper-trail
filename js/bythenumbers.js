@@ -5,9 +5,11 @@ bythenumbers = function(id, count, stats) {
   var width = $('article').width();
   var height = width*.65;
     
-  var radius = 1.5;
-  
-  var step = 0;
+  var radius = 2,
+      step = 0,
+      columns = 80,
+      spacing = 6
+      wspacing = 9.9;
   
   var svg = d3.select(id).append('svg')
       .attr("width", width)
@@ -51,10 +53,10 @@ bythenumbers = function(id, count, stats) {
       .attr('class', 'number')
       .attr('r', radius-0.5)
       .attr('cx', function(d,i) {
-        return (i%120 + 1)*7;
+        return (i%columns + 1)*wspacing;
       })
       .attr('cy', function(d,i) {
-        return Math.ceil((i+1)/120)*4 + 50;
+        return Math.ceil((i+1)/columns)*(wspacing-2.5) + 50;
       })
       .style('fill', '#5B5B5B');
   
@@ -80,7 +82,7 @@ bythenumbers = function(id, count, stats) {
       .attr("x", width - 240)
       .attr("y", 9)
       .attr("dy", ".35em")
-      .text("Each one of these dots represents 1000 undocumented people, rounded to the next 1000")
+      .text("Each one of these dots represents "+per+" undocumented people, rounded to the next "+per)
       .call(wrap, 230);
   
   var nextRect = svg.append('rect')
@@ -115,10 +117,10 @@ bythenumbers = function(id, count, stats) {
             .duration(1500)
             .attr('r', radius)
             .attr('cx', function(d,i) {
-              return (i%120 + 1)*4;
+              return (i%columns + 1)*spacing;
             })
             .attr('cy', function(d,i) {
-              return Math.ceil((i+1)/120)*4 + 50;
+              return Math.ceil((i+1)/columns)*spacing + 50;
             });
         legend.transition()
             .duration(1500)
@@ -131,8 +133,8 @@ bythenumbers = function(id, count, stats) {
                             .attr("dy", ".35em")
                             .style('opacity', 0)
                             .text('There are approximately 11.43 million undocumented people in the ' + 
-                                  'United States. That is 120 columns and 95.25 rows of dots – 11430 total, ' + 
-                                  'with each dot representing ' +'1000 people.')
+                                  'United States. That is '+columns+' columns and '+Math.round(count/columns*10)/10+
+                                  ' rows of dots – '+count+' total, with each dot representing '+per+' people.')
                             .call(wrap, 250);
         description.transition()
             .duration(1500)
@@ -143,10 +145,10 @@ bythenumbers = function(id, count, stats) {
         numbers.transition()
           .duration(1500)
           .attr('cx', function(d,i) {
-            return (i%120 + 1)*7;
+            return (i%columns + 1)*wspacing;
           })
           .attr('cy', function(d,i) {
-            return Math.ceil((i+1)/120)*4 + 50;
+            return Math.ceil((i+1)/columns)*(wspacing-2.5) + 50;
           })
           .attr('r', radius-0.5)
           .style('fill', '#5B5B5B');
@@ -183,7 +185,7 @@ bythenumbers = function(id, count, stats) {
               for (var prop in counts) {
                 if(d[stats["fields"][index]["name"]]==prop) {
                   counts[prop]++;
-                  return (counts[prop]%120 + 1)*4;
+                  return (counts[prop]%columns + 1)*spacing;
                 }
               }
             });
@@ -197,8 +199,8 @@ bythenumbers = function(id, count, stats) {
               for (var prop in counts) {
                 if(d[stats["fields"][index]["name"]]==prop) {
                   counts[prop]--;
-                  var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/120)*4 + 7.5*propCount;
-                  return Math.ceil(((totals[prop]-counts[prop]))/120)*4 + 50 + offset;
+                  var offset = propCount == 0 ? 0 : Math.ceil((totalCount+1)/columns)*spacing + 7.5*propCount;
+                  return Math.ceil(((totals[prop]-counts[prop]))/columns)*spacing + 50 + offset;
                 }
                 propCount++;
                 totalCount += totals[prop];
