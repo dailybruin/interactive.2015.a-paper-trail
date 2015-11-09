@@ -36,7 +36,7 @@ California tells one very specific story about undocumented student access to hi
 
 Students in Georgia are subjected to some of the nation’s most draconian regulations, which include a university policy banning them from attending the state’s top schools. During the last five years, undocumented students in this state have begun advocating for themselves, finding new ways to fight against policies that make it almost impossible for them to get a higher education. 
 
-{% for spost in site.posts %}
+{% for post in site.posts %}
 {% if post.title == 'The second sidebar' %}
 <figure class="sidebar">
   <img src="{{ post.featured-image | prepend: site.baseurl }}" />
