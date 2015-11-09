@@ -468,6 +468,17 @@ article.graphic {
   }
 }
 
+div#origin {
+  height: 400px;
+  position: relative;
+  
+  .datamaps-legend {
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: -3.5rem;
+  }
+}
+
 div#cavga {
   font-family: $base-sans-font-family;
   margin: 0.5rem;
@@ -600,6 +611,10 @@ article{
     &.wide {
       max-width: none;
       max-height: none;
+      float: none;
+      display: block;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
     
     &.sidebar {

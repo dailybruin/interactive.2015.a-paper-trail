@@ -132,7 +132,7 @@ bythenumbers = function(id, count, stats) {
                             .style('opacity', 0)
                             .text('There are approximately 11.43 million undocumented people in the ' + 
                                   'United States. That is 120 columns and 95.25 rows of dots – 11430 total, ' + 
-                                  'with each dot representing ' +'1000 people each.')
+                                  'with each dot representing ' +'1000 people.')
                             .call(wrap, 250);
         description.transition()
             .duration(1500)
