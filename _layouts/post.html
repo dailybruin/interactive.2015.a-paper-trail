@@ -173,7 +173,9 @@
           var $this = $(this);
           if ($this.scrollTop() > $('.featured-image').height()) {
             $('header').show();
-            $('div.sub-nav').show();
+            if ($window.width() > 1250) {
+              $('div.sub-nav').show();
+            }
           } else {
             $('header').hide();
             $('div.sub-nav').hide();
