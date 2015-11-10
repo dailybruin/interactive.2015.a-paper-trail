@@ -142,7 +142,7 @@ section.featured-image {
   top: 0;
   background-color: $background-color;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   z-index: 3;
   overflow: hidden;
   
@@ -1037,7 +1037,7 @@ div.landing {
           height: 200px;
           background-size: cover;
           vertical-align: bottom;
-          background-position: center center;
+          background-position: top center;
           
           div.featured-overlay {
             width: 100%;
