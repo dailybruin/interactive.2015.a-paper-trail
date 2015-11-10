@@ -919,14 +919,13 @@ div.landing {
       }
       
       span.share {
-        position: absolute;
-        // top: 1rem;
-      }
-      
-      span.share {
-        bottom: 15vh;
-        left: 0;
-        width: 100%;
+        position: fixed;
+        a { 
+          display: block; 
+          &:hover { border: none; }
+        }
+        top: 35vh;
+        right: 5rem;
         text-align: center;
         font-size: 2rem; 
         i { margin-left: 0.35rem; }
@@ -954,13 +953,14 @@ div.landing {
         }
       }
       
-      @include media-query($on-mobile) {
-        padding-top: 8vh;
-        
+      @include media-query($on-palm) {
         span.db,
         span.share {
           display: none;
         }
+      }
+      @include media-query($on-mobile) {
+        padding-top: 8vh;
         h1 {
           font-size: 4rem;
         }
