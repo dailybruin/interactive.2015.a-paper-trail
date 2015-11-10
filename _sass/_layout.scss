@@ -250,6 +250,7 @@ section.featured-image {
     }
     
     @include media-query($on-mobile) {
+      width: 95%;
       bottom: 0;
       padding: 1rem;
       padding-bottom: 2rem;
