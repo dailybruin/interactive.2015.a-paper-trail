@@ -157,7 +157,7 @@ section.featured-image {
         span, p {
           margin-left: auto;
         }
-      @include media-query($on-mobile) {
+      @include media-query($on-palm) {
         padding-left: 1rem;
         padding-right: 0.5rem;
       }
