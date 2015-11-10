@@ -14,7 +14,7 @@ description: Over the course of the project, several undocumented students share
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Ashley.picA.AW.jpg" />
   <h1>Ashley Rivas-Triana</h1>
-  <figcaption>College wasn't an option for Ashley Rivas-Triana at the end of her high school career. Counselors could not help her circumvent bans on undocumented students at Georgia public universities. Her future's uncertainty was delayed when the Deferred Action for Childhood Arrivals policy allowed her and her older sister to remain in the United States after her family's petition for residency was rejected, but without access to financial aid, she is unable to access higher education outside of Freedom University, which provides tuition-free programs to undocumented students in Georgia.</figcaption>
+  <figcaption>College wasn't an option for Ashley Rivas-Triana at the end of her high school career. Counselors could not help her circumvent bans on undocumented students at Georgia public universities. Her future's uncertainty was delayed when Deferred Action for Childhood Arrivals allowed her and her older sister to remain in the United States after her family's petition for residency was rejected, but without access to financial aid, she is unable to access higher education outside of Freedom University, which provides tuition-free programs to undocumented students in Georgia.</figcaption>
 </figure>
 
 <figure class="wide">
@@ -37,7 +37,7 @@ description: Over the course of the project, several undocumented students share
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Freedom.picA.AW.jpg" />
   <h1>Susana Ramirez</h1>
-  <figcaption>Susana Ramirez arrived permanently in the United States from Colombia when she was five years old.  They followed their father, who came to the country in search of work.  Ramirez remembers feelings of persecution and an innate fear of the police.  She recalls family parties with a strict curfew of 10 PM so as not to not draw attention from the police. Ramirez hopes to eventually attend a four year college.</figcaption>
+  <figcaption>Susana Ramirez arrived permanently in the United States from Colombia when she was five years old. She followed her father, who came to the country in search of work.  Ramirez remembers feelings of persecution and an innate fear of the police.  She recalls family parties with a strict curfew of 10 PM so as not to not draw attention from the police. Ramirez hopes to eventually attend a four year college.</figcaption>
 </figure>
 
 <figure class="wide">
@@ -55,5 +55,5 @@ description: Over the course of the project, several undocumented students share
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Vlad.picA.AW.jpg" />
   <h1>Vlad Stoicescu-Ghica</h1>
-  <figcaption>Vlad Stoicescu-Ghica is the co-chair of IDEAS. He immigrated in June 2002 to join his mother, who had left a year earlier to work in an American company. However, the job never materialized, and his mom had to take long hours working odd jobs in order to support her family. As co-director, Stoicescu-Ghica is responsible for coordinating group action, dealing with the media, and working in the general interest of undocumented students.  A fifth year political science major, he hopes to attend law school.</figcaption>
+  <figcaption>Vlad Stoicescu-Ghica is the co-chair of IDEAS. He immigrated in June 2002 to join his mother, who had left a year earlier to work in an American company. However, the job never materialized, and his mom had to take long hours working odd jobs in order to support her family. As co-chair, Stoicescu-Ghica is responsible for coordinating group action, dealing with the media, and working in the general interest of undocumented students.  A fifth year political science major, he hopes to attend law school.</figcaption>
 </figure>
