@@ -914,6 +914,9 @@ div.landing-photo {
   top:0;
   background-size: cover;
   background-position: center center;
+  @include media-query($on-mobile) {
+    background-image: none !important;
+  }
 }
 
 div.landing {
@@ -978,7 +981,7 @@ div.landing {
         }
       }
       @include media-query($on-mobile) {
-        padding-top: 8vh;
+        padding: 7vh 1rem;
         h1 {
           font-size: 4rem;
         }
@@ -1106,6 +1109,9 @@ div.landing {
           div.featured-text {
             width: 100%;
             padding: 0;
+          }
+          div.featured-overlay {
+            background-color: none;
           }
           div.future h1 {
             margin-top: 7.5rem;
