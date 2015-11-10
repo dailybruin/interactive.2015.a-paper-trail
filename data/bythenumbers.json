@@ -1,23 +1,23 @@
 { "total": 11430000, 
   "desc": "test", 
   "fields": [{ "name": "sex", 
-              "counts": { "Female (5,330,000)": 5330000,
-                          "Male (6,100,000)": 6100000
+              "counts": { "Female (5.33 million)": 5330000,
+                          "Male (6.1 million)": 6100000
                         }, 
               "desc": "Just over half – 53 percent – of the undocumented population identifies as male. The remaining 47 percent or 5.3 million identify as female."},
               { "name": "age", 
-                "counts": { "18 and younger (1,120,000)": 1120000,
-                            "18 to 24 years (1,410,000)": 1410000,
-                            "25 to 34 years (3,660,000)": 3660000,
-                            "35 to 44 years (3,320,000)": 3320000,
-                            "45 to 54 years (1,400,000)": 1400000,
+                "counts": { "18 and younger (1.12 million)": 1120000,
+                            "18 to 24 years (1.41 million)": 1410000,
+                            "25 to 34 years (3.66 million)": 3660000,
+                            "35 to 44 years (3.32 million)": 3320000,
+                            "45 to 54 years (1.4 million)": 1400000,
                             "55 years and older (520,000)": 520000
                           },
                 "desc": "About 10 percent or 1.12 million people are children under the age of 18. A majority of the population – 61 percent – are between 25 and 44 years old. Only 5 percent of the population are seniors over the age of 55."
               },
                 { "name": "state", 
-                  "counts": { "California (2,820,000)": 2820000,
-                              "Texas (1,830,000)": 1830000,
+                  "counts": { "California (2.82 million)": 2820000,
+                              "Texas (1.83 million)": 1830000,
                               "Florida (730,000)": 730000,
                               "New York (580,000)": 580000,
                               "Illinois (540,000)": 540000,
@@ -26,12 +26,12 @@
                               "North Carolina (360,000)": 360000,
                               "Arizona (350,000)": 350000,
                               "Washington (270,000)": 270000,
-                              " Other (3,120,000)": 3120000
+                              " Other (3.11 million)": 3120000
                             }, 
                   "desc": "More undocumented people, about a quarter of the population, settle in California than any other state. About 73 percent live in the ten states with the highest population of undocumented people."
                 },
                 { "name": "time", 
-                  "counts": { "  Less than 5 (2,400,300)": 2400300,
+                  "counts": { "  Less than 5 (2.400,300)": 2400300,
                               " 5 to 9 (3,429,000)": 3429000,
                               "10 to 14 (2,743,200)": 2743200,
                               "15 to 19 (1,257,300)": 1257300,
@@ -58,6 +58,5 @@
                               "At or above 200% poverty level (4,183,380)": 4183380
                             }, 
                   "desc": "About 32 percent of undocumented people earn a family income below the poverty line. About 69 percent live above the line with the largest group, 36 percent, living at above 200 percent of the poverty level."
-                }]
-                
+                }]      
   }
