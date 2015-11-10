@@ -906,7 +906,7 @@ div.landing {
     top: 0;
     
     h1,p,span {
-      text-shadow: 0em 0em 0.01em #fffff8;
+      text-shadow: 0em 0em 0.015em #fffff8;
     }
     
     div.top {
@@ -946,14 +946,11 @@ div.landing {
       
       p.down a {
         border: 2px solid $brand-color;
-        // color: white;
-        background-color: transparentize($brand-color, 0.5);
         padding: 0 1.5rem;
         font-size: 3rem;
         line-height: 1;
         &:hover {
           color: white;
-          background-color: transparentize($brand-color, 0.25);
         }
       }
       
@@ -1005,6 +1002,10 @@ div.landing {
         a.publish li {    
           opacity: 1;
           
+          div.featured-image {
+            background-color: $background-color;
+          }
+          
           div.featured-image div.featured-overlay {
             background-color: transparentize($brand-color, 0.6);
           }
@@ -1036,7 +1037,7 @@ div.landing {
           height: 200px;
           background-size: cover;
           vertical-align: bottom;
-          background-position: top center;
+          background-position: center center;
           
           div.featured-overlay {
             width: 100%;

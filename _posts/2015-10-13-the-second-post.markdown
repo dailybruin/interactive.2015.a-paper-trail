@@ -9,6 +9,7 @@ featured-image: /img/photos/ns.BOB.Alma.picA.AW.jpg
 featured-caption: 
 bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
 description: Undocumented students' individual stories are diverse and variable, but they are also often rooted in the same legal insecurity, deep uncertainty and fierce hope for the future.
+editorsnote: true
 
 ---
 
