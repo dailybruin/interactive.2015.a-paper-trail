@@ -292,7 +292,7 @@ Taking classes and meeting other students in his situation at Freedom University
 
  “No one is embarrassed at Freedom about where they come from or who they are,” he said.  
 
-__“We’re all just humans there.”__
+<p class="high">“We’re all just humans there.”</p>
 
 <br>
 
