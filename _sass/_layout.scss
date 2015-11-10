@@ -157,6 +157,10 @@ section.featured-image {
         span, p {
           margin-left: auto;
         }
+      @include media-query($on-mobile) {
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+      }
     }
     @media screen and (min-width: 1160px) {
       height: 210vh;
