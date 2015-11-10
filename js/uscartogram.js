@@ -1,8 +1,8 @@
 //uses abbreviation as key for data
-uscartogram = function(id, dataPath, colorField) {
+uscartogram = function(id, dataPath, colorField, offset) {
   var margin = { x: 50, y: 55};
   var width = $(id).width();
-  var height = (width-margin.x*2)*7/12 + margin.y*2;
+  var height = (width-margin.x*2)*7/12 + margin.y*2 + margin.y*offset;
     
   var radius = (width - margin.x*2)/24;
   
@@ -34,7 +34,7 @@ uscartogram = function(id, dataPath, colorField) {
                         return (d.column-1) * radius * 2 + margin.x + radius;
                       })
                       .attr("cy", function(d) {
-                        return (d.row-1) * radius * 2 + margin.y + radius;
+                        return (d.row-1) * radius * 2 + margin.y*(1+offset) + radius;
                       })
                       .style("fill", function(d) { 
                         if (d[colorField]=="")
@@ -53,7 +53,7 @@ uscartogram = function(id, dataPath, colorField) {
                         return (d.column-1) * radius * 2 + margin.x + radius;
                       })
                       .attr("y", function(d) {
-                        return (d.row-1) * radius * 2 + margin.y + radius*1.3;
+                        return (d.row-1) * radius * 2 + margin.y*(1+offset) + radius*1.3;
                       })
                       .on("mouseover", mouseover);
 

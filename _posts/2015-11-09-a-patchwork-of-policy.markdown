@@ -72,7 +72,7 @@ In California, like everywhere in the U.S., undocumented people live under the t
 <script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
 <script>
 if ($(window).width() > 595) {
-  uscartogram('#healthcare', "../../data/healthcareaccess.json", "access");
+  uscartogram('#healthcare', "../../data/healthcareaccess.json", "access", 0);
 }
 </script>
 

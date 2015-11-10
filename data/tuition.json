@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Alaska",
+    "abbreviation": "AK",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Maine",
+    "abbreviation": "ME",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Washington",
+    "abbreviation": "WA",
+    "access": "Provides in-state tuition and financial aid",
+    "Related laws": 58
+  },
+  {
+    "name": "Idaho",
+    "abbreviation": "ID",
+    "access": 0,
+    "Related laws": 71
+  },
+  {
+    "name": "Montana",
+    "abbreviation": "MT",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "North Dakota",
+    "abbreviation": "ND",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Wisconsin",
+    "abbreviation": "WI",
+    "access": 0,
+    "Related laws": 62
+  },
+  {
+    "name": "Minnesota",
+    "abbreviation": "MN",
+    "access": "Provides in-state tuition and financial aid",
+    "Related laws": 52
+  },
+  {
+    "name": "Michigan",
+    "abbreviation": "MI",
+    "access": "Provides in-state benefits through university system",
+    "Related laws": 47
+  },
+  {
+    "name": "Vermont",
+    "abbreviation": "VT",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "New Hampshire",
+    "abbreviation": "NH",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Massachusetts",
+    "abbreviation": "MA",
+    "access": 0,
+    "Related laws": 23
+  },
+  {
+    "name": "Oregon",
+    "abbreviation": "OR",
+    "access": "Provides in-state tuition",
+    "Related laws": 64
+  },
+  {
+    "name": "Nevada",
+    "abbreviation": "NV",
+    "access": 0,
+    "Related laws": 71
+  },
+  {
+    "name": "Wyoming",
+    "abbreviation": "WY",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "South Dakota",
+    "abbreviation": "SD",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Iowa",
+    "abbreviation": "IA",
+    "access": 0,
+    "Related laws": 55
+  },
+  {
+    "name": "Indiana",
+    "abbreviation": "IN",
+    "access": "Ban in-state tuition",
+    "Related laws": 60
+  },
+  {
+    "name": "Ohio",
+    "abbreviation": "OH",
+    "access": 0,
+    "Related laws": 58
+  },
+  {
+    "name": "Pennsylvania",
+    "abbreviation": "PA",
+    "access": 0,
+    "Related laws": 53
+  },
+  {
+    "name": "New York",
+    "abbreviation": "NY",
+    "access": "Provides in-state tuition",
+    "Related laws": 53
+  },
+  {
+    "name": "Connecticut",
+    "abbreviation": "CT",
+    "access": "Provides in-state tuition",
+    "Related laws": 61
+  },
+  {
+    "name": "Rhode Island",
+    "abbreviation": "RI",
+    "access": "Provides in-state benefits through university system",
+    "Related laws": 60
+  },
+  {
+    "name": "California",
+    "abbreviation": "CA",
+    "access": "Provides in-state tuition and financial aid",
+    "Related laws": 58
+  },
+  {
+    "name": "Utah",
+    "abbreviation": "UT",
+    "access": "Provides in-state tuition",
+    "Related laws": 71
+  },
+  {
+    "name": "Colorado",
+    "abbreviation": "CO",
+    "access": "Provides in-state tuition",
+    "Related laws": 67
+  },
+  {
+    "name": "Nebraska",
+    "abbreviation": "NE",
+    "access": "Provides in-state tuition",
+    "Related laws": 64
+  },
+  {
+    "name": "Missouri",
+    "abbreviation": "MO",
+    "access": "Ban in-state tuition",
+    "Related laws": 60
+  },
+  {
+    "name": "Illinois",
+    "abbreviation": "IL",
+    "access": "Provides in-state tuition",
+    "Related laws": 60
+  },
+  {
+    "name": "Kentucky",
+    "abbreviation": "KY",
+    "access": 0,
+    "Related laws": 65
+  },
+  {
+    "name": "Maryland",
+    "abbreviation": "MD",
+    "access": "Provides in-state tuition",
+    "Related laws": 59
+  },
+  {
+    "name": "Delaware",
+    "abbreviation": "DE",
+    "access": 0,
+    "Related laws": 59
+  },
+  {
+    "name": "New Jersey",
+    "abbreviation": "NJ",
+    "access": "Provides in-state tuition",
+    "Related laws": 63
+  },
+  {
+    "name": "Arizona",
+    "abbreviation": "AZ",
+    "access": "Ban in-state tuition",
+    "Related laws": 68
+  },
+  {
+    "name": "New Mexico",
+    "abbreviation": "NM",
+    "access": "Provides in-state tuition and financial aid",
+    "Related laws": 78
+  },
+  {
+    "name": "Kansas",
+    "abbreviation": "KS",
+    "access": "Provides in-state tuition",
+    "Related laws": 66
+  },
+  {
+    "name": "Arkansas",
+    "abbreviation": "AR",
+    "access": 0,
+    "Related laws": 71
+  },
+  {
+    "name": "Tennessee",
+    "abbreviation": "TN",
+    "access": "Provides in-state tuition",
+    "Related laws": 76
+  },
+  {
+    "name": "West Virginia",
+    "abbreviation": "WV",
+    "access": 0,
+    "Related laws": "Not available*"
+  },
+  {
+    "name": "Virginia",
+    "abbreviation": "VA",
+    "access": 0,
+    "Related laws": 59
+  },
+  {
+    "name": "North Carolina",
+    "abbreviation": "NC",
+    "access": 0,
+    "Related laws": 75
+  },
+  {
+    "name": "Oklahoma",
+    "abbreviation": "OK",
+    "access": "Provides in-state benefits through university system",
+    "Related laws": 76
+  },
+  {
+    "name": "Louisiana",
+    "abbreviation": "LA",
+    "access": 0,
+    "Related laws": 79
+  },
+  {
+    "name": "Mississippi",
+    "abbreviation": "MS",
+    "access": 0,
+    "Related laws": 79
+  },
+  {
+    "name": "Alabama",
+    "abbreviation": "AL",
+    "access": "Ban in-state tuition",
+    "Related laws": 73
+  },
+  {
+    "name": "Georgia",
+    "abbreviation": "GA",
+    "access": "Ban in-state tuition",
+    "Related laws": 75
+  },
+  {
+    "name": "South Carolina",
+    "abbreviation": "SC",
+    "access": "Ban in-state tuition",
+    "Related laws": 77
+  },
+  {
+    "name": "Hawaii",
+    "abbreviation": "HI",
+    "access": "Provides in-state benefits through university system",
+    "Related laws": 23
+  },
+  {
+    "name": "Texas",
+    "abbreviation": "TX",
+    "access": "Provides in-state tuition and financial aid",
+    "Related laws": 74
+  },
+  {
+    "name": "Florida",
+    "abbreviation": "FL",
+    "access": "Provides in-state tuition",
+    "Related laws": 73
+  },
+  {
+    "name": "District of Columbia",
+    "abbreviation": "DC",
+    "access": 0,
+    "Related laws": 23
+  }
+]
