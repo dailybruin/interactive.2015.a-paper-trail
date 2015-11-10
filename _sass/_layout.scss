@@ -419,12 +419,13 @@ figure.viz {
     
     p.click {
       position: absolute;
-      top: 10rem;
-      left: 3rem;
+      top: 8rem;
+      left: 2rem;
       width: 75%;
       padding: 1rem;
       line-height: 1.5;
       background-color: rgba(255,255,255,0.95);
+      font-weight: 500;
       &:hover {
         background-color: transparentize($brand-color, 0.05);
         color: white;
@@ -727,6 +728,7 @@ article{
         z-index: 2;
         
         div.sidebar-content {
+          width: 100%;
           position: relative;
           height: 95vh;
           padding: 50px 20px;
@@ -753,7 +755,7 @@ article{
         }
         
         p:last-child {
-          padding-bottom: 100px;
+          padding-bottom: 150px;
         }
         
         &.show { 
@@ -778,6 +780,13 @@ article{
       
       &:hover {
         border-top: 0.5rem solid grey;
+      }
+      
+      @include media-query($on-palm) {
+        padding: 10px 20px;
+        p {
+          font-size: 0.95rem;
+        }
       }
       
     }

@@ -8,7 +8,6 @@
 
 <nav class="posts {{ page.type }}" id="drop">
   <ul id="post-menu">
-    <li class="title"><a href="{{ "/" | | prepend: site.baseurl }}">{{ site.title }}</a></li>
     {% for chapter in (1...1) %}
       <label class="chapter">Chapter {{ chapter }}</label>
       {% for post in site.posts reversed %}
@@ -25,8 +24,8 @@
   </br>
     <label>Chapter 3 publishing Nov 11</label>
     <hr/>
-    <!-- <li class="page"><a href="{{ "/about" | | prepend: site.baseurl }}">About the project</a></li> -->
+    <li class="page"><a href="{{ "/" | | prepend: site.baseurl }}">{{ site.title }}</a></li>
+    <li class="page"><a href="{{ "/about" | | prepend: site.baseurl }}">About the project</a></li>
     <li class="page"><a href="{{ "/print" | | prepend: site.baseurl }}">Print version</a></li>
-    
   </ul>
 </nav>

@@ -70,7 +70,11 @@ In California, like everywhere in the U.S., undocumented people live under the t
   <p class="source">Data from the <a href="http://www.nilc.org/health.html">National Immigration Law Center</a> and <a href="http://www.migrationpolicy.org/programs/us-immigration-policy-program-data-hub/unauthorized-immigrant-population-profiles">Migration Policy Institute</a>.</p>
 </figure>
 <script src="{{ "/js/uscartogram.js" | prepend: site.baseurl }}"></script>
-<script>uscartogram('#healthcare', "../../data/healthcareaccess.json", "access");</script>
+<script>
+if ($(window).width() > 595) {
+  uscartogram('#healthcare', "../../data/healthcareaccess.json", "access");
+}
+</script>
 
 Many undocumented students and immigrant rights activists took her appointment almost as a personal rebuke, saying her single biggest accomplishment at the Department of Homeland Security was deporting more than 400,000 undocumented immigrants during every year of her tenure. In her government position, Napolitano took the lead for the Obama administration in an aggressive immigration enforcement effort, making her the architect of a policy that deported more immigrants than any previous president – Republican or Democrat.
 

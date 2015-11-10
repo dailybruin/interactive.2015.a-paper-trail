@@ -3,306 +3,306 @@
     "name": "Alaska",
     "abbreviation": "AK",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Maine",
     "abbreviation": "ME",
-    "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "Not available"
+    "access": 0,
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Washington",
     "abbreviation": "WA",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "58%"
+    "Estimated percent uninsured": 58
   },
   {
     "name": "Idaho",
     "abbreviation": "ID",
     "access": 0,
-    "Estimated percent uninsured*": "71%"
+    "Estimated percent uninsured": 71
   },
   {
     "name": "Montana",
     "abbreviation": "MT",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "North Dakota",
     "abbreviation": "ND",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Wisconsin",
     "abbreviation": "WI",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "62%"
+    "Estimated percent uninsured": 62
   },
   {
     "name": "Minnesota",
     "abbreviation": "MN",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "52%"
+    "Estimated percent uninsured": 52
   },
   {
     "name": "Michigan",
     "abbreviation": "MI",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "47%"
+    "Estimated percent uninsured": 47
   },
   {
     "name": "Vermont",
     "abbreviation": "VT",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "New Hampshire",
     "abbreviation": "NH",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Massachusetts",
     "abbreviation": "MA",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "23%"
+    "Estimated percent uninsured": 23
   },
   {
     "name": "Oregon",
     "abbreviation": "OR",
-    "access": 0,
-    "Estimated percent uninsured*": "64%"
+    "access": "Limited service, primarily pre-natal care or service with age restrictions",
+    "Estimated percent uninsured": 64
   },
   {
     "name": "Nevada",
     "abbreviation": "NV",
     "access": 0,
-    "Estimated percent uninsured*": "71%"
+    "Estimated percent uninsured": 71
   },
   {
     "name": "Wyoming",
     "abbreviation": "WY",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "South Dakota",
     "abbreviation": "SD",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Iowa",
     "abbreviation": "IA",
     "access": 0,
-    "Estimated percent uninsured*": "55%"
+    "Estimated percent uninsured": 55
   },
   {
     "name": "Indiana",
     "abbreviation": "IN",
     "access": 0,
-    "Estimated percent uninsured*": "60%"
+    "Estimated percent uninsured": 60
   },
   {
     "name": "Ohio",
     "abbreviation": "OH",
     "access": 0,
-    "Estimated percent uninsured*": "58%"
+    "Estimated percent uninsured": 58
   },
   {
     "name": "Pennsylvania",
     "abbreviation": "PA",
     "access": 0,
-    "Estimated percent uninsured*": "53%"
+    "Estimated percent uninsured": 53
   },
   {
     "name": "New York",
     "abbreviation": "NY",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "53%"
+    "Estimated percent uninsured": 53
   },
   {
     "name": "Connecticut",
     "abbreviation": "CT",
     "access": 0,
-    "Estimated percent uninsured*": "61%"
+    "Estimated percent uninsured": 61
   },
   {
     "name": "Rhode Island",
     "abbreviation": "RI",
-    "access": 0,
-    "Estimated percent uninsured*": "60%"
+    "access": "Limited service, primarily pre-natal care or service with age restrictions",
+    "Estimated percent uninsured": 60
   },
   {
     "name": "California",
     "abbreviation": "CA",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "58%"
+    "Estimated percent uninsured": 58
   },
   {
     "name": "Utah",
     "abbreviation": "UT",
     "access": 0,
-    "Estimated percent uninsured*": "71%"
+    "Estimated percent uninsured": 71
   },
   {
     "name": "Colorado",
     "abbreviation": "CO",
     "access": 0,
-    "Estimated percent uninsured*": "67%"
+    "Estimated percent uninsured": 67
   },
   {
     "name": "Nebraska",
     "abbreviation": "NE",
-    "access": 0,
-    "Estimated percent uninsured*": "64%"
+    "access": "Limited service, primarily pre-natal care or service with age restrictions",
+    "Estimated percent uninsured": 64
   },
   {
     "name": "Missouri",
     "abbreviation": "MO",
     "access": 0,
-    "Estimated percent uninsured*": "60%"
+    "Estimated percent uninsured": 60
   },
   {
     "name": "Illinois",
     "abbreviation": "IL",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "60%"
+    "Estimated percent uninsured": 60
   },
   {
     "name": "Kentucky",
     "abbreviation": "KY",
     "access": 0,
-    "Estimated percent uninsured*": "65%"
+    "Estimated percent uninsured": 65
   },
   {
     "name": "Maryland",
     "abbreviation": "MD",
-    "access": 0,
-    "Estimated percent uninsured*": "59%"
+    "access": "Limited service, primarily pre-natal care or service with age restrictions",
+    "Estimated percent uninsured": 59
   },
   {
     "name": "Delaware",
     "abbreviation": "DE",
     "access": 0,
-    "Estimated percent uninsured*": "59%"
+    "Estimated percent uninsured": 59
   },
   {
     "name": "New Jersey",
     "abbreviation": "NJ",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "63%"
+    "Estimated percent uninsured": 63
   },
   {
     "name": "Arizona",
     "abbreviation": "AZ",
     "access": 0,
-    "Estimated percent uninsured*": "68%"
+    "Estimated percent uninsured": 68
   },
   {
     "name": "New Mexico",
     "abbreviation": "NM",
-    "access": 0,
-    "Estimated percent uninsured*": "78%"
+    "access": "Limited service, primarily pre-natal care or service with age restrictions",
+    "Estimated percent uninsured": 78
   },
   {
     "name": "Kansas",
     "abbreviation": "KS",
     "access": 0,
-    "Estimated percent uninsured*": "66%"
+    "Estimated percent uninsured": 66
   },
   {
     "name": "Arkansas",
     "abbreviation": "AR",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "71%"
+    "Estimated percent uninsured": 71
   },
   {
     "name": "Tennessee",
     "abbreviation": "TN",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "76%"
+    "Estimated percent uninsured": 76
   },
   {
     "name": "West Virginia",
     "abbreviation": "WV",
     "access": 0,
-    "Estimated percent uninsured*": "Not available"
+    "Estimated percent uninsured": "Not available*"
   },
   {
     "name": "Virginia",
     "abbreviation": "VA",
     "access": 0,
-    "Estimated percent uninsured*": "59%"
+    "Estimated percent uninsured": 59
   },
   {
     "name": "North Carolina",
     "abbreviation": "NC",
     "access": 0,
-    "Estimated percent uninsured*": "75%"
+    "Estimated percent uninsured": 75
   },
   {
     "name": "Oklahoma",
     "abbreviation": "OK",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "76%"
+    "Estimated percent uninsured": 76
   },
   {
     "name": "Louisiana",
     "abbreviation": "LA",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "79%"
+    "Estimated percent uninsured": 79
   },
   {
     "name": "Mississippi",
     "abbreviation": "MS",
     "access": 0,
-    "Estimated percent uninsured*": "79%"
+    "Estimated percent uninsured": 79
   },
   {
     "name": "Alabama",
     "abbreviation": "AL",
     "access": 0,
-    "Estimated percent uninsured*": "73%"
+    "Estimated percent uninsured": 73
   },
   {
     "name": "Georgia",
     "abbreviation": "GA",
     "access": 0,
-    "Estimated percent uninsured*": "75%"
+    "Estimated percent uninsured": 75
   },
   {
     "name": "South Carolina",
     "abbreviation": "SC",
     "access": 0,
-    "Estimated percent uninsured*": "77%"
+    "Estimated percent uninsured": 77
   },
   {
     "name": "Hawaii",
     "abbreviation": "HI",
     "access": 0,
-    "Estimated percent uninsured*": "23%"
+    "Estimated percent uninsured": 23
   },
   {
     "name": "Texas",
     "abbreviation": "TX",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "74%"
+    "Estimated percent uninsured": 74
   },
   {
     "name": "Florida",
     "abbreviation": "FL",
     "access": "Limited service, primarily pre-natal care or service with age restrictions",
-    "Estimated percent uninsured*": "73%"
+    "Estimated percent uninsured": 73
   },
   {
     "name": "District of Columbia",
     "abbreviation": "DC",
     "access": "Full benefits to low-income DACA recipients",
-    "Estimated percent uninsured*": "23%"
+    "Estimated percent uninsured": 23
   }
 ]

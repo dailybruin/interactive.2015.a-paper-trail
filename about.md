@@ -6,25 +6,21 @@ title: "About the project"
 
 # About the project
 
-Every year, the Bridget O’Brien Scholarship Foundation gives a group of Daily Bruin staffers the opportunity to go on a fully-funded reporting trip to produce a package for the student newspaper.
+“A Paper Trail” is the ninth Daily Bruin reporting project funded by the Bridget O'Brien Scholarship Foundation. 
 
-The scholarship issued its first award in 2008, the year after Bridget O’Brien passed away in a car accident.
+The scholarship issued its first award in 2008, a year after Bridget O'Brien passed away in a car accident while traveling in Cleveland with her husband. She was 26 years old. 
 
 <figure class="right">
   <img src="{{ "/img/bridget-obrien.jpg" | prepend: site.baseurl }}"/>
   <figcaption>Photo courtesy of Kristy Milliken.</figcaption>
 </figure>
 
-Bridget was a Daily Bruin alumnus and an ambitious, passionate journalist who took her reporting and photography around the globe.
+Bridget was a daring, ambitious journalist and a former copy editor, reporter and photographer for the Daily Bruin. During her last quarter at UCLA, Bridget slept on friend's couches and lived out of her truck so she could save money for a reporting trip to Central America. The package she created on free trade coffee farming was printed in the Daily Bruin and USA Today. 
 
-During her final quarter at UCLA, she gave up her apartment to save money to travel to Central America and report on free trade coffee that was just taking off as a responsible form of coffee to buy.
+After her death, the foundation set up a scholarship to allow other student journalists to travel and produce long-term packages, as Bridget did. 
 
-After her death, the Foundation set up a scholarship to help other student journalists pursue their passions the way that Bridget did.
+We are honored to have been chosen as 2015 recipients for the first domestic project in the foundation’s history.
 
-It is an honor to be chosen as the 2014 Bridget O’Brien Scholarship recipients.
+Our project focuses on undocumented student access to higher education in the United States. Over the course of 11 months, we traveled throughout California and to Atlanta, Georgia, piecing together what it means to be an undocumented student in each place. 
 
-Our project focuses on the ongoing recovery efforts in the Philippines after Typhoon Yolanda struck the nation in early November, 2013. Even though nearly a year has passed, the country is still feeling the effects of the storm, which is one of the strongest in recorded history.
-
-While we’re in the Philippines reporting, we’ll be sharing our journey on our blog. And when we make it back to Los Angeles, we’ll create a full package of coverage to publish in the Daily Bruin early Fall quarter.
-
-The story we’re pursuing focuses on following the money that UCLA students donated to relief efforts in the immediate aftermath of the typhoon. We hope to give students an idea of where their money went, who they helped and how much aid their donations were able to provide. ■
+The package we've created is the result of months of work, reporting and travel, and we hope it sheds light on an issue that has rarely been covered in the Daily Bruin. ■
