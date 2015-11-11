@@ -50,13 +50,13 @@
   {
     "name": "UC Irvine",
     "position": 9,
-    "law": "campus with law school and no special legal center",
+    "law": "Campus with law school and no special legal center",
     "pathto": 0
   },
   {
     "name": "UC San Diego",
     "position": 10,
-    "law": "campus with no law school",
+    "law": "Campus with no law school",
     "pathto": 9
   }
 ]
