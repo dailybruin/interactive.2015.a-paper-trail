@@ -78,6 +78,7 @@ ucbreakdown = function(id, dataPath) {
     
     function path() {
       svg.selectAll('.path').remove();
+      svg.selectAll('.proposalLegend').remove();
                     
       var path = svg.selectAll('.path')
                     .data(data).enter()
@@ -90,7 +91,8 @@ ucbreakdown = function(id, dataPath) {
                     })
                     .style("stroke", "#fdfdfd")
                     .style("fill", "none")
-                    .style("stroke-dasharray", 5);
+                    .style("stroke-dasharray", 5)
+                    .attr("class", "path");
       
       path.transition()
             .duration(1500)
@@ -101,6 +103,7 @@ ucbreakdown = function(id, dataPath) {
                         .attr("x", width - 14)
                         .attr("y", height - 150)
                         .attr("dy", ".35em")
+                        .attr("class", "proposalLegend")
                         .style("font-size", "0.9rem")
                         .style("text-anchor", "end")
                         .text("- Proposed way to share resources")
