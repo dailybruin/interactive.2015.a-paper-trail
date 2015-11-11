@@ -20,7 +20,7 @@ At first she was hesitant. It would cost $465 dollars to apply, a large sum of m
 
 > Maria Alcantara paid more than $600 for the privilege of discovering she didn’t qualify for DACA.
 
-Still, at the behest of her father, Alcantara and her family sought out a legal adviser who had been recommended to them. The consultant assured the family that Alcantara, in fact, was eligible. After paying her $150, the consultant assisted Alcantara in filling out her application and continued to run through the motions, as if this was just another case. 
+Still, at the behest of her father, Alcantara and her family sought out a legal adviser who had been recommended to them. The consultant assured the family that Alcantara, in fact, was eligible. After Alcantara paid $150, the consultant assisted her in filling out an application and continued to run through the motions, as if this was just another case. 
 
 Then, suddenly, silence. Half a year passed, and in January 2015 Alcantara received the news in a letter from the United States Citizenship and Immigration Services: Her application had been rejected. Confused, she went to UC Santa Cruz’s student legal services center, which put her in contact with a volunteer lawyer who confirmed the worst: Because she had arrived in 2009, she was ineligible for DACA. 
 
