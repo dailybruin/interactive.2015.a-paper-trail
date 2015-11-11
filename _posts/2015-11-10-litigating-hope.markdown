@@ -41,6 +41,18 @@ But this has left an imbalance, and some students have more access to resources 
 
 The most effective way to accomplish this would be to adopt the UC Davis model and apply it broadly across the other campuses. 
 
+<figure class="viz">
+  <p class="title">Legal services across the UC system</p>
+  <div id="legal" class="map"></div>
+  <p class="source">Data from UC Davis School of Law, UC Berkeley School of Law.</p>
+</figure>
+<script src="{{ "/js/ucbreakdown.js" | prepend: site.baseurl }}"></script>
+<script>
+if ($(window).width() > 595) {
+  ucbreakdown('#legal', "../../data/uclawcenters.json");
+}
+</script>
+
 Those UC campuses with law schools – Los Angeles, Irvine, Berkeley and Davis – can establish a lending system that allows each of them to hire a full-time immigration attorney who can split time between the geographically close UCs. For UC Berkeley, which has a partnership with a law firm to provide such services already, this proposal would just require hiring additional staff. 
 
 For example, an attorney employed at UCLA would spend the first half of the week on campus in Westwood, and the other half in Santa Barbara or Riverside. UC Irvine could create a split week with San Diego, and UC Berkeley could work with Santa Cruz and San Francisco while UC Davis continues to share with Merced. 

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "UC Davis",
+    "position": 1,
+    "law": "Campus with law school and special legal center",
+    "pathto": 0
+  },
+  {
+    "name": "UC Berkeley",
+    "position": 2,
+    "law": "Campus with law school and special legal center",
+    "pathto": 0
+  },
+  {
+    "name": "UC Merced",
+    "position": 3,
+    "law": "Campus with no law school",
+    "pathto": 1
+  },
+  {
+    "name": "UC San Francisco",
+    "position": 4,
+    "law": "Campus with no law school",
+    "pathto": 2
+  },
+  {
+    "name": "UC Santa Cruz",
+    "position": 5,
+    "law": "Campus with no law school",
+    "pathto": 2
+  },
+  {
+    "name": "UC Santa Barbara",
+    "position": 6,
+    "law": "Campus with no law school",
+    "pathto": 8
+  },
+  {
+    "name": "UC Riverside",
+    "position": 7,
+    "law": "Campus with no law school",
+    "pathto": 8
+  },
+  {
+    "name": "UC Los Angeles",
+    "position": 8,
+    "law": "Campus with law school and no special legal center",
+    "pathto": 0
+  },
+  {
+    "name": "UC Irvine",
+    "position": 9,
+    "law": "campus with law school and no special legal center",
+    "pathto": 0
+  },
+  {
+    "name": "UC San Diego",
+    "position": 10,
+    "law": "campus with no law school",
+    "pathto": 9
+  }
+]
