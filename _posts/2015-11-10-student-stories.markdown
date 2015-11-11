@@ -14,24 +14,24 @@ description: Over the course of the project, several undocumented students share
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Ashley.picA.AW.jpg" />
   <h1>Ashley Rivas-Triana</h1>
-  <figcaption>College wasn't an option for Ashley Rivas-Triana at the end of her high school career. Counselors could not help her circumvent bans on undocumented students at Georgia public universities. Her future's uncertainty was delayed when Deferred Action for Childhood Arrivals allowed her and her older sister to remain in the United States after her family's petition for residency was rejected, but without access to financial aid, she is unable to access higher education outside of Freedom University, which provides tuition-free programs to undocumented students in Georgia.</figcaption>
+  <figcaption>College wasn't an option for Ashley Rivas-Triana at the end of her high school career. Counselors could not help her circumvent bans on undocumented students at Georgia public universities. Her future's uncertainty was delayed when Deferred Action for Childhood Arrivals, or DACA, allowed her and her older sister to remain in the United States after her family's petition for residency was rejected. But without access to financial aid she is unable to pursue higher education outside of Freedom University, which provides tuition-free programs to undocumented students in Georgia.</figcaption>
 </figure>
 
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Blanca.picA.AW.jpg" />
   <h1>Blanca Villagomez</h1>
-  <figcaption>Blanca Villagomez is a 5th year sociology student and IDEAS Retention Chair. Her job is to inform students in IDEAS about jobs, research opportunities and other resources available to them. She does not only want to help retain students, she said -- she wants them to excel.</figcaption>
+  <figcaption>Blanca Villagomez is a fifth-year sociology student and the retention chair of Improving Dreams, Equality, Access and Success, or IDEAS, UCLA's support and advocacy group for undocumented students. Her job is to inform students in IDEAS about jobs, research opportunities and other resources available to them. She does not only want to help retain students, she said, she wants them to excel.</figcaption>
 </figure>
 
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Blanca.picC.AW.jpg" />
-  <figcaption>Villagomez's own experience at UCLA has been bittersweet. She has struggled to feel welcome at an institution that has sometimes failed to help her when she needed it most. She had to withdraw for three quarters due to a lack of financial aid before the Dream Act, but came back to UCLA and found her place in the undocumented student community. She hopes to be able to convince UCLA that undocumented students need their own retention center on campus.</figcaption>
+  <figcaption>Villagomez's own experience at UCLA has been bittersweet. She has struggled to feel welcome at an institution that has sometimes failed to help her when she needed it most. She had to withdraw for three quarters due to a lack of financial aid before the California Dream Act, but came back to UCLA and found her place in the undocumented student community. She hopes to be able to convince UCLA that undocumented students need their own retention center on campus.</figcaption>
 </figure>
 
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Cristian.picA.AW.jpg" />
   <h1>Cristian De Nova</h1>
-  <figcaption>Cristian De Nova is Internal Advocacy Chair of IDEAS, UCLA's support and advocacy group for undocumented students. His family immigrated from Mexico City in 2001 so his parents could find work; they have both been seriously injured at their jobs in factories, compromising their ability to work and throwing his family's future into even greater uncertainty. De Nova has always been passionate and gifted at science. He is a third year microbiology student and hopes to eventually work as an epidemiologist for the World Health Organization.</figcaption>
+  <figcaption>Cristian De Nova is the internal advocacy chair of IDEAS. His family emigrated from Mexico City in 2001 so his parents could find work; they have both been seriously injured at their jobs in factories, compromising their ability to work and throwing his family's future into even greater uncertainty. De Nova has always been passionate about and gifted at science. He is a third-year microbiology, immunology and molecular genetics student and hopes to eventually work as an epidemiologist for the World Health Organization.</figcaption>
 </figure>
 
 <figure class="wide">
@@ -43,17 +43,17 @@ description: Over the course of the project, several undocumented students share
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Jennifer.picA.AW.jpg" />
   <h1>Jennifer Veliz</h1>
-  <figcaption>Jennifer Veliz is a first year student at the University of Georgia and a tutor at U-LEAD, a community based organization that assists low income and undocumented students with their studies.  Veliz arrived to the US from Guatemala in 2007 in order to escape the violence that persisted in her home country.  Through her mother's marriage, she was able to receive residency.  Veliz returned to U-LEAD in order to pay back the program for providing her with help during her time as a high school student. She credits the help she obtained there as crucial to her efforts to go college.</figcaption>
+  <figcaption>Jennifer Veliz is a first-year student at the University of Georgia and a tutor at U-LEAD, a community based organization that assists low-income and undocumented students with their studies. Veliz arrived to the U.S. from Guatemala in 2007 in order to escape the violence that persisted in her home country. Through her mother's marriage, she was able to receive residency. Veliz returned to U-LEAD in order to pay back the program for providing her with help during her time as a high school student. She credits the help she obtained there as crucial to her efforts to go college.</figcaption>
 </figure>
 
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Sandra.picA.AW.jpg" />
   <h1>Sandra Gallegos</h1>
-  <figcaption>Sandra Gallegos moved to California attempt to establish residency so she could apply to her dream school, UC Berkeley, and benefit from in-state tuition after graduating high school in 2007. The high cost of living and distance from her family caused her to move back to Georgia, where her family moved to from California in her junior year of high school because of affordable housing. Georgia's ban on undocumented students at public colleges have left Gallegos with little prospects in pursuing higher education outside Freedom U.</figcaption>
+  <figcaption>Sandra Gallegos moved to California in an attempt to establish residency so she could apply to her dream school, UC Berkeley, and benefit from in-state tuition after graduating high school in 2007. The high cost of living and distance from her family caused her to move back to Georgia, where her family had moved to from California in her junior year of high school because of affordable housing. Georgia's ban on undocumented students at public colleges has left Gallegos with little prospects in pursuing higher education outside Freedom University.</figcaption>
 </figure>
 
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Vlad.picA.AW.jpg" />
   <h1>Vlad Stoicescu-Ghica</h1>
-  <figcaption>Vlad Stoicescu-Ghica is the co-chair of IDEAS. He immigrated in June 2002 to join his mother, who had left a year earlier to work in an American company. However, the job never materialized, and his mom had to take long hours working odd jobs in order to support her family. As co-chair, Stoicescu-Ghica is responsible for coordinating group action, dealing with the media, and working in the general interest of undocumented students.  A fifth year political science major, he hopes to attend law school.</figcaption>
+  <figcaption>Vlad Stoicescu-Ghica is the co-chair of IDEAS. He immigrated in June 2002 to join his mother, who had left a year earlier to work in an American company. However, the job never materialized, and his mom had to take long hours working odd jobs in order to support her family. As co-chair, Stoicescu-Ghica is responsible for coordinating group action, dealing with the media and working in the general interest of undocumented students. A fifth-year political science student, he hopes to attend law school.</figcaption>
 </figure>
