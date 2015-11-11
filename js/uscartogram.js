@@ -41,7 +41,8 @@ uscartogram = function(id, dataPath, colorField, offset) {
                           return "lightgrey";
                         return color(d[colorField]); 
                       })
-                      .on("mouseover", mouseover);
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout);
                       
     var abbrLabels = svg.selectAll('abbr')
                       .data(data).enter()
@@ -55,7 +56,8 @@ uscartogram = function(id, dataPath, colorField, offset) {
                       .attr("y", function(d) {
                         return (d.row-1) * radius * 2 + margin.y*(1+offset) + radius*1.3;
                       })
-                      .on("mouseover", mouseover);
+                      .on("mouseover", mouseover)
+                      .on("mouseout", mouseout);
 
     var legend = svg.selectAll(".legend")
         .data(color.domain())
