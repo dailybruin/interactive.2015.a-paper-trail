@@ -7,7 +7,7 @@ chapter: 3
 type: main
 permalink: /chapter3/a-fighting-chance/
 featured-image: /img/photos/ns.BOB.Emiko.picA.AW.jpg
-featured-caption: 
+featured-caption: Laura Emiko Soltis is the director of Freedom University, an Atlanta based advocacy school that supports undocumented students in their desire to pursue higher education.
 bylines: ["Story by Natalie Delgadillo","Photos by Angie Wang"]
 description: In the face of unforgiving  state and federal policies and enormous individual struggle, undocumented students in California and Georgia fight for themselves and their families.
 editorsnote: true
