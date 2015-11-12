@@ -3,7 +3,7 @@ layout: post
 title:  The freedom to nurse a dream
 date:   2015-11-10 00:06:00
 publish: true
-chapter: 1
+chapter: 2
 type: sidebar
 featured-image: /img/photos/ns.BOB.Zuri.picA.AW.jpg
 bylines: ["Story and photos by Angie Wang"]

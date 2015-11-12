@@ -3,7 +3,7 @@ layout: post
 title:  Keeping it together
 date:   2015-11-10 00:06:00
 publish: true
-chapter: 1
+chapter: 2
 type: sidebar
 featured-image: /img/photos/ns.BOB.RJ.picA.AW.jpg
 bylines: ["Story by Natalie Delgadillo"]

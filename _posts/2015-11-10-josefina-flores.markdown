@@ -3,7 +3,7 @@ layout: post
 title:  Perseverance pays off in journey fraught with financial worry
 date:   2015-11-10 00:06:00
 publish: true
-chapter: 1
+chapter: 2
 type: sidebar
 featured-image: /img/photos/ns.BOB.Josefina.picB.AW.jpg
 bylines: ["Story by Natalie Delgadillo"]

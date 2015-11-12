@@ -472,6 +472,13 @@ figure.viz {
     }
 }
 
+ul#resources {
+  li {
+    font-family: $base-sans-font-family;
+    font-size: 0.95rem;
+  }
+}
+
 div.map {
   &:hover { cursor: default; }
 }
@@ -863,6 +870,7 @@ article{
     
     p {
       display: block;
+      margin-bottom: $spacing-unit;
     }
     
     span.quoteby {

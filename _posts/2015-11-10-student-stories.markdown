@@ -53,7 +53,7 @@ description: Over the course of the project, several undocumented students share
 </figure>
 
 <figure class="wide">
-  <img src="/img/photos/ns.BOB.Vlad.picA.AW.jpg" />
-  <h1>Vlad Stoicescu-Ghica</h1>
-  <figcaption>Vlad Stoicescu-Ghica is the co-chair of IDEAS. He immigrated in June 2002 to join his mother, who had left a year earlier to work in an American company. However, the job never materialized, and his mom had to take long hours working odd jobs in order to support her family. As co-chair, Stoicescu-Ghica is responsible for coordinating group action, dealing with the media and working in the general interest of undocumented students. A fifth-year political science student, he hopes to attend law school.</figcaption>
+  <img src="/img/photos/ns.BOB.Zulley.picA.AW.jpg" />
+  <h1>Zulley Huaman</h1>
+  <figcaption>Zulley Huaman was 4 when her mother was detained by immigration authorities. After visiting her mother in the detention center, Huaman's grandmother, her guardian at the time, was also detained. Though an American citizen, she spent the latter half of her childhood and early adolescence in Peru, before returning to graduate from an American high school. She hopes to attend a four-year university.</figcaption>
 </figure>

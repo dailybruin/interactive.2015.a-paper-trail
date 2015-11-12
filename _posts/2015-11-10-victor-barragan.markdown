@@ -3,7 +3,7 @@ layout: post
 title:  Continuing to fight off ‘the bad guys’ from every angle
 date:   2015-11-10 00:06:00
 publish: true
-chapter: 1
+chapter: 2
 type: sidebar
 featured-image: /img/photos/ns.BOB.Victor.picA.AW.jpg
 bylines: ["Story and photos by Angie Wang"]
