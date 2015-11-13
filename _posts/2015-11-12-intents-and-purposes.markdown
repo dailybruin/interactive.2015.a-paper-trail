@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Keeping an Open Mind"
+title:  "Intents and Purposes"
 date:   2015-11-12 06:02:00
 publish: true
 chapter: 3
 type: column
-permalink: /chapter3/keeping-an-open-mind/
+permalink: /chapter3/intents-and-purposes/
 featured-image: /img/illos/BOB3_illo.jpg
 featured-caption: Illustration by Kelly Brennan
 bylines: ["Column by Ryan Nelson"]

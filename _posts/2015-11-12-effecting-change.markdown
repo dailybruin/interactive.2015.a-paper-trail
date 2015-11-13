@@ -9,7 +9,7 @@ permalink: /chapter3/affecting-change/
 featured-image: /img/photos/ns.BOB.UCLA.picE.AW.jpg
 featured-caption: Laura Emiko Soltis gives a presentation about Freedom University at the Charles E Young Research Library in October.  Freedom University, an undocumented student advocacy school in Atlanta, visited UCLA to discuss their efforts and the future of the undocumented student movement in the country.
 bylines: ["Photo essay by Angie Wang"]
-description: The leaders and supporters of several passionate activists organizations have every reason to dedicate themselves to the cause, and shared some of them with us. 
+description: The leaders and supporters of several passionate activist organizations have every reason to dedicate themselves to the cause, and shared some of them with us. 
 ---
 
 <figure class="wide">
@@ -27,7 +27,7 @@ description: The leaders and supporters of several passionate activists organiza
 <figure class="wide">
   <img src="/img/photos/ns.BOB.Emiko.picB.AW.jpg" />
   <h1>Laura Emiko Soltis</h1>
-  <figcaption>Laura Emiko Soltis is the director of Freedom University, an Atlanta based advocacy school that supports undocumented students in their desire to pursue higher education. Based on the Freedom schools from the civil rights area, the organization focuses primarily on community outreach and developing tools for further activism. The school relies on volunteer teachers to assist students with college preparedness, argumentation, and self-empowerment.</figcaption>
+  <figcaption>Laura Emiko Soltis is the director of Freedom University, an Atlanta based advocacy school that supports undocumented students in their desire to pursue higher education. Based on the Freedom schools from the civil rights era, the organization focuses primarily on community outreach and developing tools for further activism. The school relies on volunteer teachers to assist students with college preparedness, argumentation, and self-empowerment.</figcaption>
 </figure>
 
 <figure class="wide">

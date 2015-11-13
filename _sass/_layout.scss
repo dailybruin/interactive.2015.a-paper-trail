@@ -1016,7 +1016,7 @@ div.landing {
         margin: auto;
         
         a { color: $brand-color; }
-        a.publish:hover { color: black; }
+        a.publish:hover { color: black; border-bottom: none; }
         
         hr { 
           border: none;
