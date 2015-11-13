@@ -5,7 +5,7 @@ date: 2015-11-12 00:06:00
 publish: true
 chapter: 3
 type: sidebar
-featured-image: /img/photos/ns.BOB.UCLA.picA.AW.jpg
+featured-image: /img/photos/ns.BOB.UCLA.picC.AW.jpg
 bylines: ["Story and photos by Angie Wang"]
 description: In 2013, Laura Emiko Soltis walked 200 miles in solidarity with farmworkers in South Florida, making their physical struggle as migrant laborers her own.
 
