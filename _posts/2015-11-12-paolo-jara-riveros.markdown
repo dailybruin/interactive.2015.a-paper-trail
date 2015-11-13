@@ -5,7 +5,7 @@ date: 2015-11-12 00:06:00
 publish: true
 chapter: 3
 type: sidebar
-featured-image: /img/photos/ns.BOB.Paolo.picB.AW.jpg
+featured-image: /img/photos/ns.BOB.Paolo.picA.AW.jpg
 bylines: ["Story by Natalie Delgadillo"]
 description: Etched into his forearm in large, blocky script are the coordinates of Paolo Jara-Riveros’ home in Lima, Peru.
 
@@ -24,7 +24,7 @@ But even more difficult to adjust to than his new surroundings was his immigrati
 “The first knowledge I had about immigration was in reference to me being ‘an illegal,’” he said. “When people talked about undocumented people like they were criminals, I really took that to heart. It made me believe I was worth less than other people.” 
 
 <figure>
-  <img src="/img/photos/ns.BOB.Paolo.picA.AW.jpg" />
+  <img src="/img/photos/ns.BOB.Paolo.picB.AW.jpg" />
   <figcaption>Paolo Jara-Riveros poses with a portrait of a woman who has accepted his gender identity and taken him in to her Los Angeles home.</figcaption>
 </figure>
 
