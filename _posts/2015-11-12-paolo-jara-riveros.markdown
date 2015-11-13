@@ -25,7 +25,7 @@ But even more difficult to adjust to than his new surroundings was his immigrati
 
 <figure>
   <img src="/img/photos/ns.BOB.Paolo.picB.AW.jpg" />
-  <figcaption>Paolo Jara-Riveros poses with a portrait of a woman who has accepted his gender identity and taken him in to her Los Angeles home.</figcaption>
+  <figcaption>Paolo Jara-Riveros had the coordinates of his home in Lima, Peru, tattooed onto his forearm. He has lived in the United States since he was 15 years old, when he and his mother immigrated to California.</figcaption>
 </figure>
 
 That feeling followed him through his last two years of high school in Alhambra, his five years at a community college in Pasadena and finally his two semesters at Cal Poly Pomona studying hospitality management. After that, Jara-Riveros had had enough.
